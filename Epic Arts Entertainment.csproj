@@ -7,4 +7,11 @@
     <RootNamespace>Epic_Arts_Entertainment</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Update="Views\Usuario\Cadastro.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
