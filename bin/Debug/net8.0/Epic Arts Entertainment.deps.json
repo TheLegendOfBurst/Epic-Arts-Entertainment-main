@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Epic Arts Entertainment/1.0.0": {
+        "runtime": {
+          "Epic Arts Entertainment.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Epic Arts Entertainment/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

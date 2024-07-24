@@ -1,0 +1,125 @@
+
+
+
+/* Style for the overall page */
+body {
+    background-color: #000000;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header with logo and company name */
+div[style*="background-color: #000000; color: white;"] {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+div[style*="background-color: #000000; color: white;"] a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: inline-flex;
+    align-items: center;
+}
+
+div[style*="background-color: #000000; color: white;"] img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+div[style*="background-color: #000000; color: white;"] h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+/* Container for the form */
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #080808;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #fc0fc0;
+}
+
+/* Modal header */
+.modal-header {
+    background-color: #000000;
+    color: white;
+    border-color: #000000;
+    padding: 10px 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.modal-header h1 {
+    margin: 0;
+    color: #fc0fc0;
+}
+
+/* Modal body */
+.modal-body {
+    padding: 20px;
+}
+
+/* Input fields and labels */
+input[type="date"], .form-select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #222;
+    color: #fc0fc0;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Checkbox labels */
+.form-check-label {
+    color: #fc0fc0;
+}
+
+/* Error messages */
+span[id^="Span"] {
+    color: red;
+}
+
+/* Modal footer */
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #000000;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+
+/* Error message paragraph */
+p[style="color:red"] {
+    color: red;
+    margin-bottom: 20px;
+}
+
+/*--------------------------------------------------------------
+# Butao voltar
+--------------------------------------------------------------*/
+button{
+    background-color: #fc0fc0 !important;
+    border: none !important;
+    color: #000000 !important;
+    transition: .5s;
+}
+
+button:hover{
+    background-color: #000000 !important;
+    color: #fc0fc0 !important;
+    border: 1px solid #fc0fc0 !important;

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Epic Arts Entertainment.props" />
+</Project>

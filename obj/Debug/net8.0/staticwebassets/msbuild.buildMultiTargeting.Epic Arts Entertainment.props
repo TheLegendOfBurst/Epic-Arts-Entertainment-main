@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Epic Arts Entertainment.props" />
+</Project>
