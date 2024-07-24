@@ -4,11 +4,11 @@ using System.Diagnostics;
 
 namespace Epic_Arts_Entertainment.Controllers
 {
-    public class CadastroController : Controller
+    public class UsuarioController : Controller
     {
-        private readonly ILogger<CadastroController> _logger;
+        private readonly ILogger<UsuarioController> _logger;
 
-        public CadastroController(ILogger<CadastroController> logger)
+        public UsuarioController(ILogger<UsuarioController> logger)
         {
             _logger = logger;
         }
