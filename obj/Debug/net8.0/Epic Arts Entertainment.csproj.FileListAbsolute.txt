@@ -28,3 +28,34 @@ C:\Users\Aluno Noite\Documents\Elora-main\Elora Visual Studio 2022\Epic Arts Ent
 C:\Users\Aluno Noite\Documents\Elora-main\Elora Visual Studio 2022\Epic Arts Entertainment\Epic Arts Entertainment\obj\Debug\net8.0\Epic Arts Entertainment.pdb
 C:\Users\Aluno Noite\Documents\Elora-main\Elora Visual Studio 2022\Epic Arts Entertainment\Epic Arts Entertainment\obj\Debug\net8.0\Epic Arts Entertainment.genruntimeconfig.cache
 C:\Users\Aluno Noite\Documents\Elora-main\Elora Visual Studio 2022\Epic Arts Entertainment\Epic Arts Entertainment\obj\Debug\net8.0\ref\Epic Arts Entertainment.dll
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\bin\Debug\net8.0\appsettings.json
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\bin\Debug\net8.0\Epic Arts Entertainment.staticwebassets.runtime.json
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\bin\Debug\net8.0\Epic Arts Entertainment.exe
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\bin\Debug\net8.0\Epic Arts Entertainment.deps.json
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\bin\Debug\net8.0\Epic Arts Entertainment.runtimeconfig.json
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\bin\Debug\net8.0\Epic Arts Entertainment.dll
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\bin\Debug\net8.0\Epic Arts Entertainment.pdb
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\Epic Arts Entertainment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\Epic Arts Entertainment.AssemblyInfoInputs.cache
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\Epic Arts Entertainment.AssemblyInfo.cs
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\Epic Arts Entertainment.csproj.CoreCompileInputs.cache
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\Epic Arts Entertainment.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\Epic Arts Entertainment.RazorAssemblyInfo.cache
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\Epic Arts Entertainment.RazorAssemblyInfo.cs
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\Epic Arts Entertainment.sourcelink.json
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\staticwebassets\msbuild.Epic Arts Entertainment.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\staticwebassets\msbuild.build.Epic Arts Entertainment.props
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Epic Arts Entertainment.props
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Epic Arts Entertainment.props
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\scopedcss\bundle\Epic Arts Entertainment.styles.css
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\scopedcss\projectbundle\Epic Arts Entertainment.bundle.scp.css
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\Epic Arts Entertainment.dll
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\refint\Epic Arts Entertainment.dll
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\Epic Arts Entertainment.pdb
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\Epic Arts Entertainment.genruntimeconfig.cache
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\ref\Epic Arts Entertainment.dll
