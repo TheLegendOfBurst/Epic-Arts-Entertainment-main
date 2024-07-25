@@ -18,8 +18,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Aluno Noite/Documents/Backup/Epic-Arts-Entertainment-main/Epic-Arts-Entertainment-main/Views/Agendamento/Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhbWVudG9cQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aluno Noite/Documents/Backup/Epic-Arts-Entertainment-main/Epic-Arts-Entertainment-main/Views/Agendamento/Cadastro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhbWVudG9cQ2FkYXN0cm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Aluno Noite/Documents/Backup/Epic-Arts-Entertainment-main/Epic-Arts-Entertainment-main/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aluno Noite/Documents/Backup/Epic-Arts-Entertainment-main/Epic-Arts-Entertainment-main/Views/Serviço/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmnDp29cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Aluno Noite/Documents/Backup/Epic-Arts-Entertainment-main/Epic-Arts-Entertainment-main/Views/Shared/Error.cshtml]
