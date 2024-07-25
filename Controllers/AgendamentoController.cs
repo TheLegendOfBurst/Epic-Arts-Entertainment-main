@@ -23,6 +23,11 @@ namespace Epic_Arts_Entertainment.Controllers
             return View();
         }
 
+        public IActionResult Cliente()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

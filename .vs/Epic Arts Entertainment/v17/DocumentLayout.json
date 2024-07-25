@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment-main\\Epic-Arts-Entertainment-main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|c:\\users\\aluno noite\\documents\\backup\\epic-arts-entertainment-main\\epic-arts-entertainment-main\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|c:\\users\\aluno noite\\documents\\backup\\epic-arts-entertainment-main\\epic-arts-entertainment-main\\views\\agendamento\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|solutionrelative:views\\agendamento\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|c:\\users\\aluno noite\\documents\\backup\\epic-arts-entertainment-main\\epic-arts-entertainment-main\\views\\agendamento\\cliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|solutionrelative:views\\agendamento\\cliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|c:\\users\\aluno noite\\documents\\backup\\epic-arts-entertainment-main\\epic-arts-entertainment-main\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|c:\\users\\aluno noite\\documents\\backup\\epic-arts-entertainment-main\\epic-arts-entertainment-main\\views\\servi\u00E7o\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|solutionrelative:views\\servi\u00E7o\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,40 +31,44 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment-main\\Epic-Arts-Entertainment-main\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment-main\\Epic-Arts-Entertainment-main\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAnAAAA",
+              "Title": "Cadastro.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment-main\\Epic-Arts-Entertainment-main\\Views\\Agendamento\\Cadastro.cshtml",
+              "RelativeDocumentMoniker": "Views\\Agendamento\\Cadastro.cshtml",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment-main\\Epic-Arts-Entertainment-main\\Views\\Agendamento\\Cadastro.cshtml",
+              "RelativeToolTip": "Views\\Agendamento\\Cadastro.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-25T18:31:52.69Z",
+              "WhenOpened": "2024-07-25T18:45:34.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cliente.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment-main\\Epic-Arts-Entertainment-main\\Views\\Agendamento\\Cliente.cshtml",
+              "RelativeDocumentMoniker": "Views\\Agendamento\\Cliente.cshtml",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment-main\\Epic-Arts-Entertainment-main\\Views\\Agendamento\\Cliente.cshtml",
+              "RelativeToolTip": "Views\\Agendamento\\Cliente.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-25T18:34:33.468Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment-main\\Epic-Arts-Entertainment-main\\Views\\Servi\u00E7o\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Servi\u00E7o\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment-main\\Epic-Arts-Entertainment-main\\Views\\Servi\u00E7o\\Index.cshtml",
-              "RelativeToolTip": "Views\\Servi\u00E7o\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-25T18:20:32.215Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment-main\\Epic-Arts-Entertainment-main\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment-main\\Epic-Arts-Entertainment-main\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAewCEAAAAfAAAA",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAFgAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-25T18:07:39.781Z",
+              "WhenOpened": "2024-07-25T18:34:17.501Z",
               "EditorCaption": ""
             }
           ]
