@@ -22,11 +22,11 @@
 /*--------------------- 0- Global CSS (Start) ---------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-:root{
-    --purple: #fc0fc0;
+:root {
+    --purple: #c90397;
     --black: #000000;
     --white: #878788;
-    --grey: #DFDFDE;
+    --grey: #403e3e;
 }
 
 *{
@@ -142,7 +142,7 @@ section{
 }
 
 .btn:hover{
-    color: var(--white);
+    color: var(--black);
     background-color: var(--purple);
     cursor: pointer;
 }
@@ -585,7 +585,7 @@ header #menu-btn:hover{
 
 
 /*--------------------- 7- Services Area CSS (Start) ---------------------*/
-.service .box-container{
+.service .box-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -600,47 +600,68 @@ header #menu-btn:hover{
     gap: 1.5rem;
 }
 
-.service-item{
+.service-item {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 33rem;
-        flex: 1 1 33rem;
+    flex: 1 1 33rem;
     background-color: var(--black);
     padding: 4rem 3rem;
     text-align: center;
-    border: 0.1rem solid rgba(255,255, 255, 0.3);
+    border: 0.1rem solid rgba(255, 255, 255, 0.3);
     border-radius: 0.5rem;
     -webkit-transition: all 0.5s linear;
-       -moz-transition: all 0.5s linear;
-         -o-transition: all 0.5s linear;
-            transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
 }
 
-.service-item:hover{
-    background-color: var(--purple);
-}
+    .service-item:hover {
+        background-color: var(--purple);
+    }
 
-.service-item i{
-    color: var(--white);
-    font-size: 4rem;
-}
+    .service-item i {
+        color: var(--grey);
+        font-size: 4rem;
+    }
 
-.service-item h3{
-    font-size: 2rem;
-    color: var(--white);
-    padding: 1.5rem 0;
-}
+    .service-item h3 {
+        font-size: 2rem;
+        color: var(--white);
+        padding: 1.5rem 0;
+    }
 
-.service-item p{
-    font-size: 1.6rem;
-    color: var(--grey);
-    line-height: 1.6;
-}
+    .service-item p {
+        font-size: 1.6rem;
+        color: var(--grey);
+        line-height: 1.6;
+    }
 
-.service-item:hover p{
-    color: var(--white);
-}
+    .service-item:hover i {
+        color: var(--black); /* Mudando a cor do ícone para preto ao passar o mouse */
+    }
+
+    .service-item:hover h3,
+    .service-item:hover p {
+        color: var(--black); /* Mudando a cor do texto para preto ao passar o mouse */
+    }
+
+    /* Estilos para o botão dentro da caixa service-item */
+    .service-item #agendar-btn {
+        color: var(--purple); /* Cor do texto em rosa */
+        background-color: var(--black); /* Cor de fundo em rosa */
+        border: 0.2rem solid var(--black); /* Borda em rosa */
+        transition: all 0.5s linear; /* Transição suave para as mudanças de cor */
+    }
+
+    .service-item:hover #agendar-btn {
+        color: var(--purple); /* Cor do texto ao passar o mouse em preto */
+        background-color: black; /* Cor de fundo ao passar o mouse em preto */
+        border: 0.2rem solid black; /* Borda em preto ao passar o mouse */
+    }
+
 
 /*--------------------- 7- Services Area CSS (End) ---------------------*/
+
 
 
 
@@ -1040,7 +1061,7 @@ header #menu-btn:hover{
     color: var(--purple);
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;;
+    display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;

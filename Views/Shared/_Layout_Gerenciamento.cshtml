@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Epic Arts Entertainment</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+        <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="~/lib/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link href="~/lib/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="~/css/usuario_index.css">
+        <link rel="stylesheet" href="~/css/submenu.css">
+        <link rel="stylesheet" href="~/css/submenu2.css">
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    </head>
+<body>
+
+    <!-------------------- Header Area (Start) -------------------->
+
+    <nav id="NavBar-2">
+        <span>
+            <i class="fas fa-home fa-lg" aria-hidden="true" style="color: #fc0fc0;"></i> <!-- Ícone de casa com cor rosa -->
+            <a href="/Home/Index" style="margin-left: 10px; text-decoration: none;">Inicio</a>
+        </span>
+
+        <div id="SubMenu-2">
+            <span>
+                <i class="fa fa-user" aria-hidden="true" style="color: #fc0fc0;"></i> <!-- Ícone de usuário com cor rosa -->
+                <a href="/Usuario/Login" style="margin-left: 10px; text-decoration: none;">Login</a>
+            </span>
+            <div id="SubMenu-2-content">
+                <a href="/Usuario/Index">
+                    <i class="fa fa-users" aria-hidden="true" style="margin-right: 20px;"></i>
+                    Usuarios
+                </a>
+                <a href="/Agendamento/Index">
+                    <i class="fa fa-calendar" aria-hidden="true" style="margin-right: 20px;"></i>
+                    Agendamento Admin
+                </a>
+                <a href="/Agendamento/Gerencimento_Agendamento_Usuario">
+                    <i class="fa fa-calendar" aria-hidden="true" style="margin-right: 20px;"></i>
+                    Agendamento User
+                </a>
+                <a href="/Agendamento/Cadastro">
+                    <i class="fa fa-address-book" aria-hidden="true" style="margin-right: 20px;"></i>
+                    Cadastro Agendamento
+                </a>
+                <a href="/Servico/Index">
+                    <i class="fa fa-file-archive" aria-hidden="true" style="margin-right: 20px;"></i>
+                    Gerenciamento de Serviço
+                </a>
+                <a href="#logout">
+                    <i class="fa fa-file-archive" aria-hidden="true" style="margin-right: 20px;"></i>
+                    Relatório
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-------------------- Header Area (End) -------------------->
+
+
+
+    <div>
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-------------------- Footer Area (Start) -------------------->
+    
+    <!-------------------- Footer Area (End) -------------------->
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

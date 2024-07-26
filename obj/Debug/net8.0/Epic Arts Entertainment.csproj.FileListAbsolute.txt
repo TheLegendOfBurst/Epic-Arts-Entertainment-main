@@ -52,6 +52,7 @@ C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Ent
 C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Epic Arts Entertainment.props
 C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout_Gerenciamento.cshtml.rz.scp.css
 C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\scopedcss\bundle\Epic Arts Entertainment.styles.css
 C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\scopedcss\projectbundle\Epic Arts Entertainment.bundle.scp.css
 C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\obj\Debug\net8.0\Epic Arts Entertainment.dll

@@ -1,0 +1,79 @@
+/* styles.css */
+
+#NavBar-2 {
+    position: fixed;
+    top: 3.5%;
+    right: 35px;
+    background-color: #000000; /* Ajuste a cor de fundo conforme necessário */
+    padding: 10px; /* Ajuste o padding conforme necessário */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: adiciona sombra para destacar o navbar */
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap; /* Garante que os itens não quebrarão para a linha seguinte */
+}
+
+    #NavBar-2 span {
+        display: flex;
+        align-items: center;
+        margin-right: 20px; /* Espaço entre os itens */
+    }
+
+    #NavBar-2 a {
+        text-decoration: none !important; /* Força a remoção do sublinhado dos links na navbar */
+        color: var(--white); /* Ajusta a cor do texto para os links na navbar */
+    }
+
+#SubMenu-2 {
+    position: relative; /* Necessário para posicionar o submenu corretamente */
+}
+
+.dropbtn {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3%;
+    display: flex;
+    align-items: center;
+}
+
+#SubMenu-2-content {
+    display: none; /* Esconde o menu dropdown por padrão */
+    position: absolute;
+    background-color: var(--black);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px var(--red);
+    z-index: 1;
+    padding: 8px;
+    border-radius: 3%;
+    right: 0; /* Alinha o submenu ao lado direito do item de menu */
+}
+
+    #SubMenu-2-content a {
+        color: var(--white);
+        padding: 7px; /* Adiciona padding */
+        text-decoration: none !important; /* Força a remoção do sublinhado dos links no submenu */
+        display: flex;
+        align-items: center;
+        margin: 5px; /* Adiciona a margem */
+        border-radius: 30% !important;
+    }
+
+        #SubMenu-2-content a:hover {
+            background-color: var(--red) !important; /* Muda a cor do fundo para vermelho ao passar o mouse */
+            color: var(--black) !important; /* Muda a cor da letra para preto ao passar o mouse */
+            border: var(--red) solid 2px;
+            border-radius: 3%;
+            text-decoration: none !important; /* Remove o sublinhado dos links no submenu quando hovered */
+        }
+
+            #SubMenu-2-content a:hover .fa {
+                color: var(--black) !important; /* Muda a cor do ícone para preto ao passar o mouse */
+                text-decoration: none !important;
+            }
+
+#SubMenu-2:hover #SubMenu-2-content {
+    display: block; /* Mostra o submenu quando o mouse está sobre o item de menu */
+}

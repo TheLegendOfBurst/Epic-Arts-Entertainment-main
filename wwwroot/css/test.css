@@ -1,0 +1,24 @@
+<style >
+.navbar {
+    position: fixed;
+    top: 3.5%;
+    right: 35px;
+    background-color: #000000; /* Ajuste a cor de fundo conforme necessário */
+    padding: 10px; /* Ajuste o padding conforme necessário */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: adiciona sombra para destacar o navbar */
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.dropdown-content {
+    display: none; /* Esconde o menu dropdown por padrão */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #000000; /* Ajuste a cor de fundo conforme necessário */
+    border: 2px solid #c90397; /* Borda rosa (cor: #FF69B4) */
+    z-index: 1000; /* Garante que o dropdown fique acima de outros elementos */
+}
+
+</style >
