@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Epic Arts Entertainment")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5f813d6398da44806f0dc0e5d54e4c562761ebe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+241d4cc09571c1fef8a786874f94b7d83cc1c2c0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Epic Arts Entertainment")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Epic Arts Entertainment")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
