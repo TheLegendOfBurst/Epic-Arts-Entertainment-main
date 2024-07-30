@@ -8,7 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\teste\" />
+    <None Remove="test1\tester.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="test1\tester.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
