@@ -7,4 +7,8 @@
     <RootNamespace>Epic_Arts_Entertainment</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\teste\" />
+  </ItemGroup>
+
 </Project>
