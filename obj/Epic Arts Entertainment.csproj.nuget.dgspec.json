@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment-main\\Epic-Arts-Entertainment-main\\Epic Arts Entertainment.csproj": {}
+    "C:\\Users\\Aluno Noite\\Downloads\\DaviG\\Site\\Epic-Arts-Entertainment-main\\Epic Arts Entertainment.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment-main\\Epic-Arts-Entertainment-main\\Epic Arts Entertainment.csproj": {
+    "C:\\Users\\Aluno Noite\\Downloads\\DaviG\\Site\\Epic-Arts-Entertainment-main\\Epic Arts Entertainment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment-main\\Epic-Arts-Entertainment-main\\Epic Arts Entertainment.csproj",
+        "projectUniqueName": "C:\\Users\\Aluno Noite\\Downloads\\DaviG\\Site\\Epic-Arts-Entertainment-main\\Epic Arts Entertainment.csproj",
         "projectName": "Epic Arts Entertainment",
-        "projectPath": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment-main\\Epic-Arts-Entertainment-main\\Epic Arts Entertainment.csproj",
+        "projectPath": "C:\\Users\\Aluno Noite\\Downloads\\DaviG\\Site\\Epic-Arts-Entertainment-main\\Epic Arts Entertainment.csproj",
         "packagesPath": "C:\\Users\\Aluno Noite\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment-main\\Epic-Arts-Entertainment-main\\obj\\",
+        "outputPath": "C:\\Users\\Aluno Noite\\Downloads\\DaviG\\Site\\Epic-Arts-Entertainment-main\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Aluno Noite\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -64,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

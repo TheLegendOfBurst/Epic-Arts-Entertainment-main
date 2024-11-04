@@ -9,67 +9,67 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Epic_Arts_Entertainment
 build_property.RootNamespace = Epic_Arts_Entertainment
-build_property.ProjectDir = C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main\
+build_property.ProjectDir = C:\Users\Aluno Noite\Downloads\DaviG\Site\Epic-Arts-Entertainment-main\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Aluno Noite\Documents\Backup\Epic-Arts-Entertainment-main\Epic-Arts-Entertainment-main
+build_property.MSBuildProjectDirectory = C:\Users\Aluno Noite\Downloads\DaviG\Site\Epic-Arts-Entertainment-main
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Aluno Noite/Documents/Backup/Epic-Arts-Entertainment-main/Epic-Arts-Entertainment-main/Views/Agendamento/Admin.cshtml]
+[C:/Users/Aluno Noite/Downloads/DaviG/Site/Epic-Arts-Entertainment-main/Views/Agendamento/Admin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhbWVudG9cQWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno Noite/Documents/Backup/Epic-Arts-Entertainment-main/Epic-Arts-Entertainment-main/Views/Agendamento/Cadastro.cshtml]
+[C:/Users/Aluno Noite/Downloads/DaviG/Site/Epic-Arts-Entertainment-main/Views/Agendamento/Cadastro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhbWVudG9cQ2FkYXN0cm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno Noite/Documents/Backup/Epic-Arts-Entertainment-main/Epic-Arts-Entertainment-main/Views/Agendamento/Cliente.cshtml]
+[C:/Users/Aluno Noite/Downloads/DaviG/Site/Epic-Arts-Entertainment-main/Views/Agendamento/Cliente.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhbWVudG9cQ2xpZW50ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno Noite/Documents/Backup/Epic-Arts-Entertainment-main/Epic-Arts-Entertainment-main/Views/Home/Index.cshtml]
+[C:/Users/Aluno Noite/Downloads/DaviG/Site/Epic-Arts-Entertainment-main/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno Noite/Documents/Backup/Epic-Arts-Entertainment-main/Epic-Arts-Entertainment-main/Views/Serviço/Index.cshtml]
+[C:/Users/Aluno Noite/Downloads/DaviG/Site/Epic-Arts-Entertainment-main/Views/Serviço/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmnDp29cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno Noite/Documents/Backup/Epic-Arts-Entertainment-main/Epic-Arts-Entertainment-main/Views/Shared/Error.cshtml]
+[C:/Users/Aluno Noite/Downloads/DaviG/Site/Epic-Arts-Entertainment-main/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno Noite/Documents/Backup/Epic-Arts-Entertainment-main/Epic-Arts-Entertainment-main/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Aluno Noite/Downloads/DaviG/Site/Epic-Arts-Entertainment-main/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno Noite/Documents/Backup/Epic-Arts-Entertainment-main/Epic-Arts-Entertainment-main/Views/Usuario/Cadastro.cshtml]
+[C:/Users/Aluno Noite/Downloads/DaviG/Site/Epic-Arts-Entertainment-main/Views/Usuario/Cadastro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDYWRhc3Ryby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno Noite/Documents/Backup/Epic-Arts-Entertainment-main/Epic-Arts-Entertainment-main/Views/Usuario/Login.cshtml]
+[C:/Users/Aluno Noite/Downloads/DaviG/Site/Epic-Arts-Entertainment-main/Views/Usuario/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno Noite/Documents/Backup/Epic-Arts-Entertainment-main/Epic-Arts-Entertainment-main/Views/Usuario/UsuarioIndex.cshtml]
+[C:/Users/Aluno Noite/Downloads/DaviG/Site/Epic-Arts-Entertainment-main/Views/Usuario/UsuarioIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xVc3VhcmlvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno Noite/Documents/Backup/Epic-Arts-Entertainment-main/Epic-Arts-Entertainment-main/Views/_ViewImports.cshtml]
+[C:/Users/Aluno Noite/Downloads/DaviG/Site/Epic-Arts-Entertainment-main/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno Noite/Documents/Backup/Epic-Arts-Entertainment-main/Epic-Arts-Entertainment-main/Views/_ViewStart.cshtml]
+[C:/Users/Aluno Noite/Downloads/DaviG/Site/Epic-Arts-Entertainment-main/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aluno Noite/Documents/Backup/Epic-Arts-Entertainment-main/Epic-Arts-Entertainment-main/Views/Shared/_Layout.cshtml]
+[C:/Users/Aluno Noite/Downloads/DaviG/Site/Epic-Arts-Entertainment-main/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-3sn3p1aszr
 
-[C:/Users/Aluno Noite/Documents/Backup/Epic-Arts-Entertainment-main/Epic-Arts-Entertainment-main/Views/Shared/_Layout_Gerenciamento.cshtml]
+[C:/Users/Aluno Noite/Downloads/DaviG/Site/Epic-Arts-Entertainment-main/Views/Shared/_Layout_Gerenciamento.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRfR2VyZW5jaWFtZW50by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-ywf906k0zd
