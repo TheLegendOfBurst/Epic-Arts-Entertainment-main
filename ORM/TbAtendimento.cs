@@ -9,7 +9,7 @@ public partial class TbAtendimento
 
     public DateTime DtHoraAgendamento { get; set; }
 
-    public DateOnly DataAtendimento { get; set; }
+    public DateTime DataAtendimento { get; set; }
 
     public TimeOnly Horario { get; set; }
 

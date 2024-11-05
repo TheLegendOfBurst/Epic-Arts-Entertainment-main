@@ -204,3 +204,4 @@ C:\Users\Aluno Noite\Downloads\DaviG\Site\Epic-Arts-Entertainment-main\bin\Debug
 C:\Users\Aluno Noite\Downloads\DaviG\Site\Epic-Arts-Entertainment-main\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Aluno Noite\Downloads\DaviG\Site\Epic-Arts-Entertainment-main\obj\Debug\net8.0\Epic Arts Entertainment.csproj.AssemblyReference.cache
 C:\Users\Aluno Noite\Downloads\DaviG\Site\Epic-Arts-Entertainment-main\obj\Debug\net8.0\Epic Art.0E0E58FB.Up2Date
+C:\Users\Aluno Noite\Downloads\DaviG\Site\Epic-Arts-Entertainment-main\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
