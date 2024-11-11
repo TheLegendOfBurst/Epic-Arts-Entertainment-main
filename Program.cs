@@ -1,6 +1,22 @@
+using Microsoft.EntityFrameworkCore;
+using Epic_Arts_Entertainment.Repositorio;
+using Epic_Arts_Entertainment.Repositorios;
+using Epic_Arts_Entertainment.ORM;
+using Epic_Arts_Entertainment.Repositorio;
+using Epic_Arts_Entertainment.Repositorios;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Registrar o DbContext se necessário
+builder.Services.AddDbContext<BdEpicArtsEntertainmentContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Registrar o repositório (UsuarioRepositorio)
+builder.Services.AddScoped<UsuarioRepositorio>();  // Ou AddTransient ou AddSingleton dependendo do caso
+// Registrar o repositório (UsuarioRepositorio)
+builder.Services.AddScoped<ServicoRepositorio>();  // Ou AddTransient ou AddSingleton dependendo do caso
+
+// Registrar outros serviços, como controllers com views
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
