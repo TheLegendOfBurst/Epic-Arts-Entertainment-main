@@ -104,12 +104,12 @@ footer {
 }
 
 
-.page-maneger{
+.page-maneger {
     background-color: var(--black);
     margin-top: 2.5em;
     border-radius: 8px;
     box-shadow: 2px 0 10px -2px var(--red);
-    height: 590px;
+    height: 750px;
     overflow: hidden;
 }
 
