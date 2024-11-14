@@ -1,14 +1,10 @@
-﻿@{
+﻿@model IEnumerable<Epic_Arts_Entertainment.Models.ServicoVM>
+@{
     Layout = "~/Views/Shared/_Layout_Gerenciamento.cshtml";
 }
 
 <body>
-    <header class="container">
-        <h1 class="section-title"> 
-            <a href="/Home/Index"><img src="~/images/Logo/Logo.png" alt="About-Image" style="width: 100px; height: 100px; "></a>
-        </h1>
-    </header>   
-    
+
 
     <section class="maneger-page-section">
         <div  class="container page-maneger"> 
@@ -35,49 +31,49 @@
                 </div>
             </div>
 
-            <div class="table-container table-responsive">
-                <table id="TbClientes" class="table">
-                    <colgroup>
-                        <col class="tc-nome">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Nome do Serviço</th>
-                            <th>Valor do Serviço</th>
-                            <th class="editar">Editar</th>
-                            <th class="excluir">Excluir</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
+            <div class="table-container ">
+                <div class="table-responsive">
+                    <table id="TbClientes" class="table">
+                        <colgroup>
+                            <col class="tc-nome">
+                        </colgroup>
+                        <thead>
                             <tr>
-                                <td>Id</td>
-                                <td>Nome</td>
-                                <td>Valor</td>
-
-                                <td class="text-center">
-                                    <button class="btn btn-default" onclick="definirEdt(
-                                    'Id',
-                                    'Nome',
-                                    'Valor'
-                                    )" data-bs-toggle="modal" data-bs-target="#EditarServico">
-                                        <i class="fa fa-edit" style="color: #F7F5F2;"></i>
-                                    </button>
-                                </td>
-                                <td class="text-center">
-                                    <button class="btn btn-default" onclick="definirExc(
-                                    'Id',
-                                    'Nome', 
-                                    'Valor'
-                                    )" data-bs-toggle="modal" data-bs-target="#ExcluirServico">
-                                        <i class="fa fa-trash" style="color: #F7F5F2;"></i>
-                                    </button>
-                                </td>
+                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 50px; position: sticky; top: 0; background-color: #000000;">#</th>
+                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 900px; position: sticky; top: 0; background-color: #000000;">Nome do Serviço</th>
+                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 200px; position: sticky; top: 0; background-color: #000000;">Valor do Serviço</th>
+                                <th class="editar" style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 50px; position: sticky; top: 0; background-color: #000000;">Editar</th>
+                                <th class="excluir" style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 50px; position: sticky; top: 0; background-color: #000000;">Excluir</th>
                             </tr>
-                        
-                    </tbody>
-                </table>
+                        </thead>
+                    </table>
+                    <!-- Corpo da tabela rolável -->
+                    <div style="max-height: 300px; overflow-y: auto; overflow-x: hidden;">
+                        <table id="TbServicosBody" class="table" style="width: 100%; border-collapse: collapse; table-layout: fixed;">
+                            <tbody>
+                                @foreach (var servico in Model)
+                                {
+                                    <tr>
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 50px">@servico.IdServico</td>
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 900px">@servico.TipoServico</td>
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 100px; text-align:center">@servico.Valor</td>
+
+                                        <td class="text-center" style="border: 1px solid #fc0fc0;width: 50px">
+                                            <button class="btn btn-default" onclick="definirEdt('@servico.IdServico', '@servico.TipoServico', '@servico.Valor')" data-bs-toggle="modal" data-bs-target="#EditarServico" style="color: #EAE7DC;">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                        </td>
+                                        <td class="text-center" style="border: 1px solid #fc0fc0;width: 50px">
+                                            <button class="btn btn-default" onclick="definirExc('@servico.IdServico', '@servico.TipoServico', '@servico.Valor')" data-bs-toggle="modal" data-bs-target="#ExcluirServico" style="color: #EAE7DC;">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -157,7 +153,6 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-
                         <form>
                             <div class="mb-3">
                                 <label for="nome">Nome do Serviço</label>
@@ -169,6 +164,7 @@
                                 <input type="email" id="EdtEmail" class="form-control" placeholder="R$ 1000,00" readonly>
                             </div>
                         </form>
+
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                             <button type="button" onclick="AlterarServico()" class="btn btn-primary">Atualizar</button>
@@ -279,8 +275,8 @@
             type: "POST",
             dataType: "json",
             data: dados,
-            success: function (resultado) {
-                if (resultado.success) {
+            ~: function (resultado) {
+                if (resultado.~) {
                     alert(resultado.message);  // Exibe a mensagem de sucesso
                     // Fecha o modal
                     $('#InserirUsuario').modal('hide');
@@ -327,9 +323,9 @@
             url: "/Usuario/AlterarUsuario",
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify(dados),
-            success: function (response) {
+            ~: function (response) {
                 // Manipule a resposta do servidor
-                if (response.success) {
+                if (response.~) {
                     alert("Servico alterado com sucesso!");
                     // Feche o modal de edição se necessário
                     $('#FormEditar').modal('hide');
@@ -357,9 +353,9 @@
             url: "/Usuario/ExcluirUsuario", // Substitua "Usuario" pelo nome do seu controller
             data: { id: userId },
             dataType: "json",
-            success: function (response) {
-                // A resposta do servidor está em response.success
-                if (response.success) {
+            ~: function (response) {
+                // A resposta do servidor está em response.~
+                if (response.~) {
                     // Feche o modal de exclusão
                     $('#ExcluirUsuario').modal('hide');
                     alert("Serviço excluido com sucesso!");

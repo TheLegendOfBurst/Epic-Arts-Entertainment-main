@@ -1,5 +1,4 @@
-﻿using Epic_Arts_Entertainment.ORM;
-
+﻿
 namespace Epic_Arts_Entertainment.Models
 {
     public class ServicoVM
