@@ -87,9 +87,8 @@ section {
     color: var(--red);
 }
 
-.modal-header, .modal-footer{
-    background-color: var(--red);
-
+.modal-header, .modal-footer {
+    background-color: #000000;
 }
 .modal-header h1{
     color: var(--black);
