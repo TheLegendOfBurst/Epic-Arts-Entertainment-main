@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Epic_Arts_Entertainment.Models.UsuarioVM>
+﻿    @model IEnumerable<Epic_Arts_Entertainment.Models.UsuarioVM>
 @{
     Layout = "~/Views/Shared/_Layout_Gerenciamento.cshtml";
 }
@@ -29,10 +29,7 @@
                             <i class="fa fa-plus"></i> Adicionar Cliente
                         </button>
                     </div>
-                    <!-- Contador de Registros Centralizado com Fonte Maior -->
-                    <div style="text-align: center; color: #EAE7DC; margin-top: 10px;">
-                        <strong style="font-size: 18px">Total de Usuários: <span id="registroCount">0</span></strong>
-                    </div>
+                   
                 </div>
             </div>
 
@@ -204,6 +201,7 @@
                 </div>
             </div>
         </div>
+        
 
         <div class="modal fade" id="InserirUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -503,17 +501,12 @@
 
     </section>
 
-    <!--Butao Voltar-->
+    <!-- Contador de Registros Centralizado com Fonte Maior -->
+    <div style="text-align: center; color: #fc0fc0; margin-top: 10px;">
+        <strong style="font-size: 18px">Total de Usuários: <span id="registroCount">0</span></strong>
+    </div>
+    
 
-    <section class="container text-center">
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <div>
-                <button type="button" id="send-button2" class="nav-link active btn btn-danger btn-block" style="flex: 1; margin-left: 5px;" onclick="window.location.href = '/Home/Index';">
-                    Voltar
-                </button>
-            </div>
-        </div>
-    </section>
 
 
 </body>
