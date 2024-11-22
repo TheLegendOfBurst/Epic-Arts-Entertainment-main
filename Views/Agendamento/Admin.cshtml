@@ -221,6 +221,7 @@
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                         <button type="button" class="btn btn-primary" onclick="InserirAgendamentos()">Adicionar</button>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -385,207 +386,60 @@
 
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        function InserirAgendamentos() {
+            // Coleta os valores dos campos de input
+            var data = $('#data_agdt').val();
+            var servico = $('#frutas').val();
+            var horariosSelecionados = [];
 
-        function definirEdt(id, Nome, Email, Senha, TipoUsuario, Telefone) {
+            // Coleta os horários selecionados
+            $('input[type="checkbox"][data-group="horario"]:checked').each(function () {
+                horariosSelecionados.push($(this).val());
+            });
 
-            $('#IdEdt').val(id);
-            $('#EditNome').val(Nome);
-            $('#EditSenha').val(Senha);
-            $('#EditEmail').val(Email);
-            $('#EditTel').val(Telefone);
-
-
-            var senhaValue = "";
-            if (Senha) {
-                $('#EditSenha').val(Senha);
-                senhaValue = Senha;
-            }
-
-
-            if ($('#DropTipoUsuarioEdit').length > 0) {
-                $('#DropTipoUsuarioEdit option').filter(function () {
-                    return $(this).val() === TipoUsuario;
-                }).prop('selected', true);
-                $('#DropTipoUsuarioEdit').trigger('chosen:updated');
-            } else {
-                console.error("DropDownList não encontrado.");
-            }
-        }
-
-        function definirExc(id, Nome, Email, Telefone) {
-            $('#IdExc').val(id);
-            $('#ExcNome').val(Nome);
-            $('#ExcEmail').val(Email);
-            $('#ExcTel').val(Telefone)
-        }
-
-        function InserirUsuario() {
-
-            var nome = $('#Nome').val();
-            var email = $('#Email').val();
-            var senha = $('#Senha').val();
-            var telefone = $('#Telefone').val();
-            var tipoUsuario = $('#DropTipoUsuario option:selected').val();
-
-            if (nome.trim() === "") {
-                alert("Por favor, preencha o campo Nome.");
-                return;
-            }
-            if (senha.trim() === "") {
-                alert("Por favor, preencha o campo Senha.");
-                return;
-            }
-            if (email.trim() === "") {
-                alert("Por favor, insira um email válido.");
+            // Verificação básica dos campos
+            if (data.trim() === "") {
+                alert("Por favor, escolha uma data.");
                 return;
             }
 
-            if (tipoUsuario === "Escolha o Tipo de Usuário") {
-                alert("Por favor, selecione o tipo de usuário.");
+            if (horariosSelecionados.length === 0) {
+                alert("Por favor, selecione pelo menos um horário.");
                 return;
             }
 
-            if (telefone.trim() === "") {
-                alert("Por favor, insira um número de telefone válido.");
+            if (servico === "Escolha o Serviço") {
+                alert("Por favor, escolha um serviço.");
                 return;
             }
 
-
-
+            // Prepara os dados para enviar no AJAX
             var dados = {
-                Nome: nome,
-                Email: email,
-                Senha: senha,
-                Telefone: telefone,
-                TipoUsuario: tipoUsuario
+                Data: data,
+                Servico: servico,
+                Horarios: horariosSelecionados
             };
 
-            // Faça a chamada AJAX
+            // Envia a requisição AJAX para o backend
             $.ajax({
-                url: '/Usuario/InserirUsuario',
-                type: "POST",
-                dataType: "json",
+                url: '/Agendamento/Inserir',  // Aqui vai para o seu controller de agendamentos
+                type: 'POST',
+                dataType: 'json',
                 data: dados,
                 success: function (resultado) {
                     if (resultado.success) {
-                        alert(resultado.message);  // Exibe a mensagem de sucesso
-                        // Fecha o modal
-                        $('#InserirUsuario').modal('hide');
-                        // Recarrega a págInserirUsuarioina
-                        location.reload();
+                        alert("Agendamento inserido com sucesso!");
+                        $('#InserirAgendamento').modal('hide');  // Fecha o modal de inserção
+                        location.reload();  // Atualiza a página (caso necessário)
                     } else {
-                        alert(resultado.message);  // Exibe a mensagem de falha
+                        alert(resultado.message);
                     }
                 },
                 error: function () {
-                    alert('Erro na requisição AJAX.');
+                    alert('Erro ao enviar o agendamento.');
                 }
             });
         }
-
-        function AlterarUsuario() {
-            var id = $("#IdEdt").val();
-            var nome = $("#EditNome").val();
-            var senha = $("#EditSenha").val();
-            var email = $("#EditEmail").val();
-            var tel = $('#EditTel').val();
-            var tipoCli = $('#DropTipoUsuarioEdit').val(); // Obtém o valor do tipo de cliente, não apenas o texto
-
-            // Validação do campo 'Nome'
-            if (!nome) {
-                alert("Por favor, preencha o campo Nome.");
-                return;
-            }
-
-            // Validação do campo 'Senha'
-            if (!senha) {
-                alert("Por favor, preencha o campo Senha.");
-                return;
-            }
-
-            // Validação do campo 'Email'
-            if (!email) {
-                alert("Por favor, preencha o campo Email.");
-                return;
-            }
-
-            // Validação do campo 'Telefone'
-            if (!tel) {
-                alert("Por favor, preencha o campo Telefone.");
-                return;
-            }
-
-            // Validação do campo 'Tipo de Cliente'
-            if (!tipoCli) {
-                alert("Por favor, selecione o Tipo de Cliente.");
-                return;
-            }
-
-            // Crie um objeto com os dados
-            var dados = {
-                Id: id,
-                Nome: nome,
-                Senha: senha,
-                Email: email,
-                Telefone: tel,
-                TipoUsuario: tipoCli
-            };
-
-            // Faça a chamada AJAX para o servidor
-            $.ajax({
-                type: "POST",
-                url: "/Usuario/AlterarUsuario",
-                contentType: "application/json; charset=utf-8",
-                data: JSON.stringify(dados),
-                success: function (response) {
-                    // Manipule a resposta do servidor
-                    if (response.success) {
-                        alert("Cliente alterado com sucesso!");
-                        // Feche o modal de edição se necessário
-                        $('#FormEditar').modal('hide');
-                        // Recarregue a página se necessário
-                        location.reload();
-                    } else {
-                        alert("Falha ao alterar cliente.");
-                    }
-                },
-                error: function (error) {
-                    // Manipule erros de requisição AJAX
-                    console.error("Erro na chamada AJAX:", error);
-                }
-            });
-        }
-
-        function ExcluirUsuario() {
-            // Obtenha o ID do usuário a ser excluído
-            var userId = $('#IdExc').val();
-
-            // Faça uma requisição AJAX
-            $.ajax({
-                type: "POST",
-                url: "/Usuario/ExcluirUsuario", // Substitua "Usuario" pelo nome do seu controller
-                data: { id: userId },
-                dataType: "json",
-                success: function (response) {
-                    // A resposta do servidor está em response.success
-                    if (response.success) {
-                        // Feche o modal de exclusão
-                        $('#ExcluirUsuario').modal('hide');
-                        alert("Cliente excluido com sucesso!");
-
-                        // Recarregue a página
-                        location.reload();
-                    } else {
-                        alert("Falha ao excluir usuário.");
-                    }
-                },
-                error: function () {
-                    alert("Erro na requisição AJAX.");
-                }
-            });
-        }
-
-
-
     </script>
+
 </body>
