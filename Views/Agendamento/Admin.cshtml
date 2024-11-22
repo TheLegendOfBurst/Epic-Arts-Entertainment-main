@@ -387,15 +387,17 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function InserirAgendamentos() {
-            // Coleta os valores dos campos de input
             var data = $('#data_agdt').val();
             var servico = $('#frutas').val();
             var horariosSelecionados = [];
 
-            // Coleta os horários selecionados
+            // Verificar todos os checkboxes com data-group="horario" e coletar os valores dos marcados
             $('input[type="checkbox"][data-group="horario"]:checked').each(function () {
                 horariosSelecionados.push($(this).val());
             });
+
+            // Log para depuração
+            console.log("Horários selecionados:", horariosSelecionados);  // Verifique no console se os horários estão sendo capturados corretamente
 
             // Verificação básica dos campos
             if (data.trim() === "") {
