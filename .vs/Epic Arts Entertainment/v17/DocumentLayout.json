@@ -7,12 +7,8 @@
       "RelativeMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|solutionrelative:views\\agendamento\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|c:\\users\\aluno noite\\downloads\\davig\\site\\epic-arts-entertainment-main\\codigosexcluidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|solutionrelative:codigosexcluidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|c:\\users\\aluno noite\\downloads\\davig\\site\\epic-arts-entertainment-main\\views\\servico\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|solutionrelative:views\\servico\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|c:\\users\\aluno noite\\downloads\\davig\\site\\epic-arts-entertainment-main\\wwwroot\\css\\usuario_index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|solutionrelative:wwwroot\\css\\usuario_index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,35 +40,22 @@
               "RelativeDocumentMoniker": "Views\\Agendamento\\Cadastro.cshtml",
               "ToolTip": "C:\\Users\\Aluno Noite\\Downloads\\DaviG\\Site\\Epic-Arts-Entertainment-main\\Views\\Agendamento\\Cadastro.cshtml",
               "RelativeToolTip": "Views\\Agendamento\\Cadastro.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-18T20:31:53.487Z",
+              "WhenOpened": "2024-11-22T17:14:49.941Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CodigosExcluidos.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Downloads\\DaviG\\Site\\Epic-Arts-Entertainment-main\\CodigosExcluidos.cs",
-              "RelativeDocumentMoniker": "CodigosExcluidos.cs",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Downloads\\DaviG\\Site\\Epic-Arts-Entertainment-main\\CodigosExcluidos.cs",
-              "RelativeToolTip": "CodigosExcluidos.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAABYAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T20:30:24.743Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Downloads\\DaviG\\Site\\Epic-Arts-Entertainment-main\\Views\\Servico\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Servico\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Downloads\\DaviG\\Site\\Epic-Arts-Entertainment-main\\Views\\Servico\\Index.cshtml",
-              "RelativeToolTip": "Views\\Servico\\Index.cshtml",
-              "ViewState": "AgIAAKQAAAAAAAAAAAAAAKsAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-18T20:29:34.607Z",
+              "Title": "usuario_index.css",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Downloads\\DaviG\\Site\\Epic-Arts-Entertainment-main\\wwwroot\\css\\usuario_index.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\usuario_index.css",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Downloads\\DaviG\\Site\\Epic-Arts-Entertainment-main\\wwwroot\\css\\usuario_index.css",
+              "RelativeToolTip": "wwwroot\\css\\usuario_index.css",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAAIUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-22T17:14:03.413Z",
               "EditorCaption": ""
             }
           ]
