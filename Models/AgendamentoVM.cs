@@ -1,12 +1,12 @@
 ﻿namespace Epic_Arts_Entertainment.Models
 {
-    public class AtendimentoVM
+    public class AgendamentoVM
     {
-        public int IdAtendimento { get; set; }
+        public int IdAgendamento { get; set; }
 
         public DateTime DtHoraAgendamento { get; set; }
 
-        public DateOnly DataAtendimento { get; set; }
+        public DateOnly DataAgendamento { get; set; }
 
         public TimeOnly Horario { get; set; }
 
