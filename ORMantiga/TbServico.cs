@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Epic_Arts_Entertainment.ORM1;
+namespace Epic_Arts_Entertainment.ORM;
 
 public partial class TbServico
 {
@@ -11,5 +11,5 @@ public partial class TbServico
 
     public decimal Valor { get; set; }
 
-    public virtual ICollection<TbAgendamento> TbAgendamentos { get; set; } = new List<TbAgendamento>();
+    public virtual ICollection<TbAtendimento> TbAtendimentos { get; set; } = new List<TbAtendimento>();
 }

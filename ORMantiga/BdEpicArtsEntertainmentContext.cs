@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace Epic_Arts_Entertainment.ORM1;
+namespace Epic_Arts_Entertainment.ORM;
 
 public partial class BdEpicArtsEntertainmentContext : DbContext
 {
@@ -15,13 +15,13 @@ public partial class BdEpicArtsEntertainmentContext : DbContext
     {
     }
 
-    public virtual DbSet<TbAgendamento> TbAgendamentos { get; set; }
+    public virtual DbSet<TbAtendimento> TbAtendimentos { get; set; }
 
     public virtual DbSet<TbServico> TbServicos { get; set; }
 
     public virtual DbSet<TbUsuario> TbUsuarios { get; set; }
 
-    public virtual DbSet<ViewAgendamento> ViewAgendamentos { get; set; }
+    public virtual DbSet<ViewAtendimento> ViewAtendimentos { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
@@ -29,26 +29,26 @@ public partial class BdEpicArtsEntertainmentContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<TbAgendamento>(entity =>
+        modelBuilder.Entity<TbAtendimento>(entity =>
         {
-            entity.HasKey(e => e.IdAgendamento).HasName("PK__Tb_Atend__EE2552C0BC45134B");
+            entity.HasKey(e => e.IdAtendimento).HasName("PK__Tb_Atend__EE2552C0BC45134B");
 
-            entity.ToTable("Tb_Agendamento");
+            entity.ToTable("Tb_Atendimento");
 
-            entity.Property(e => e.IdAgendamento).HasColumnName("id_Agendamento");
+            entity.Property(e => e.IdAtendimento).HasColumnName("id_Atendimento");
             entity.Property(e => e.DtHoraAgendamento).HasColumnType("datetime");
             entity.Property(e => e.IdServico).HasColumnName("id_Servico");
             entity.Property(e => e.IdUsuario).HasColumnName("id_Usuario");
 
-            entity.HasOne(d => d.IdServicoNavigation).WithMany(p => p.TbAgendamentos)
+            entity.HasOne(d => d.IdServicoNavigation).WithMany(p => p.TbAtendimentos)
                 .HasForeignKey(d => d.IdServico)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Tb_Atendimento_Tb_Servico");
+                .HasConstraintName("FK_Tb_Atendimento_Servico");
 
-            entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.TbAgendamentos)
+            entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.TbAtendimentos)
                 .HasForeignKey(d => d.IdUsuario)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Tb_Atendimento_Tb_Usuario");
+                .HasConstraintName("FK_Tb_Atendimento_Usuario");
         });
 
         modelBuilder.Entity<TbServico>(entity =>
@@ -85,17 +85,17 @@ public partial class BdEpicArtsEntertainmentContext : DbContext
                 .IsUnicode(false);
         });
 
-        modelBuilder.Entity<ViewAgendamento>(entity =>
+        modelBuilder.Entity<ViewAtendimento>(entity =>
         {
             entity
                 .HasNoKey()
-                .ToView("ViewAgendamento");
+                .ToView("View_Atendimento");
 
             entity.Property(e => e.DtHoraAgendamento).HasColumnType("datetime");
             entity.Property(e => e.Email)
                 .HasMaxLength(100)
                 .IsUnicode(false);
-            entity.Property(e => e.IdAgendamento).HasColumnName("id_Agendamento");
+            entity.Property(e => e.IdAtendimento).HasColumnName("id_Atendimento");
             entity.Property(e => e.Nome)
                 .HasMaxLength(100)
                 .IsUnicode(false);
