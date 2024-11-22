@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace Epic_Arts_Entertainment.ORM1;
+namespace Epic_Arts_Entertainment.ORM;
 
 public partial class BdEpicArtsEntertainmentContext : DbContext
 {

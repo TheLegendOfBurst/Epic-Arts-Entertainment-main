@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-
 using Epic_Arts_Entertainment.Repositorios;
 using Epic_Arts_Entertainment.ORM;
 
@@ -11,8 +10,12 @@ builder.Services.AddDbContext<BdEpicArtsEntertainmentContext>(options =>
 
 // Registrar o repositório (UsuarioRepositorio)
 builder.Services.AddScoped<UsuarioRepositorio>();  // Ou AddTransient ou AddSingleton dependendo do caso
-// Registrar o repositório (UsuarioRepositorio)
+
+// Registrar o repositório (ServicoRepositorio)
 builder.Services.AddScoped<ServicoRepositorio>();  // Ou AddTransient ou AddSingleton dependendo do caso
+
+// Registrar o repositório (AgendamentoRepositorio)
+builder.Services.AddScoped<AgendamentoRepositorio>();  // Adicionando AgendamentoRepositorio
 
 // Registrar outros serviços, como controllers com views
 builder.Services.AddControllersWithViews();
