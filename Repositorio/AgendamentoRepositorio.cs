@@ -1,5 +1,6 @@
 ﻿using Epic_Arts_Entertainment.Models;
 using Epic_Arts_Entertainment.ORM;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,42 +10,48 @@ namespace Epic_Arts_Entertainment.Repositorios
     public class AgendamentoRepositorio
     {
         private BdEpicArtsEntertainmentContext _context;
-
         public AgendamentoRepositorio(BdEpicArtsEntertainmentContext context)
         {
             _context = context;
         }
 
-        public bool InserirAgendamento(DateTime dtHoraAgendamento, DateOnly dataAgendamento, TimeOnly horario, int idUsuario, int idServico)
+        public void Add(AgendamentoVM agendamento)
         {
-            try
+            var tbAgendamento = new TbAgendamento()
             {
-                var agendamento = new TbAgendamento
-                {
-                    DtHoraAgendamento = dtHoraAgendamento,
-                    DataAgendamento = dataAgendamento,
-                    Horario = horario,
-                    IdUsuario = idUsuario,
-                    IdServico = idServico
-                };
+                DtHoraAgendamento = agendamento.DtHoraAgendamento,
+                DataAgendamento = agendamento.DataAgendamento,
+                Horario = agendamento.Horario,
+                IdUsuario = agendamento.IdUsuario,  // Vincula o usuário
+                IdServico = agendamento.IdServico   // Vincula o serviço
+            };
 
-                _context.TbAgendamentos.Add(agendamento);
+            _context.TbAgendamentos.Add(tbAgendamento);
+            _context.SaveChanges();
+        }
+
+        public void Delete(int id)
+        {
+            var tbAgendamento = _context.TbAgendamentos.FirstOrDefault(f => f.IdAgendamento == id);
+            if (tbAgendamento != null)
+            {
+                _context.TbAgendamentos.Remove(tbAgendamento);
                 _context.SaveChanges();
-
-                return true; // Retorna true para indicar sucesso
             }
-            catch (Exception ex)
+            else
             {
-                // Trate o erro ou faça um log do ex.Message se necessário
-                return false; // Retorna false para indicar falha
+                throw new Exception("Agendamento não encontrado.");
             }
         }
 
         public List<AgendamentoVM> ListarAgendamentos()
         {
-            List<AgendamentoVM> listAgendamentos = new List<AgendamentoVM>();
+            var listAte = new List<AgendamentoVM>();
 
-            var listTb = _context.TbAgendamentos.ToList();
+            // Inclui a navegação para carregar dados do usuário (e-mail, telefone)
+            var listTb = _context.TbAgendamentos
+                .Include(a => a.IdUsuarioNavigation)  // Inclui a navegação para o usuário
+                .ToList();
 
             foreach (var item in listTb)
             {
@@ -54,64 +61,37 @@ namespace Epic_Arts_Entertainment.Repositorios
                     DtHoraAgendamento = item.DtHoraAgendamento,
                     DataAgendamento = item.DataAgendamento,
                     Horario = item.Horario,
-                    IdUsuario = item.IdUsuario,
-                    IdServico = item.IdServico
+                    // Dados do Usuário pela navegação
+                    UsuarioNome = item.IdUsuarioNavigation.Nome,   // Nome do usuário
+                    UsuarioEmail = item.IdUsuarioNavigation.Email, // E-mail do usuário
+                    UsuarioTelefone = item.IdUsuarioNavigation.Telefone, // Telefone do usuário
+                    ServicoNome = item.IdServicoNavigation.TipoServico,   // Nome do serviço
+                    ServicoValor = item.IdServicoNavigation.Valor  // Valor do serviço
                 };
 
-                listAgendamentos.Add(agendamento);
+                listAte.Add(agendamento);
             }
 
-            return listAgendamentos;
+            return listAte;
         }
 
-        public bool AtualizarAgendamento(int id, DateTime dtHoraAgendamento, DateOnly dataAgendamento, TimeOnly horario, int idUsuario, int idServico)
+        public void Update(AgendamentoVM agendamento)
         {
-            try
+            var tbAgendamento = _context.TbAgendamentos.FirstOrDefault(f => f.IdAgendamento == agendamento.IdAgendamento);
+            if (tbAgendamento != null)
             {
-                var agendamento = _context.TbAgendamentos.FirstOrDefault(a => a.IdAgendamento == id);
-                if (agendamento != null)
-                {
-                    agendamento.DtHoraAgendamento = dtHoraAgendamento;
-                    agendamento.DataAgendamento = dataAgendamento;
-                    agendamento.Horario = horario;
-                    agendamento.IdUsuario = idUsuario;
-                    agendamento.IdServico = idServico;
+                tbAgendamento.DtHoraAgendamento = agendamento.DtHoraAgendamento;
+                tbAgendamento.DataAgendamento = agendamento.DataAgendamento;
+                tbAgendamento.Horario = agendamento.Horario;
+                tbAgendamento.IdUsuario = agendamento.IdUsuario;
+                tbAgendamento.IdServico = agendamento.IdServico;
 
-                    _context.SaveChanges();
-
-                    return true; // Retorna verdadeiro se a atualização for bem-sucedida
-                }
-                else
-                {
-                    return false; // Retorna falso se o agendamento não foi encontrado
-                }
+                _context.TbAgendamentos.Update(tbAgendamento);
+                _context.SaveChanges();
             }
-            catch (Exception ex)
+            else
             {
-                Console.WriteLine($"Erro ao atualizar o agendamento com ID {id}: {ex.Message}");
-                return false;
-            }
-        }
-
-        public bool ExcluirAgendamento(int id)
-        {
-            try
-            {
-                var agendamento = _context.TbAgendamentos.FirstOrDefault(a => a.IdAgendamento == id);
-                if (agendamento == null)
-                {
-                    throw new KeyNotFoundException("Agendamento não encontrado.");
-                }
-
-                _context.TbAgendamentos.Remove(agendamento);
-                _context.SaveChanges(); // Isso pode lançar uma exceção se houver dependências
-
-                return true; // Retorna true indicando sucesso
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Erro ao excluir o agendamento com ID {id}: {ex.Message}");
-                throw new Exception($"Erro ao excluir o agendamento: {ex.Message}");
+                throw new Exception("Agendamento não encontrado.");
             }
         }
     }

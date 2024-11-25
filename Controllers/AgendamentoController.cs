@@ -1,108 +1,89 @@
 using Epic_Arts_Entertainment.Models;
 using Epic_Arts_Entertainment.Repositorios;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Diagnostics;
 
 namespace Epic_Arts_Entertainment.Controllers
 {
     public class AgendamentoController : Controller
     {
-        private readonly ILogger<AgendamentoController> _logger;
         private readonly AgendamentoRepositorio _agendamentoRepositorio;
+        private readonly UsuarioRepositorio _usuarioRepositorio;
+        private readonly ServicoRepositorio _servicoRepositorio;
 
-        // Construtor com injeção de dependência do repositório
-        public AgendamentoController(ILogger<AgendamentoController> logger, AgendamentoRepositorio agendamentoRepositorio)
+        public AgendamentoController(AgendamentoRepositorio agendamentoRepositorio, UsuarioRepositorio usuarioRepositorio, ServicoRepositorio servicoRepositorio)
         {
-            _logger = logger;
             _agendamentoRepositorio = agendamentoRepositorio;
+            _usuarioRepositorio = usuarioRepositorio;
+            _servicoRepositorio = servicoRepositorio;
         }
 
-        // Página Admin (listar todos os agendamentos)
-        public IActionResult Admin()
-        {
-            var agendamentos = _agendamentoRepositorio.ListarAgendamentos();
-            return View(agendamentos);
-        }
 
-        // Página Cadastro (formulário para novo agendamento)
         public IActionResult Cadastro()
         {
             return View();
         }
 
-        // Ação para criar um agendamento
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Cadastro(DateTime dtHoraAgendamento, DateOnly dataAgendamento, TimeOnly horario, int idUsuario, int idServico)
-        {
-            var sucesso = _agendamentoRepositorio.InserirAgendamento(dtHoraAgendamento, dataAgendamento, horario, idUsuario, idServico);
-
-            if (sucesso)
-            {
-                TempData["MensagemSucesso"] = "Agendamento criado com sucesso!";
-                return RedirectToAction("Admin");
-            }
-            else
-            {
-                TempData["MensagemErro"] = "Erro ao criar agendamento.";
-                return View();
-            }
-        }
-
-        // Página Cliente (listar agendamentos do cliente)
         public IActionResult Cliente()
         {
             return View();
         }
 
-        // Ação para excluir um agendamento
-        public IActionResult Excluir(int id)
+        public IActionResult Admin()
         {
-            var sucesso = _agendamentoRepositorio.ExcluirAgendamento(id);
+            // Buscar os usuários e serviços no banco de dados
+            var usuarios = _usuarioRepositorio.ListarUsuarios();
+            var servicos = _servicoRepositorio.ListarServicos();
 
-            if (sucesso)
+            // Preencher as listas para os dropdowns
+            List<SelectListItem> idUsuario = usuarios.Select(u => new SelectListItem
             {
-                TempData["MensagemSucesso"] = "Agendamento excluído com sucesso!";
-            }
-            else
-            {
-                TempData["MensagemErro"] = "Erro ao excluir o agendamento.";
-            }
+                Value = u.IdUsuario.ToString(),
+                Text = u.Nome
+            }).ToList();
 
-            return RedirectToAction("Admin");
+            List<SelectListItem> idServico = servicos.Select(s => new SelectListItem
+            {
+                Value = s.IdServico.ToString(),
+                Text = s.TipoServico
+            }).ToList();
+
+            ViewBag.lstIdUsuario = new SelectList(idUsuario, "Value", "Text");
+            ViewBag.lstIdServico = new SelectList(idServico, "Value", "Text");
+
+            // Buscar os agendamentos e incluir os nomes de Usuário e Serviço
+            var agendamentos = _agendamentoRepositorio.ListarAgendamentos();
+
+            return View(agendamentos);
         }
 
-        // Ação para editar um agendamento
-        public IActionResult Editar(int id)
+        public IActionResult Create()
         {
-            var agendamento = _agendamentoRepositorio.ListarAgendamentos().FirstOrDefault(a => a.IdAgendamento == id);
-            if (agendamento == null)
+            // Recarrega as listas de usuários e serviços
+            var usuarios = _usuarioRepositorio.ListarUsuarios();
+            var servicos = _servicoRepositorio.ListarServicos();
+
+            List<SelectListItem> idUsuario = usuarios.Select(u => new SelectListItem
             {
-                return NotFound();
-            }
-            return View(agendamento);
+                Value = u.IdUsuario.ToString(),
+                Text = u.Nome
+            }).ToList();
+
+            List<SelectListItem> idServico = servicos.Select(s => new SelectListItem
+            {
+                Value = s.IdServico.ToString(),
+                Text = s.TipoServico
+            }).ToList();
+
+            ViewBag.lstIdUsuario = new SelectList(idUsuario, "Value", "Text");
+            ViewBag.lstIdServico = new SelectList(idServico, "Value", "Text");
+
+            return View();
         }
 
-        // Ação para atualizar o agendamento
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Editar(int id, DateTime dtHoraAgendamento, DateOnly dataAgendamento, TimeOnly horario, int idUsuario, int idServico)
-        {
-            var sucesso = _agendamentoRepositorio.AtualizarAgendamento(id, dtHoraAgendamento, dataAgendamento, horario, idUsuario, idServico);
 
-            if (sucesso)
-            {
-                TempData["MensagemSucesso"] = "Agendamento atualizado com sucesso!";
-                return RedirectToAction("Admin");
-            }
-            else
-            {
-                TempData["MensagemErro"] = "Erro ao atualizar o agendamento.";
-                return View();
-            }
-        }
 
-        // Ação para exibir erros
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
