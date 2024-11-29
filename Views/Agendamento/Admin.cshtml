@@ -55,26 +55,28 @@
                         @foreach (var agendamento in Model)
                         {
                             <tr>
-                                <td>@agendamento.IdAgendamento</td>
-                                <td>@agendamento.UsuarioNome</td> <!-- Nome do usuário -->
-                                <td>@agendamento.UsuarioEmail</td> <!-- Email do usuário -->
-                                <td>@agendamento.UsuarioTelefone</td> <!-- Telefone do usuário -->
-                                <td>@agendamento.DataAgendamento</td> <!-- Data do agendamento -->
-                                <td>@agendamento.Horario</td> <!-- Hora do agendamento -->
-                                <td>@agendamento.ServicoNome</td> <!-- Nome do serviço -->
-                                <td>@agendamento.ServicoValor</td> <!-- Valor do serviço -->
+                                
+                                <td style="color: #EAE7DC; border: 1px solid #fc0fc0; padding: 10px;width: 50px">@agendamento.IdAgendamento</td>
+                                <td style="color: #EAE7DC; border: 1px solid #fc0fc0; padding: 8px;width: 170px">@agendamento.UsuarioNome</td>
+                                <td style="color: #EAE7DC; border: 1px solid #fc0fc0; padding: 8px;width: 180px">@agendamento.UsuarioEmail</td>
+                                <td style="color: #EAE7DC; border: 1px solid #fc0fc0; padding: 8px;width: 150px">@agendamento.UsuarioTelefone</td>
+                                <td style="color: #EAE7DC; border: 1px solid #fc0fc0; padding: 8px;width: 150px">@agendamento.DataAgendamento</td>
+                                <td style="color: #EAE7DC; border: 1px solid #fc0fc0; padding: 8px;width: 80px">@agendamento.Horario</td>
+                                <td style="color: #EAE7DC; border: 1px solid #fc0fc0; padding: 8px;width: 150px">@agendamento.ServicoNome</td>
+                                <td style="color: #EAE7DC; border: 1px solid #fc0fc0; padding: 8px;width: 50px">@agendamento.ServicoValor</td>
 
-                                <td class="text-center">
+                                <td class="text-center" style="border: 1px solid #fc0fc0; padding: 4px; width: 60px;">
                                     <button class="btn btn-default"
                                             onclick="definirEdt(@agendamento.IdAgendamento, '@agendamento.UsuarioNome', '@agendamento.UsuarioEmail', '@agendamento.UsuarioTelefone', '@agendamento.DataAgendamento', '@agendamento.Horario', '@agendamento.ServicoNome', '@agendamento.ServicoValor')"
-                                            data-bs-toggle="modal" data-bs-target="#EditarAgendamento">
+                                            data-bs-toggle="modal" data-bs-target="#EditarAgendamento" style="padding: 5px 10px;">
                                         <i class="fa fa-edit" style="color: #F7F5F2;"></i>
                                     </button>
                                 </td>
-                                <td class="text-center">
+
+                                <td class="text-center" style="border: 1px solid #fc0fc0; padding: 4px; width: 60px;">
                                     <button class="btn btn-default"
                                             onclick="definirExc(@agendamento.IdAgendamento, '@agendamento.UsuarioNome', '@agendamento.UsuarioEmail', '@agendamento.UsuarioTelefone', '@agendamento.DataAgendamento', '@agendamento.Horario', '@agendamento.ServicoNome', '@agendamento.ServicoValor')"
-                                            data-bs-toggle="modal" data-bs-target="#ExcluirAgendamento">
+                                            data-bs-toggle="modal" data-bs-target="#ExcluirAgendamento" style="padding: 5px 10px;">
                                         <i class="fa fa-trash" style="color: #F7F5F2;"></i>
                                     </button>
                                 </td>
@@ -83,10 +85,7 @@
                     </tbody>
                 </table>
             </div>
-
-
         </div>
-
 
         <div class="modal fade" id="ExcluirAgendamento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
