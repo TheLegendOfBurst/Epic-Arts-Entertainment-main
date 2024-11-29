@@ -15,20 +15,12 @@ namespace Epic_Arts_Entertainment.Repositorios
             _context = context;
         }
 
-        public void Add(AgendamentoVM agendamento)
+        public void Inserir(TbAgendamento agendamento)
         {
-            var tbAgendamento = new TbAgendamento()
-            {
-                DtHoraAgendamento = agendamento.DtHoraAgendamento,
-                DataAgendamento = agendamento.DataAgendamento,
-                Horario = agendamento.Horario,
-                IdUsuario = agendamento.IdUsuario,  // Vincula o usuário
-                IdServico = agendamento.IdServico   // Vincula o serviço
-            };
-
-            _context.TbAgendamentos.Add(tbAgendamento);
-            _context.SaveChanges();
+            _context.TbAgendamentos.Add(agendamento); // Adiciona o agendamento à tabela
+            _context.SaveChanges(); // Salva as alterações no banco de dados
         }
+
 
         public void Delete(int id)
         {

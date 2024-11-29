@@ -151,80 +151,82 @@
         </div>
 
         <div class="modal fade" id="InserirAgendamento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable" style="max-height: 80vh;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title" id="exampleModalLabel">Adicionar Agendamento</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="mb-3 d-flex align-items-center">
-                        <input type="hidden" id="TxtId" class="form-check-input" value="10:00" style="margin-right: 10px;" disabled>
+            <div class="modal-dialog modal-dialog-scrollable" style="max-height: 80vh;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="exampleModalLabel">Adicionar Agendamento</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3 d-flex align-items-center">
+                                <input type="hidden" id="TxtId" class="form-check-input" value="10:00" style="margin-right: 10px;" disabled>
+                            </div>
 
-                    <div class="mb-3 d-flex align-items-center">
-                        <label for="data_agdt">Escolha uma data:</label>
-                        <input id="data_agdt" type="date" class="form-control" style="width: 300px;" placeholder="Escolha a data do agendamento" oninput="consultarAgendamento();consultarAgendamentoManutencao()">
-                    </div>
-                    <div class="mb-3 d-flex align-items-center">
-                        <label for="frutas">Escolha um serviço:</label>
-                        <select id="frutas" name="frutas">
-                                    <option value="laranja">Desenvolver Jogos</option>
-                                    <option value="banana">Design de personagens e ambientes</option>
-                                    <option value="maça" selected>Teste de Qualidade e Garantia</option>
-                                    <option value="uva">Criação de Roteiro e Narrativa</option>
-                                    <option value="melancia">Marketing e Lançamento de Jogos</option>
-                                    <option value="melancia">Suporte e Manutenção de Jogos e Consoles</option>
-                        </select>
-                    </div>
+                            <!-- Adicione o atributo data-group para cada grupo de checkboxes -->
+                            <div class="mb-3 d-flex align-items-center">
+                                <label for="frutas">Escolha uma data:</label>
+                                <input id="data_agdt" type="date" class="form-control" style="width: 300px;" placeholder="Escolha a data do agendamento" oninput="consultarAgendamento();consultarAgendamentoManutencao()">
+                            </div>
+                            <div class="mb-3 d-flex align-items-center">
+                                <label for="frutas">Escolha um serviço:</label>
+                                <select id="frutas" name="frutas">
+                                    <option value="web">Construção completa de sites - Front e Back</option>
+                                    <option value="construcao">Construção e Projeção de Banco de Dados</option>
+                                    <option value="migracao" selected>Migração para cloud</option>
+                                    <option value="administracao">Administração e Analise de Bancos de Dados</option>
+                                    <option value="dashboard">Criação de Dashboards</option>
+                                    <option value="suporte">Suporte pos-execução</option>
+                                </select>
+                            </div>
 
-                    <div class="mb-3 d-flex align-items-center">
-                        <input type="checkbox" id="chk08" class="form-check-input" value="08:00" style="margin-right: 10px;" data-group="horario">
-                        <label class="form-check-label" for="chk08">Atendimento das 8:00</label>
-                        <span id="Span08" style="color:red;"></span>
-                    </div>
+                            <div class="mb-3 d-flex align-items-center">
+    <input type="checkbox" id="chk08" class="form-check-input" value="08:00" style="margin-right: 10px;" data-group="horario">
+    <label class="form-check-label" for="chk08">Atendimento das 8:00</label>
+    <span id="Span08" style="color:red;"></span>
+</div>
 
-                    <div class="mb-3 d-flex align-items-center">
-                        <input type="checkbox" id="chk10" class="form-check-input" value="10:00" style="margin-right: 10px;" data-group="horario">
-                        <label class="form-check-label" for="chk10">Atendimento das 10:00</label>
-                        <span id="Span10" style="color:red;"></span>
-                    </div>
+<div class="mb-3 d-flex align-items-center">
+    <input type="checkbox" id="chk10" class="form-check-input" value="10:00" style="margin-right: 10px;" data-group="horario">
+    <label class="form-check-label" for="chk10">Atendimento das 10:00</label>
+    <span id="Span10" style="color:red;"></span>
+</div>
 
-                    <div class="mb-3 d-flex align-items-center">
-                        <input type="checkbox" id="chk13" class="form-check-input" value="13:00" style="margin-right: 10px;" data-group="horario">
-                        <label class="form-check-label" for="chk13">Atendimento das 13:00</label>
-                        <span id="Span13" style="color:red;"></span>
-                    </div>
+<div class="mb-3 d-flex align-items-center">
+    <input type="checkbox" id="chk13" class="form-check-input" value="13:00" style="margin-right: 10px;" data-group="horario">
+    <label class="form-check-label" for="chk13">Atendimento das 13:00</label>
+    <span id="Span13" style="color:red;"></span>
+</div>
 
-                    <div class="mb-3 d-flex align-items-center">
-                        <input type="checkbox" id="chk15" class="form-check-input" value="15:00" style="margin-right: 10px;" data-group="horario">
-                        <label class="form-check-label" for="chk15">Atendimento das 15:00</label>
-                        <span id="Span15" style="color:red;"></span>
-                    </div>
+<div class="mb-3 d-flex align-items-center">
+    <input type="checkbox" id="chk15" class="form-check-input" value="15:00" style="margin-right: 10px;" data-group="horario">
+    <label class="form-check-label" for="chk15">Atendimento das 15:00</label>
+    <span id="Span15" style="color:red;"></span>
+</div>
 
-                    <div class="mb-3 d-flex align-items-center">
-                        <input type="checkbox" id="chk17" class="form-check-input" value="17:00" style="margin-right: 10px;" data-group="horario">
-                        <label class="form-check-label" for="chk17">Atendimento das 17:00</label>
-                        <span id="Span17" style="color:red;"></span>
-                    </div>
+<div class="mb-3 d-flex align-items-center">
+    <input type="checkbox" id="chk17" class="form-check-input" value="17:00" style="margin-right: 10px;" data-group="horario">
+    <label class="form-check-label" for="chk17">Atendimento das 17:00</label>
+    <span id="Span17" style="color:red;"></span>
+</div>
 
-                    <div class="mb-3 d-flex align-items-center">
-                        <input type="checkbox" id="chk19" class="form-check-input" value="19:00" style="margin-right: 10px;" data-group="horario">
-                        <label class="form-check-label" for="chk19">Atendimento das 19:00</label>
-                        <span id="Span19" style="color:red;"></span>
-                    </div>
+<div class="mb-3 d-flex align-items-center">
+    <input type="checkbox" id="chk19" class="form-check-input" value="19:00" style="margin-right: 10px;" data-group="horario">
+    <label class="form-check-label" for="chk19">Atendimento das 19:00</label>
+    <span id="Span19" style="color:red;"></span>
+</div>
 
-                    <input type="hidden" id="IdEdt" value="">
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary" onclick="InserirAgendamentos()">Adicionar</button>
+
+                            <input type="hidden" id="IdEdt" value="">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary" onclick="InserirAgendamentos()">Adicionar</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
         <div class="modal fade" id="EditarAgendamento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -289,6 +291,7 @@
                                     <input id="data_a" type="text" class="form-control" style="width: 300px;" placeholder="Escolha a data do agendamento" oninput="consultarAgendamentoEdt();consultarAgendamentoManutencaoEdt()">
                                 </div>
                                 <div class="mb-3 d-flex align-items-center">
+
                                 </div>
                             </div>
                             <input type="hidden" id="IdEdt" class="form-control" readonly>
@@ -388,61 +391,50 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script>
 
-        function InserirAgendamentos() {
-            var data = $('#data_agdt').val();
-            var servico = $('#frutas').val();
-            var horariosSelecionados = [];
 
-            // Verificar todos os checkboxes com data-group="horario" e coletar os valores dos marcados
-            $('input[type="checkbox"][data-group="horario"]:checked').each(function () {
-                horariosSelecionados.push($(this).val());
-            });
+    function InserirAgendamentos() {
+    var horarioSelecionado = $('input[name="horario"]:checked').val();  // Captura o horário selecionado
 
-            // Log para depuração
-            console.log("Horários selecionados:", horariosSelecionados);  // Verifique no console se os horários estão sendo capturados corretamente
+    // Verificar se um horário foi selecionado
+    if (!horarioSelecionado) {
+        alert("Por favor, selecione um horário.");
+        return;
+    }
 
-            // Verificação básica dos campos
-            if (data.trim() === "") {
-                alert("Por favor, escolha uma data.");
-                return;
+    var data = $('#data_agdtM').val();
+
+    // Verificar se a data foi preenchida
+    if (data.trim() === "") {
+        alert("Por favor, escolha uma data.");
+        return;
+    }
+
+    // Dados para o envio via AJAX
+    var dados = {
+        Horario: horarioSelecionado,
+        DataAgendamento: data
+    };
+
+    // Envio via AJAX
+    $.ajax({
+        url: '/Agendamento/InserirAgendamento',  // Verifique a URL correta
+        type: 'POST',
+        dataType: 'json',
+        data: dados,
+        success: function (resultado) {
+            if (resultado.success) {
+                alert("Agendamento inserido com sucesso!");
+                $('#InserirAgendamento').modal('hide');  // Fechar o modal
+                location.reload();  // Atualizar a página
+            } else {
+                alert(resultado.message);
             }
-
-            if (horariosSelecionados.length === 0) {
-                alert("Por favor, selecione pelo menos um horário.");
-                return;
-            }
-
-            if (servico === "Escolha o Serviço") {
-                alert("Por favor, escolha um serviço.");
-                return;
-            }
-
-            // Prepara os dados para enviar no AJAX
-            var dados = {
-                Data: data,
-                Servico: servico,
-                Horarios: horariosSelecionados
-            };
-
-            // Envia a requisição AJAX para o backend
-            $.ajax({
-                url: '/Agendamento/Inserir',  // Aqui vai para o seu controller de agendamentos
-                type: 'POST',
-                dataType: 'json',
-                data: dados,
-                success: function (resultado) {
-                    if (resultado.success) {
-                        alert("Agendamento inserido com sucesso!");
-                        $('#InserirAgendamento').modal('hide');  // Fecha o modal de inserção
-                        location.reload();  // Atualiza a página (caso necessário)
-                    } else {
-                        alert(resultado.message);
-                    }
-                },
-                error: function () {
-                    alert('Erro ao enviar o agendamento.');
-                }
-            });
+        },
+        error: function () {
+            alert('Erro ao enviar o agendamento.');
         }
-    </script>
+    });
+}
+</script>
+
 </body>

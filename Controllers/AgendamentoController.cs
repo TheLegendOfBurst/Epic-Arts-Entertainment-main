@@ -1,4 +1,5 @@
 using Epic_Arts_Entertainment.Models;
+using Epic_Arts_Entertainment.ORM;
 using Epic_Arts_Entertainment.Repositorios;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -80,6 +81,43 @@ namespace Epic_Arts_Entertainment.Controllers
             ViewBag.lstIdServico = new SelectList(idServico, "Value", "Text");
 
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult InserirAgendamento(AgendamentoVM agendamento)
+        {
+            try
+            {
+                // Log para verificar os dados recebidos
+                Console.WriteLine($"Dados recebidos: {agendamento.IdUsuario}, {agendamento.IdServico}, {agendamento.DataAgendamento}, {agendamento.Horario}");
+
+                // Verificar se os dados necessários estão presentes
+                if (agendamento == null || agendamento.IdUsuario <= 0 || agendamento.IdServico <= 0)
+                {
+                    return Json(new { success = false, message = "Dados do agendamento inválidos." });
+                }
+
+                // Mapear a ViewModel para a entidade da ORM (TbAgendamento)
+                var novoAgendamento = new TbAgendamento
+                {
+                    DtHoraAgendamento = agendamento.DtHoraAgendamento,
+                    DataAgendamento = agendamento.DataAgendamento,
+                    Horario = agendamento.Horario,
+                    IdUsuario = agendamento.IdUsuario,
+                    IdServico = agendamento.IdServico
+                };
+
+                // Chamar o método de inserção do repositório
+                _agendamentoRepositorio.Inserir(novoAgendamento);
+
+                // Retornar sucesso
+                return Json(new { success = true, message = "Agendamento inserido com sucesso!" });
+            }
+            catch (Exception ex)
+            {
+                // Retornar erro em caso de exceção
+                return Json(new { success = false, message = "Erro ao processar a solicitação. Detalhes: " + ex.Message });
+            }
         }
 
 
