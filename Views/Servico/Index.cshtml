@@ -4,8 +4,6 @@
 }
 
 <body>
-
-
     <section class="maneger-page-section">
         <div class="container page-maneger servico-height">
             <div class="logo-container text-center mt-3 mb-3">
@@ -25,7 +23,6 @@
                         </div>
                     </div>
                     <div class="col-md-6 text-md-end">
-                        <!-- Alteração para "text-md-end" para alinhar à direita apenas em telas médias e maiores -->
                         <button class="btn btn-danger btn-lg" onclick="" data-bs-toggle="modal" data-bs-target="#InserirServico">
                             <i class="fa fa-plus"></i> Adicionar Serviço
                         </button>
@@ -33,7 +30,7 @@
                 </div>
             </div>
 
-            <div class="table-container ">
+            <div class="table-container">
                 <div class="table-responsive">
                     <table id="TbClientes" class="table">
                         <colgroup>
@@ -103,6 +100,7 @@
             </div>
         </div>
 
+        <!-- Modal para Inserir Serviço -->
         <div class="modal fade" id="InserirServico" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable" style="max-height: 80vh;">
                 <div class="modal-content">
@@ -112,6 +110,7 @@
                     </div>
                     <div class="modal-body">
                         <form>
+                            <!-- Campo para escolher o tipo de serviço -->
                             <div class="mb-3 row">
                                 <div class="col-md-6">
                                     @Html.DropDownList("TipoServico", ViewBag.lstTipoServico as SelectList, "Escolha o tipo de Serviço", new { @class = "form-control", @style = "width:230px; background-color: #EAE7DC; color: #333;", required = "required" })
@@ -121,9 +120,10 @@
                                 </div>
                             </div>
 
+                            <!-- Campo para escolher o valor do serviço -->
                             <div class="mb-3">
-                                <label for="v_serv">Valor do Serviço:</label>
-                                <input id="Valor" type="number" class="form-control" style="width: 300px;" placeholder="R$ 1000,00" required>
+                                <label for="Valor">Valor do Serviço:</label>
+                                @Html.DropDownList("Valor", ViewBag.lstValoresServico as SelectList, "Escolha o valor", new { @class = "form-control", @style = "width: 300px;" })
                             </div>
                         </form>
                     </div>
@@ -163,13 +163,12 @@
             </div>
         </div>
 
-
     </section>
+
     <!-- Contador de Registros Centralizado com Fonte Maior -->
     <div style="text-align: center; color: #fc0fc0; margin-top: 10px;">
         <strong style="font-size: 18px">Total de Serviços: <span id="registroCount">0</span></strong>
     </div>
-    
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
@@ -179,6 +178,69 @@
 
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Função para verificar se o campo foi preenchido e esconder o asterisco
+            function verificarPreenchimento(campo, label) {
+                // Verifica se o campo está preenchido (para input) ou se o select não tem o valor padrão
+                if (campo.value.trim() !== "" || (campo.tagName === "SELECT" && campo.selectedIndex !== 0)) {
+                    label.style.display = 'none'; // Esconde o asterisco
+                } else {
+                    label.style.display = 'inline'; // Exibe o asterisco se o campo estiver vazio
+                }
+            }
+
+            // Função para adicionar os eventos de input e change nos campos
+            function adicionarEventos() {
+                // Campos a serem monitorados
+                const campos = [
+                    { id: '#TipoServico', type: 'select' },  // Campo select
+                    { id: '#Valor', type: 'input' }         // Campo input
+                ];
+
+                campos.forEach(function (campoInfo) {
+                    const campo = document.querySelector(campoInfo.id);
+                    const label = campo.closest('.row').querySelector('label'); // Encontra o label associado ao campo
+
+                    if (campoInfo.type === 'input') {
+                        // Para campos de input, adicionar evento de 'input'
+                        campo.addEventListener('input', function () {
+                            verificarPreenchimento(campo, label);
+                        });
+                    } else if (campoInfo.type === 'select') {
+                        // Para o select, adicionar evento de 'change'
+                        campo.addEventListener('change', function () {
+                            verificarPreenchimento(campo, label);
+                        });
+                    }
+
+                    // Chama a função para inicializar o estado do campo ao carregar a página
+                    verificarPreenchimento(campo, label);
+                });
+            }
+
+            // Inicializa os eventos
+            adicionarEventos();
+
+            // Função para limpar os campos do modal quando for aberto
+            window.limparCamposInserirServico = function () {
+                // Limpar campos de texto
+                document.querySelector('#Valor').value = '';
+                document.querySelector('#TipoServico').selectedIndex = 0;  // Reseta o select para a opção "Escolha o tipo de Serviço"
+
+                // Mostrar novamente os asteriscos
+                const campos = [
+                    { id: '#TipoServico', type: 'select' },
+                    { id: '#Valor', type: 'input' }
+                ];
+
+                campos.forEach(function (campoInfo) {
+                    const campo = document.querySelector(campoInfo.id);
+                    const label = campo.closest('.row').querySelector('label');
+                    label.style.display = 'inline'; // Mostrar asterisco
+                });
+            }
+        });
 
         $(document).ready(function () {
             // Função para atualizar o contador de registros visíveis
@@ -220,38 +282,49 @@
         }
 
         function InserirServico() {
-            // Coleta os valores dos campos HTML
-            var valor = $('#Valor').val();
-            var tipoServico = $('#TipoServico option:selected').text();
+    // Coleta os valores dos campos HTML
+    var valor = $('#Valor').val();
+    var tipoServico = $('#TipoServico option:selected').val();
 
-            // Cria o objeto de dados que será enviado
-            var dados = {
-                tipoServico: tipoServico,
-                valor: valor
-            };
+    // Validação dos campos
+    if (tipoServico === "" || tipoServico === "Escolha o tipo de Serviço") {
+        alert("Por favor, selecione o tipo de serviço.");
+        return;
+    }
+    if (valor.trim() === "") {
+        alert("Por favor, insira um valor válido.");
+        return;
+    }
 
-            // Requisição AJAX para o método InserirServico
-            $.ajax({
-                url: '/Servico/InserirServico', // URL do método no controlador
-                type: "POST",
-                dataType: "json",
-                data: dados,
-                success: function (resultado) {
-                    // Verifica o sucesso da operação
-                    if (resultado.success) {
-                        alert(resultado.message);
-                        $('#InserirServico').modal('hide'); // Fecha o modal após a inserção
-                        location.reload(); // Recarrega a página para atualizar a lista de serviços
-                    } else {
-                        alert(resultado.message); // Exibe mensagem de erro
-                    }
-                },
-                error: function (xhr, status, error) {
-                    console.error("Erro ao inserir serviço:", status, error, xhr.responseText);
-                    alert('Erro na requisição AJAX: ' + xhr.responseText);
-                }
-            });
+    // Cria o objeto de dados que será enviado
+    var dados = {
+        tipoServico: tipoServico,
+        valor: valor
+    };
+
+    // Requisição AJAX para o método InserirServico
+    $.ajax({
+        url: '/Servico/InserirServico', // URL do método no controlador
+        type: "POST",
+        dataType: "json",
+        data: dados,
+        success: function (resultado) {
+            // Verifica o sucesso da operação
+            if (resultado.success) {
+                alert(resultado.message); // Exibe a mensagem de sucesso
+                $('#InserirServico').modal('hide'); // Fecha o modal após a inserção
+                location.reload(); // Recarrega a página para atualizar a lista de serviços
+            } else {
+                alert(resultado.message); // Exibe a mensagem de erro
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error("Erro ao inserir serviço:", status, error, xhr.responseText);
+            alert('Erro na requisição AJAX: ' + xhr.responseText);
         }
+    });
+}
+
 
         function AtualizarServico() {
             var idServico = $('#EdtId').val();
@@ -325,9 +398,6 @@
                 }
             });
         }
-
-
-
 
     </script>
 </body>

@@ -18,23 +18,38 @@ namespace Epic_Arts_Entertainment.Controllers
         }
 
         public IActionResult Index()
-        {
-            List<SelectListItem> tipoServico = new List<SelectListItem>
-            {
-                new SelectListItem { Value = "0", Text = "Desenvolvimento Backend .NET" },
-                new SelectListItem { Value = "1", Text = "Consultoria Cloud AWS" },
-                new SelectListItem { Value = "2", Text = "Implementação Kubernetes" },
-                new SelectListItem { Value = "3", Text = "Segurança Cibernética" },
-                new SelectListItem { Value = "4", Text = "Desenvolvimento Backend Python" },
-                new SelectListItem { Value = "5", Text = "Consultoria Cloud Azure" }
-            };
+{
+    // Lista de tipos de serviço
+    List<SelectListItem> tipoServico = new List<SelectListItem>
+    {
+        new SelectListItem { Value = "0", Text = "Desenvolvimento de Jogos" },
+        new SelectListItem { Value = "1", Text = "Criação de Roteiro e Narrativas" },
+        new SelectListItem { Value = "2", Text = "Design De Personagens e Ambientes" },
+        new SelectListItem { Value = "3", Text = "Marketing e Lançamento de Jogos" },
+        new SelectListItem { Value = "4", Text = "Teste e Garantia de Qualidade (QA)" },
+        new SelectListItem { Value = "5", Text = "Suporte e Manutenção de Jogos e Consoles" }
+    };
 
-            // Passar a lista para a View usando ViewBag
-            ViewBag.lstTipoServico = new SelectList(tipoServico, "Value", "Text");
+    // Lista de valores fixos para o serviço
+    List<SelectListItem> valoresServico = new List<SelectListItem>
+    {
+        new SelectListItem { Value = "100", Text = "R$ 100" },
+        new SelectListItem { Value = "200", Text = "R$ 200" },
+        new SelectListItem { Value = "300", Text = "R$ 300" },
+        new SelectListItem { Value = "500", Text = "R$ 500" }
+    };
 
-            var Servicos = _servicoRepositorio.ListarServicos();
-            return View(Servicos);
-        }
+    // Passando as listas para a View
+    ViewBag.lstTipoServico = new SelectList(tipoServico, "Value", "Text");
+    ViewBag.lstValoresServico = new SelectList(valoresServico, "Value", "Text");
+
+    // Carregar os serviços já existentes
+    var servicos = _servicoRepositorio.ListarServicos();
+
+    // Passar os serviços para a view
+    return View(servicos);
+}
+
 
         public IActionResult InserirServico(string tipoServico, decimal valor)
         {

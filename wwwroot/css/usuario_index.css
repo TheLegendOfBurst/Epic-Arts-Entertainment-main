@@ -154,7 +154,7 @@ label {
 }
 
 /*--------------------------------------------------------------
-# Butao voltar
+# Botão voltar e botoes normais
 --------------------------------------------------------------*/
 button{
     background-color: #fc0fc0 !important;
@@ -168,3 +168,17 @@ button:hover{
     color: var(--purple) !important;
     border: 1px solid var(--purple) !important;
 }
+
+.btn-close-custom {
+    background-color: white; /* Cor de fundo */
+    color: black; /* Cor do texto */
+    border: 1px solid #ccc; /* Borda para melhor visibilidade */
+    border-radius: 0.25rem; /* Bordas arredondadas */
+    opacity: 1; /* Garante que não seja transparente */
+    padding: 0.5rem; /* Espaçamento interno */
+}
+
+    .btn-close-custom:hover {
+        background-color: #f0f0f0; /* Cor ao passar o mouse */
+        border-color: #999; /* Cor da borda ao passar o mouse */
+    }
