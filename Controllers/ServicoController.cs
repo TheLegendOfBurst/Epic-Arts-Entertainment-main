@@ -18,9 +18,9 @@ namespace Epic_Arts_Entertainment.Controllers
         }
 
         public IActionResult Index()
-{
-    // Lista de tipos de serviço
-    List<SelectListItem> tipoServico = new List<SelectListItem>
+        {
+            // Lista de tipos de serviço
+            List<SelectListItem> tipoServico = new List<SelectListItem>
     {
         new SelectListItem { Value = "0", Text = "Desenvolvimento de Jogos" },
         new SelectListItem { Value = "1", Text = "Criação de Roteiro e Narrativas" },
@@ -30,8 +30,8 @@ namespace Epic_Arts_Entertainment.Controllers
         new SelectListItem { Value = "5", Text = "Suporte e Manutenção de Jogos e Consoles" }
     };
 
-    // Lista de valores fixos para o serviço
-    List<SelectListItem> valoresServico = new List<SelectListItem>
+            // Lista de valores fixos para o serviço
+            List<SelectListItem> valoresServico = new List<SelectListItem>
     {
         new SelectListItem { Value = "100", Text = "R$ 100" },
         new SelectListItem { Value = "200", Text = "R$ 200" },
@@ -39,35 +39,53 @@ namespace Epic_Arts_Entertainment.Controllers
         new SelectListItem { Value = "500", Text = "R$ 500" }
     };
 
-    // Passando as listas para a View
-    ViewBag.lstTipoServico = new SelectList(tipoServico, "Value", "Text");
-    ViewBag.lstValoresServico = new SelectList(valoresServico, "Value", "Text");
+            // Passando as listas para a View
+            ViewBag.lstTipoServico = new SelectList(tipoServico, "Value", "Text");
+            ViewBag.lstValoresServico = new SelectList(valoresServico, "Value", "Text");
 
-    // Carregar os serviços já existentes
-    var servicos = _servicoRepositorio.ListarServicos();
+            // Carregar os serviços já existentes
+            var servicos = _servicoRepositorio.ListarServicos();
 
-    // Passar os serviços para a view
-    return View(servicos);
-}
+            // Mapeamento do tipo de serviço para o nome
+            var tiposServicoMap = tipoServico.ToDictionary(t => t.Value, t => t.Text);
+
+            // Passar os serviços e o mapeamento de tipos para a view
+            ViewBag.TiposServicoMap = tiposServicoMap;
+            return View(servicos);
+        }
 
 
         public IActionResult InserirServico(string tipoServico, decimal valor)
         {
             try
             {
+                // Mapeamento dos tipos de serviço (podemos fazer isso diretamente ou usar um serviço)
+                var tipoServicoMap = new Dictionary<string, string>
+        {
+            { "0", "Desenvolvimento de Jogos" },
+            { "1", "Criação de Roteiro e Narrativas" },
+            { "2", "Design De Personagens e Ambientes" },
+            { "3", "Marketing e Lançamento de Jogos" },
+            { "4", "Teste e Garantia de Qualidade (QA)" },
+            { "5", "Suporte e Manutenção de Jogos e Consoles" }
+        };
+
+                // Obter o nome do tipo de serviço baseado no valor selecionado
+                string nomeTipoServico = tipoServicoMap[tipoServico];
+
                 // Chama o método do repositório que realiza a inserção no banco de dados
-                var resultado = _servicoRepositorio.InserirServico(tipoServico, valor);
+                var resultado = _servicoRepositorio.InserirServico(nomeTipoServico, valor);
 
                 // Verifica o resultado da inserção
                 if (resultado)
                 {
-                    // Se o resultado for verdadeiro, significa que o servico foi inserido com sucesso
-                    return Json(new { success = true, message = "Servico inserido com sucesso!" });
+                    // Se o resultado for verdadeiro, significa que o serviço foi inserido com sucesso
+                    return Json(new { success = true, message = "Serviço inserido com sucesso!" });
                 }
                 else
                 {
-                    // Se o resultado for falso, significa que houve um erro ao tentar inserir o servico
-                    return Json(new { success = false, message = "Erro ao inserir o servico. Tente novamente." });
+                    // Se o resultado for falso, significa que houve um erro ao tentar inserir o serviço
+                    return Json(new { success = false, message = "Erro ao inserir o serviço. Tente novamente." });
                 }
             }
             catch (Exception ex)
@@ -76,6 +94,7 @@ namespace Epic_Arts_Entertainment.Controllers
                 return Json(new { success = false, message = "Erro ao processar a solicitação. Detalhes: " + ex.Message });
             }
         }
+
         public IActionResult AtualizarServico(int id, string tipoServico, decimal valor)
         {
             try
