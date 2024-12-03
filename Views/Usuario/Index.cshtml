@@ -66,11 +66,11 @@
                                     
                                     @if (usuario.TipoUsuario == 1)
                                     {
-                                        <td style="color: #EAE7DC; border: 1px solid #fc0fc0; padding: 8px; width: 170px">Cliente</td>
+                                        <td style="color: #EAE7DC; border: 1px solid #fc0fc0; padding: 8px; width: 170px">Administrador</td>
                                     }
                                     else
                                     {
-                                        <td style="color: #EAE7DC; border: 1px solid #fc0fc0; padding: 8px; width: 170px">Administrador</td>
+                                        <td style="color: #EAE7DC; border: 1px solid #fc0fc0; padding: 8px; width: 170px">Cliente</td>
                                     }
 
 
@@ -364,16 +364,16 @@
                         alert("Por favor, insira um email válido.");
                         return;
                     }
-
-                    if (tipoUsuario === "Escolha o Tipo de Usuário") {
-                        alert("Por favor, selecione o tipo de usuário.");
-                        return;
-                    }
-
                     if (telefone.trim() === "") {
                         alert("Por favor, insira um número de telefone válido.");
                         return;
                     }
+
+                    // Verifica se o tipo de usuário foi selecionado corretamente
+                    if (tipoUsuario === "" || tipoUsuario === "Escolha o tipo de Usuário") {
+                        alert("Por favor, selecione o tipo de usuário.");
+                        return;
+                    }                 
 
                     var dados = {
                         Nome: nome,

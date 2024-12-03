@@ -102,12 +102,13 @@
 
             $.ajax({
                 type: "POST",
-                url: "/Usuario/ConsultarUsuario",
+                url: "/Usuario/VerificarLogin",
                 data: { Email: email, Senha: senha },
                 dataType: "json",
                 success: function (result) {
                     if (result.success) {
                         window.location.href = '/Home/Index';
+
                     } else {
                         // Exiba uma mensagem de erro
                         alert("Erro: " + result.message);

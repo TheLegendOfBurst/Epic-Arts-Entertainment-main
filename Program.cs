@@ -20,18 +20,29 @@ builder.Services.AddScoped<AgendamentoRepositorio>();  // Adicionando Agendament
 // Registrar outros serviços, como controllers com views
 builder.Services.AddControllersWithViews();
 
+// Adiciona suporte para sessões
+builder.Services.AddDistributedMemoryCache();  // Usando memória para cache de sessão
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);  // Defina o tempo de expiração da sessão
+    options.Cookie.HttpOnly = true;  // Protege o cookie contra acesso JavaScript
+    options.Cookie.IsEssential = true;  // Permite que a sessão seja essencial para a aplicação
+});
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure o pipeline de requisições
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+// Habilita o uso de sessões
+app.UseSession();
 
 app.UseRouting();
 
