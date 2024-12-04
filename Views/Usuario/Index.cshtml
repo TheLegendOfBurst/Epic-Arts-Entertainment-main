@@ -201,73 +201,68 @@
                 </div>
             </div>
         </div>
-        
+
 
         <div class="modal fade" id="InserirUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-
                     <div class="modal-header">
-                        <h1 class="modal-title" id="exampleModalLabel">Adicionar Cliente</h1>
+                        <h1 class="modal-title" id="exampleModalLabel" style="color:#fc0fc0">Adicionar Cliente</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-
                     <div class="modal-body">
                         <form>
-                            <p style="color: #ac0404">Campos com * vermelho são obrigatórios</p>
                             <div class="mb-3 row">
                                 <div class="col-md-6">
-                                    <input id="Nome" type="text" class="form-control" placeholder="Digite o nome do cliente">
+                                    <input id="Nome" type="text" class="form-control" placeholder="Digite o nome do cliente" oninput="toggleAsterisk(this)">
                                 </div>
                                 <div class="col-md-6">
-                                    <label>*</label>
+                                    <span id="NomeAsterisk" style="margin-top: 7px; display: inline-block; font-size: 20px; color:#fc0fc0;">*</span>
                                 </div>
                             </div>
 
                             <div class="mb-3 row">
                                 <div class="col-md-6">
-                                    <input id="Senha" type="text" class="form-control" placeholder="Digite o a senha">
+                                    <input id="Senha" type="text" class="form-control" placeholder="Digite a senha" oninput="toggleAsterisk(this)">
                                 </div>
                                 <div class="col-md-6">
-                                    <label>*</label>
+                                    <span id="SenhaAsterisk" style="margin-top: 7px; display: inline-block; font-size: 20px; color:#fc0fc0;">*</span>
                                 </div>
                             </div>
 
                             <div class="mb-3 row">
                                 <div class="col-md-7">
-                                    <input id="Email" type="email" class="form-control" placeholder="Digite o email">
+                                    <input id="Email" type="email" class="form-control" placeholder="Digite o email" oninput="toggleAsterisk(this)">
                                 </div>
                                 <div class="col-md-5">
-                                    <label>*</label>
+                                    <span id="EmailAsterisk" style="margin-top: 7px; display: inline-block; font-size: 20px; color:#fc0fc0;">*</span>
                                 </div>
                             </div>
-
 
                             <div class="mb-3 row">
                                 <div class="col-md-6">
-                                    <input id="Telefone" type="text" class="form-control" placeholder="Digite o telefone">
+                                    <input id="Telefone" type="text" class="form-control" placeholder="Digite o telefone" oninput="toggleAsterisk(this)">
                                 </div>
                                 <div class="col-md-6">
-                                    <label>*</label>
+                                    <span id="TelefoneAsterisk" style="margin-top: 7px; display: inline-block; font-size: 20px; color:#fc0fc0;">*</span>
                                 </div>
                             </div>
 
-                                <div class="mb-3 row">
-                                    <div class="col-md-6">
-                                        @Html.DropDownList("TipoUsuario", ViewBag.lstTipoUsuario as SelectList, "Escolha o tipo de Usuário", new { @class = "form-control", @style = "width:230px; background-color: #EAE7DC; color: #333;", required = "required" })
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label style="color:red">*</label>
-                                    </div>
+                            <div class="mb-3 row">
+                                <div class="col-md-6">
+                                    @Html.DropDownList("TipoUsuario", ViewBag.lstTipoUsuario as SelectList, "Escolha o tipo de Usuário", new { @class = "form-control", @style = "width:230px; background-color: #EAE7DC; color: #333;", required = "required", onchange = "toggleAsterisk(this)" })
                                 </div>
+                                <div class="col-md-6">
+                                    <span id="TipoUsuarioAsterisk" style="margin-top: 7px; display: inline-block; font-size: 20px; color:#fc0fc0;">*</span>
+                                </div>
+                            </div>
 
                             <input type="hidden" id="Id" value="" />
-
                         </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary" onclick="InserirUsuario()">Adicionar</button><!--onclick para chamar a funcao de alteração-->
+                        <button type="button" class="btn btn-primary" onclick="InserirUsuario()">Adicionar</button>
                     </div>
                 </div>
             </div>
@@ -282,7 +277,28 @@
 
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <script>
+            // Função para mostrar ou esconder o asterisco com base no preenchimento do campo
+            function toggleAsterisk(inputElement) {
+                // Pega o id do campo de entrada
+                var fieldId = inputElement.id;
+                // Encontra o asterisco correspondente ao campo
+                var asterisk = document.getElementById(fieldId + "Asterisk");
 
+                // Se o campo estiver vazio, exibe o asterisco
+                if (inputElement.value === "") {
+                    asterisk.style.display = "inline-block";
+                } else {
+                    // Se o campo estiver preenchido, esconde o asterisco
+                    asterisk.style.display = "none";
+                }
+            }
+
+            // Verifica se os campos já estão preenchidos quando o formulário for carregado
+            window.onload = function () {
+                document.querySelectorAll('input').forEach(function (inputElement) {
+                    toggleAsterisk(inputElement); // Verifica se o campo já está preenchido
+                });
+            }
 
              document.addEventListener("DOMContentLoaded", function () {
      // Função para remover o asterisco

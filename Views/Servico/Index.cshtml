@@ -116,17 +116,23 @@
                                     @Html.DropDownList("TipoServico", ViewBag.lstTipoServico as SelectList, "Escolha o tipo de Serviço", new { @class = "form-control", @style = "width:230px; background-color: #EAE7DC; color: #333;", required = "required" })
                                 </div>
                                 <div class="col-md-6">
-                                    <label style="color:red">*</label>
+                                    <span style="margin-top: 7px; display: inline-block; font-size: 20px; color: red;">*</span> <!-- Ajuste do asterisco -->
                                 </div>
                             </div>
 
                             <!-- Campo para escolher o valor do serviço -->
-                            <div class="mb-3">
-                                <label for="Valor">Valor do Serviço:</label>
-                                @Html.DropDownList("Valor", ViewBag.lstValoresServico as SelectList, "Escolha o valor", new { @class = "form-control", @style = "width: 300px;" })
+                            <div class="mb-3 row">
+                                <div class="col-md-6">
+                                    @Html.DropDownList("Valor", ViewBag.lstValoresServico as SelectList, "Escolha o valor", new { @class = "form-control", @style = "width: 230px;" })
+                                </div>
+                                <div class="col-md-6">
+                                    <span style="margin-top: 7px; display: inline-block; font-size: 20px; color: red;">*</span> <!-- Ajuste do asterisco -->
+                                </div>
                             </div>
                         </form>
                     </div>
+
+
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                         <button type="button" class="btn btn-primary" onclick="InserirServico()">Adicionar</button>
