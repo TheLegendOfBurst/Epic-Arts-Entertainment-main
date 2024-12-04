@@ -46,27 +46,37 @@
                             </tr>
                         </thead>
                     </table>
+
                     <!-- Corpo da tabela rolável -->
                     <div style="max-height: 300px; overflow-y: auto; overflow-x: hidden;">
                         <table id="TbServicosBody" class="table" style="width: 100%; border-collapse: collapse; table-layout: fixed;">
                             <tbody>
-                                @foreach (var servico in Model)
+                                @if (Model != null && Model.Any())
+                                {
+                                    @foreach (var servico in Model)
+                                    {
+                                        <tr>
+                                            <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; width: 50px">@servico.IdServico</td>
+                                            <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; width: 220px">@servico.TipoServico</td>
+                                            <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; width: 250px">@servico.Valor.ToString("C")</td> <!-- Formato de moeda -->
+
+                                            <td class="text-center" style="border: 1px solid #ddd; width: 80px;">
+                                                <button class="btn btn-default" onclick="definirEdt('@servico.IdServico', '@servico.TipoServico', '@servico.Valor')" data-bs-toggle="modal" data-bs-target="#EditarServico" style="color: #EAE7DC;">
+                                                    <i class="fa fa-edit"></i>
+                                                </button>
+                                            </td>
+                                            <td class="text-center" style="border: 1px solid #ddd; width: 80px;">
+                                                <button class="btn btn-default" onclick="definirExc('@servico.IdServico', '@servico.TipoServico', '@servico.Valor')" data-bs-toggle="modal" data-bs-target="#ExcluirServico" style="color: #EAE7DC;">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                                else
                                 {
                                     <tr>
-                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 50px">@servico.IdServico</td>
-                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 900px">@servico.TipoServico</td>
-                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 100px; text-align:center">@servico.Valor</td>
-
-                                        <td class="text-center" style="border: 1px solid #fc0fc0;width: 50px">
-                                            <button class="btn btn-default" onclick="definirEdt('@servico.IdServico', '@servico.TipoServico', '@servico.Valor')" data-bs-toggle="modal" data-bs-target="#EditarServico" style="color: #EAE7DC;">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                        </td>
-                                        <td class="text-center" style="border: 1px solid #fc0fc0;width: 50px">
-                                            <button class="btn btn-default" onclick="definirExc('@servico.IdServico', '@servico.TipoServico', '@servico.Valor')" data-bs-toggle="modal" data-bs-target="#ExcluirServico" style="color: #EAE7DC;">
-                                                <i class="fa fa-trash"></i>
-                                            </button>
-                                        </td>
+                                        <td colspan="5" style="text-align: center; color: #EAE7DC; padding: 8px;">Nenhum serviço encontrado.</td>
                                     </tr>
                                 }
                             </tbody>

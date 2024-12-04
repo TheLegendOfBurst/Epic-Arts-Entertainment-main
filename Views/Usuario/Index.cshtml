@@ -55,36 +55,43 @@
                 <div style="max-height: 300px; overflow-y: auto; overflow-x: hidden;">
                     <table id="TbClientesBody" class="table" style="width: 100%; border-collapse: collapse; table-layout: fixed;">
                         <tbody>
-                            @foreach (var usuario in Model)
+                            @if (Model != null && Model.Any())
+                            {
+                                @foreach (var usuario in Model)
+                                {
+                                    <tr>
+                                        <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px;width: 50px">@usuario.IdUsuario</td>
+                                        <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px;width: 190px">@usuario.Nome</td>
+                                        <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; width: 230px">@usuario.Senha</td>
+                                        <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; width: 312px">@usuario.Email</td>
+                                        <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; width: 160px">@usuario.Telefone</td>
+
+                                        @if (usuario.TipoUsuario == 1)
+                                        {
+                                            <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; width: 170px">Administrador</td>
+                                        }
+                                        else
+                                        {
+                                            <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; width: 170px">Cliente</td>
+                                        }
+
+                                        <td class="text-center" style="border: 1px solid #ddd;">
+                                            <button class="btn btn-default" onclick="definirEdt('@usuario.IdUsuario', '@usuario.Nome','@usuario.Email', '@usuario.Senha', '@usuario.TipoUsuario', '@usuario.Telefone')" data-bs-toggle="modal" data-bs-target="#EditarUsuario" style="color: #EAE7DC;">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                        </td>
+                                        <td class="text-center" style="border: 1px solid #ddd;">
+                                            <button class="btn btn-default" onclick="definirExc('@usuario.IdUsuario', '@usuario.Nome', '@usuario.Email', '@usuario.Telefone')" data-bs-toggle="modal" data-bs-target="#ExcluirUsuario" style="color: #EAE7DC;">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
                             {
                                 <tr>
-                                    <td style="color: #EAE7DC; border: 1px solid #fc0fc0; padding: 8px;width: 50px">@usuario.IdUsuario</td>
-                                    <td style="color: #EAE7DC; border: 1px solid #fc0fc0; padding: 8px;width: 190px">@usuario.Nome</td>
-                                    <td style="color: #EAE7DC; border: 1px solid #fc0fc0; padding: 8px; width: 230px">@usuario.Senha</td>
-                                    <td style="color: #EAE7DC; border: 1px solid #fc0fc0; padding: 8px; width: 312px">@usuario.Email</td>   
-                                    <td style="color: #EAE7DC; border: 1px solid #fc0fc0; padding: 8px; width: 160px">@usuario.Telefone</td>
-                                    
-                                    @if (usuario.TipoUsuario == 1)
-                                    {
-                                        <td style="color: #EAE7DC; border: 1px solid #fc0fc0; padding: 8px; width: 170px">Administrador</td>
-                                    }
-                                    else
-                                    {
-                                        <td style="color: #EAE7DC; border: 1px solid #fc0fc0; padding: 8px; width: 170px">Cliente</td>
-                                    }
-
-
-
-                                    <td class="text-center" style="border: 1px solid #fc0fc0;">
-                                        <button class="btn btn-default" onclick="definirEdt('@usuario.IdUsuario', '@usuario.Nome','@usuario.Email', '@usuario.Senha', '@usuario.TipoUsuario', '@usuario.Telefone')" data-bs-toggle="modal" data-bs-target="#EditarUsuario" style="color: #EAE7DC;">
-                                            <i class="fa fa-edit"></i>
-                                        </button>
-                                    </td>
-                                    <td class="text-center" style="border: 1px solid #fc0fc0;">
-                                        <button class="btn btn-default" onclick="definirExc('@usuario.IdUsuario', '@usuario.Nome', '@usuario.Email', '@usuario.Telefone')" data-bs-toggle="modal" data-bs-target="#ExcluirUsuario" style="color: #EAE7DC;">
-                                            <i class="fa fa-trash"></i>
-                                        </button>
-                                    </td>
+                                    <td colspan="8" style="text-align: center; color: #EAE7DC; padding: 8px;">Nenhum usuário encontrado.</td>
                                 </tr>
                             }
                         </tbody>
@@ -105,55 +112,59 @@
                     </div>
                     <div class="modal-body">
                         <form>
+                            <!-- Nome -->
                             <div class="mb-3 row">
                                 <div class="col-md-6">
-                                    <input id="EdtNome" type="text" class="form-control" placeholder="Digite o nome do cliente">
+                                    <input id="EdtNome" type="text" class="form-control" placeholder="Digite o nome do cliente" style="width: 200px;">
                                 </div>
                                 <div class="col-md-6">
                                     <label>*</label>
                                 </div>
                             </div>
 
+                            <!-- Senha -->
                             <div class="mb-3 row">
                                 <div class="col-md-6">
-                                    <input id="EdtSenha" type="text" class="form-control" placeholder="Digite o a senha">
+                                    <input id="EdtSenha" type="text" class="form-control" placeholder="Digite a senha" style="width: 200px;">
                                 </div>
                                 <div class="col-md-6">
                                     <label>*</label>
                                 </div>
                             </div>
 
+                            <!-- Email -->
                             <div class="mb-3 row">
                                 <div class="col-md-7">
-                                    <input id="EdtEmail" type="email" class="form-control" placeholder="Digite o email">
+                                    <input id="EdtEmail" type="email" class="form-control" placeholder="Digite o email" style="width: 200px;">
                                 </div>
                                 <div class="col-md-5">
                                     <label>*</label>
                                 </div>
                             </div>
 
-
+                            <!-- Telefone -->
                             <div class="mb-3 row">
                                 <div class="col-md-6">
-                                    <input id="EdtTel" type="text" class="form-control" placeholder="Digite o telefone">
+                                    <input id="EdtTel" type="text" class="form-control" placeholder="Digite o telefone" style="width: 200px;">
                                 </div>
                                 <div class="col-md-6">
                                     <label>*</label>
                                 </div>
                             </div>
 
-                                <div class="mb-3 row">
-                                    <div class="col-md-6">
-                                        @Html.DropDownList("EdtTipoUsuario", ViewBag.lstTipoUsuario as SelectList, "Escolha o tipo de Usuário", new { @class = "form-control", @style = "width:230px; background-color: #EAE7DC; color: #333;", required = "required" })
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label style="color:red">*</label>
-                                    </div>
+                            <!-- Tipo de Usuário -->
+                            <div class="mb-3 row">
+                                <div class="col-md-6">
+                                    @Html.DropDownList("EdtTipoUsuario", ViewBag.lstTipoUsuario as SelectList, "Escolha o tipo de Usuário", new { @class = "form-control", @style = "width: 200px; background-color: #EAE7DC; color: #333;", required = "required" })
                                 </div>
+                                <div class="col-md-6">
+                                    <label style="color:red">*</label>
+                                </div>
+                            </div>
 
                             <input type="hidden" id="EdtId" value="" />
-
                         </form>
+                    </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -205,45 +216,50 @@
                     </div>
                     <div class="modal-body">
                         <form>
+                            <!-- Nome -->
                             <div class="mb-3 row">
                                 <div class="col-md-6">
-                                    <input id="Nome" type="text" class="form-control" placeholder="Digite o nome do cliente" oninput="toggleAsterisk(this)">
+                                    <input id="Nome" type="text" class="form-control" placeholder="Digite o nome do cliente" oninput="toggleAsterisk(this)" style="width: 200px;">
                                 </div>
                                 <div class="col-md-6">
                                     <span id="NomeAsterisk" style="margin-top: 7px; display: inline-block; font-size: 20px; color:#fc0fc0;">*</span>
                                 </div>
                             </div>
 
+                            <!-- Senha -->
                             <div class="mb-3 row">
                                 <div class="col-md-6">
-                                    <input id="Senha" type="text" class="form-control" placeholder="Digite a senha" oninput="toggleAsterisk(this)">
+                                    <input id="Senha" type="password" class="form-control" placeholder="Digite a senha" oninput="toggleAsterisk(this)" style="width: 200px;">
                                 </div>
                                 <div class="col-md-6">
                                     <span id="SenhaAsterisk" style="margin-top: 7px; display: inline-block; font-size: 20px; color:#fc0fc0;">*</span>
                                 </div>
                             </div>
 
+                            <!-- Email -->
                             <div class="mb-3 row">
                                 <div class="col-md-7">
-                                    <input id="Email" type="email" class="form-control" placeholder="Digite o email" oninput="toggleAsterisk(this)">
+                                    <input id="Email" type="email" class="form-control" placeholder="Digite o email" oninput="toggleAsterisk(this)" style="width: 200px;">
                                 </div>
                                 <div class="col-md-5">
-                                    <span id="EmailAsterisk" style="margin-top: 7px; display: inline-block; font-size: 20px; color:#fc0fc0;">*</span>
+                                    <span id="EmailAsterisk" style="margin-top: 7px; display: inline-block; font-size: 20px; color:#fc0fc0; margin-left: -41px;">*</span>
                                 </div>
                             </div>
 
+                            <!-- Telefone -->
                             <div class="mb-3 row">
                                 <div class="col-md-6">
-                                    <input id="Telefone" type="text" class="form-control" placeholder="Digite o telefone" oninput="toggleAsterisk(this)">
+                                    <input id="Telefone" type="text" class="form-control" placeholder="Digite o telefone" oninput="toggleAsterisk(this)" style="width: 200px;">
                                 </div>
                                 <div class="col-md-6">
                                     <span id="TelefoneAsterisk" style="margin-top: 7px; display: inline-block; font-size: 20px; color:#fc0fc0;">*</span>
                                 </div>
                             </div>
 
+                            <!-- Tipo de Usuário -->
                             <div class="mb-3 row">
                                 <div class="col-md-6">
-                                    @Html.DropDownList("TipoUsuario", ViewBag.lstTipoUsuario as SelectList, "Escolha o tipo de Usuário", new { @class = "form-control", @style = "width:230px; background-color: #EAE7DC; color: #333;", required = "required", onchange = "toggleAsterisk(this)" })
+                                    @Html.DropDownList("TipoUsuario", ViewBag.lstTipoUsuario as SelectList, "Escolha o tipo de Usuário", new { @class = "form-control", @style = "width: 200px; background-color: #EAE7DC; color: #333;", required = "required", onchange = "toggleAsterisk(this)" })
                                 </div>
                                 <div class="col-md-6">
                                     <span id="TipoUsuarioAsterisk" style="margin-top: 7px; display: inline-block; font-size: 20px; color:#fc0fc0;">*</span>
@@ -252,6 +268,8 @@
 
                             <input type="hidden" id="Id" value="" />
                         </form>
+                    </div>
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -270,6 +288,15 @@
 
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <script>
+            // Função para validar apenas caracteres no nome (incluindo espaços)
+            function validateName(input) {
+                input.value = input.value.replace(/[^a-zA-Z\s]/g, ''); // Permite apenas letras e espaços
+            }
+
+            // Função para validar apenas números no telefone (incluindo espaços)
+            function validatePhone(input) {
+                input.value = input.value.replace(/[^0-9\s]/g, ''); // Permite apenas números e espaços
+            }
             // Função para mostrar ou esconder o asterisco com base no preenchimento do campo
             function toggleAsterisk(inputElement) {
                 // Pega o id do campo de entrada
