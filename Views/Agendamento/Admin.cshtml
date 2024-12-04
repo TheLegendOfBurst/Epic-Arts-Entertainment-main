@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<Epic_Arts_Entertainment.Models.AgendamentoVM>
+
+@{
     Layout = "~/Views/Shared/_Layout_Gerenciamento.cshtml";
 }
 
@@ -84,7 +86,6 @@
 
                     </tbody>
                 </table>
-=======
                  <div class="table-container" style="max-height: 300px; overflow-y: auto;">
                 <!-- Corpo da tabela rolável -->
                 <div style="max-height: 300px; overflow-y: auto; overflow-x: auto;">
@@ -95,22 +96,22 @@
                 @foreach (var agendamento in Model)
                 {
                     <tr>
-                        <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; min-width: 50px">@agendamento.IdAgendamento</td>
-                        <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; min-width: 150px">@agendamento.DtHoraAgendamento</td>
-                        <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; min-width: 150px">@agendamento.DataAgendamento.ToString("dd/MM/yyyy")</td>
-                        <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; min-width: 150px">@agendamento.Horario.ToString("HH:mm")</td>
-                        <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; min-width: 150px">@agendamento.UsuarioNome</td>
-                        <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; min-width: 150px; word-wrap: break-word;">@agendamento.UsuarioEmail</td>
-                        <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; min-width: 150px">@agendamento.UsuarioTelefone</td>
-                        <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; min-width: 150px">@agendamento.ServicoNome</td>
-                        <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; min-width: 150px">@agendamento.ServicoValor.ToString("C")</td>
-                        <td class="text-center" style="border: 1px solid #ddd; min-width: 80px;">
-                            <button class="btn btn-default" onclick="definirEdt('@agendamento.IdAgendamento', '@agendamento.UsuarioNome', '@agendamento.ServicoNome', '@agendamento.ServicoValor')" data-bs-toggle="modal" data-bs-target="#EditarAtendimento" style="color: #EAE7DC;">
+                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; min-width: 50px">@agendamento.IdAgendamento</td>
+                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; min-width: 150px">@agendamento.DtHoraAgendamento</td>
+                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; min-width: 150px">@agendamento.DataAgendamento.ToString("dd/MM/yyyy")</td>
+                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; min-width: 150px">@agendamento.Horario.ToString("HH:mm")</td>
+                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; min-width: 150px">@agendamento.UsuarioNome</td>
+                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; min-width: 150px; word-wrap: break-word;">@agendamento.UsuarioEmail</td>
+                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; min-width: 150px">@agendamento.UsuarioTelefone</td>
+                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; min-width: 150px">@agendamento.ServicoNome</td>
+                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; min-width: 150px">@agendamento.ServicoValor.ToString("C")</td>
+                        <td class="text-center" style="border: 1px solid #fc0fc0; min-width: 80px;">
+                            <button class="btn btn-default" onclick="definirEdt('@agendamento.IdAgendamento', '@agendamento.UsuarioNome', '@agendamento.ServicoNome', '@agendamento.ServicoValor')" data-bs-toggle="modal" data-bs-target="#EditarAtendimento" style="color: #fc0fc0;">
                                 <i class="fa fa-edit"></i>
                             </button>
                         </td>
-                        <td class="text-center" style="border: 1px solid #ddd; min-width: 80px;">
-                            <button class="btn btn-default" onclick="definirExc('@agendamento.IdAgendamento', '@agendamento.UsuarioNome', '@agendamento.ServicoNome', '@agendamento.ServicoValor')" data-bs-toggle="modal" data-bs-target="#ExcluirAtendimento" style="color: #EAE7DC;">
+                        <td class="text-center" style="border: 1px solid #fc0fc0; min-width: 80px;">
+                            <button class="btn btn-default" onclick="definirExc('@agendamento.IdAgendamento', '@agendamento.UsuarioNome', '@agendamento.ServicoNome', '@agendamento.ServicoValor')" data-bs-toggle="modal" data-bs-target="#ExcluirAtendimento" style="color: #fc0fc0;">
                                 <i class="fa fa-trash"></i>
                             </button>
                         </td>
@@ -120,7 +121,7 @@
             else
             {
                 <tr>
-                    <td colspan="11" style="text-align: center; color: #EAE7DC; padding: 8px;">Nenhum atendimento encontrado.</td>
+                    <td colspan="11" style="text-align: center; color: #fc0fc0; padding: 8px;">Nenhum atendimento encontrado.</td>
                 </tr>
             }
         </tbody>

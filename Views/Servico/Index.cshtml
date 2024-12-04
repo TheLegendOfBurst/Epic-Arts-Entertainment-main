@@ -56,17 +56,17 @@
                                     @foreach (var servico in Model)
                                     {
                                         <tr>
-                                            <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; width: 50px">@servico.IdServico</td>
-                                            <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; width: 220px">@servico.TipoServico</td>
-                                            <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; width: 250px">@servico.Valor.ToString("C")</td> <!-- Formato de moeda -->
+                                            <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 50px">@servico.IdServico</td>
+                                            <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 220px">@servico.TipoServico</td>
+                                            <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 250px">@servico.Valor.ToString("C")</td> <!-- Formato de moeda -->
 
-                                            <td class="text-center" style="border: 1px solid #ddd; width: 80px;">
-                                                <button class="btn btn-default" onclick="definirEdt('@servico.IdServico', '@servico.TipoServico', '@servico.Valor')" data-bs-toggle="modal" data-bs-target="#EditarServico" style="color: #EAE7DC;">
+                                            <td class="text-center" style="border: 1px solid #fc0fc0; width: 80px;">
+                                                <button class="btn btn-default" onclick="definirEdt('@servico.IdServico', '@servico.TipoServico', '@servico.Valor')" data-bs-toggle="modal" data-bs-target="#EditarServico" style="color: #fc0fc0;">
                                                     <i class="fa fa-edit"></i>
                                                 </button>
                                             </td>
-                                            <td class="text-center" style="border: 1px solid #ddd; width: 80px;">
-                                                <button class="btn btn-default" onclick="definirExc('@servico.IdServico', '@servico.TipoServico', '@servico.Valor')" data-bs-toggle="modal" data-bs-target="#ExcluirServico" style="color: #EAE7DC;">
+                                            <td class="text-center" style="border: 1px solid #fc0fc0; width: 80px;">
+                                                <button class="btn btn-default" onclick="definirExc('@servico.IdServico', '@servico.TipoServico', '@servico.Valor')" data-bs-toggle="modal" data-bs-target="#ExcluirServico" style="color: #fc0fc0;">
                                                     <i class="fa fa-trash"></i>
                                                 </button>
                                             </td>
@@ -76,7 +76,7 @@
                                 else
                                 {
                                     <tr>
-                                        <td colspan="5" style="text-align: center; color: #EAE7DC; padding: 8px;">Nenhum serviço encontrado.</td>
+                                        <td colspan="5" style="text-align: center; color: #fc0fc0; padding: 8px;">Nenhum serviço encontrado.</td>
                                     </tr>
                                 }
                             </tbody>
@@ -123,7 +123,7 @@
                             <!-- Campo para escolher o tipo de serviço -->
                             <div class="mb-3 row">
                                 <div class="col-md-6">
-                                    @Html.DropDownList("TipoServico", ViewBag.lstTipoServico as SelectList, "Escolha o tipo de Serviço", new { @class = "form-control", @style = "width:230px; background-color: #EAE7DC; color: #333;", required = "required" })
+                                    @Html.DropDownList("TipoServico", ViewBag.lstTipoServico as SelectList, "Escolha o tipo de Serviço", new { @class = "form-control", @style = "width:230px; background-color: #fc0fc0; color: #333;", required = "required" })
                                 </div>
                                 <div class="col-md-6">
                                     <span style="margin-top: 7px; display: inline-block; font-size: 20px; color: red;">*</span> <!-- Ajuste do asterisco -->

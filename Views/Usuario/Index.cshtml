@@ -37,7 +37,7 @@
                 <!-- Tabela com cabeçalho fixo -->
                 <table id="TbClientes" class="table" style="width: 100%; border-collapse: collapse; table-layout: fixed;">
                     <!-- Cabeçalho fixo -->
-                    <thead style="background-color: fc0fc0; color: #EAE7DC;">
+                    <thead style="background-color: fc0fc0; color: #fc0fc0;">
                         <tr>
                             <th style="border: 1px solid #fc0fc0; padding: 8px; width: 50px; position: sticky; top: 0; background-color: fc0fc0; z-index: 2;">#</th>
                             <th style="border: 1px solid #fc0fc0; padding: 8px; width: 190px; position: sticky; top: 0; background-color: fc0fc0; z-index: 2;">Nome</th>
@@ -60,28 +60,28 @@
                                 @foreach (var usuario in Model)
                                 {
                                     <tr>
-                                        <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px;width: 50px">@usuario.IdUsuario</td>
-                                        <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px;width: 190px">@usuario.Nome</td>
-                                        <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; width: 230px">@usuario.Senha</td>
-                                        <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; width: 312px">@usuario.Email</td>
-                                        <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; width: 160px">@usuario.Telefone</td>
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px;width: 50px">@usuario.IdUsuario</td>
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px;width: 190px">@usuario.Nome</td>
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 230px">@usuario.Senha</td>
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 312px">@usuario.Email</td>
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 160px">@usuario.Telefone</td>
 
                                         @if (usuario.TipoUsuario == 1)
                                         {
-                                            <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; width: 170px">Administrador</td>
+                                            <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 170px">Administrador</td>
                                         }
                                         else
                                         {
-                                            <td style="color: #EAE7DC; border: 1px solid #ddd; padding: 8px; width: 170px">Cliente</td>
+                                            <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 170px">Cliente</td>
                                         }
 
-                                        <td class="text-center" style="border: 1px solid #ddd;">
-                                            <button class="btn btn-default" onclick="definirEdt('@usuario.IdUsuario', '@usuario.Nome','@usuario.Email', '@usuario.Senha', '@usuario.TipoUsuario', '@usuario.Telefone')" data-bs-toggle="modal" data-bs-target="#EditarUsuario" style="color: #EAE7DC;">
+                                        <td class="text-center" style="border: 1px solid #fc0fc0;">
+                                            <button class="btn btn-default" onclick="definirEdt('@usuario.IdUsuario', '@usuario.Nome','@usuario.Email', '@usuario.Senha', '@usuario.TipoUsuario', '@usuario.Telefone')" data-bs-toggle="modal" data-bs-target="#EditarUsuario" style="color: #fc0fc0;">
                                                 <i class="fa fa-edit"></i>
                                             </button>
                                         </td>
-                                        <td class="text-center" style="border: 1px solid #ddd;">
-                                            <button class="btn btn-default" onclick="definirExc('@usuario.IdUsuario', '@usuario.Nome', '@usuario.Email', '@usuario.Telefone')" data-bs-toggle="modal" data-bs-target="#ExcluirUsuario" style="color: #EAE7DC;">
+                                        <td class="text-center" style="border: 1px solid #fc0fc0;">
+                                            <button class="btn btn-default" onclick="definirExc('@usuario.IdUsuario', '@usuario.Nome', '@usuario.Email', '@usuario.Telefone')" data-bs-toggle="modal" data-bs-target="#ExcluirUsuario" style="color: #fc0fc0;">
                                                 <i class="fa fa-trash"></i>
                                             </button>
                                         </td>
@@ -91,7 +91,7 @@
                             else
                             {
                                 <tr>
-                                    <td colspan="8" style="text-align: center; color: #EAE7DC; padding: 8px;">Nenhum usuário encontrado.</td>
+                                    <td colspan="8" style="text-align: center; color: #fc0fc0; padding: 8px;">Nenhum usuário encontrado.</td>
                                 </tr>
                             }
                         </tbody>
@@ -155,7 +155,7 @@
                             <!-- Tipo de Usuário -->
                             <div class="mb-3 row">
                                 <div class="col-md-6">
-                                    @Html.DropDownList("EdtTipoUsuario", ViewBag.lstTipoUsuario as SelectList, "Escolha o tipo de Usuário", new { @class = "form-control", @style = "width: 200px; background-color: #EAE7DC; color: #333;", required = "required" })
+                                    @Html.DropDownList("EdtTipoUsuario", ViewBag.lstTipoUsuario as SelectList, "Escolha o tipo de Usuário", new { @class = "form-control", @style = "width: 200px; background-color: #fc0fc0; color: #333;", required = "required" })
                                 </div>
                                 <div class="col-md-6">
                                     <label style="color:red">*</label>
@@ -259,7 +259,7 @@
                             <!-- Tipo de Usuário -->
                             <div class="mb-3 row">
                                 <div class="col-md-6">
-                                    @Html.DropDownList("TipoUsuario", ViewBag.lstTipoUsuario as SelectList, "Escolha o tipo de Usuário", new { @class = "form-control", @style = "width: 200px; background-color: #EAE7DC; color: #333;", required = "required", onchange = "toggleAsterisk(this)" })
+                                    @Html.DropDownList("TipoUsuario", ViewBag.lstTipoUsuario as SelectList, "Escolha o tipo de Usuário", new { @class = "form-control", @style = "width: 200px; background-color: #fc0fc0; color: #333;", required = "required", onchange = "toggleAsterisk(this)" })
                                 </div>
                                 <div class="col-md-6">
                                     <span id="TipoUsuarioAsterisk" style="margin-top: 7px; display: inline-block; font-size: 20px; color:#fc0fc0;">*</span>
