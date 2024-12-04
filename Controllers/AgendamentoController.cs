@@ -37,6 +37,19 @@ namespace Epic_Arts_Entertainment.Controllers
             var usuarios = _usuarioRepositorio.ListarUsuarios();
             var servicos = _servicoRepositorio.ListarServicos();
 
+            List<SelectListItem> tipoServico = new List<SelectListItem>
+            {
+                new SelectListItem { Value = "1", Text = "Desenvolvimento Backend .NET" },
+                new SelectListItem { Value = "2", Text = "Consultoria Cloud AWS" },
+                new SelectListItem { Value = "3", Text = "Implementação Kubernetes" },
+                new SelectListItem { Value = "4", Text = "Segurança Cibernética" },
+                new SelectListItem { Value = "5", Text = "Desenvolvimento Backend Python" },
+                new SelectListItem { Value = "6", Text = "Consultoria Cloud Azure" }
+            };
+            // Passar a lista para a View usando ViewBag
+            ViewBag.lstTipoServico = new SelectList(tipoServico, "Value", "Text");
+
+
             // Preencher as listas para os dropdowns
             List<SelectListItem> idUsuario = usuarios.Select(u => new SelectListItem
             {
@@ -53,34 +66,27 @@ namespace Epic_Arts_Entertainment.Controllers
             ViewBag.lstIdUsuario = new SelectList(idUsuario, "Value", "Text");
             ViewBag.lstIdServico = new SelectList(idServico, "Value", "Text");
 
+
             // Buscar os agendamentos e incluir os nomes de Usuário e Serviço
             var agendamentos = _agendamentoRepositorio.ListarAgendamentos();
 
             return View(agendamentos);
         }
 
-        public IActionResult Create()
+        public IActionResult ConsultarAgendamento(string data)
         {
-            // Recarrega as listas de usuários e serviços
-            var usuarios = _usuarioRepositorio.ListarUsuarios();
-            var servicos = _servicoRepositorio.ListarServicos();
 
-            List<SelectListItem> idUsuario = usuarios.Select(u => new SelectListItem
+            var agendamento = _agendamentoRepositorio.ConsultarAgendamento(data);
+
+            if (agendamento != null)
             {
-                Value = u.IdUsuario.ToString(),
-                Text = u.Nome
-            }).ToList();
-
-            List<SelectListItem> idServico = servicos.Select(s => new SelectListItem
+                return Json(agendamento);
+            }
+            else
             {
-                Value = s.IdServico.ToString(),
-                Text = s.TipoServico
-            }).ToList();
+                return NotFound();
+            }
 
-            ViewBag.lstIdUsuario = new SelectList(idUsuario, "Value", "Text");
-            ViewBag.lstIdServico = new SelectList(idServico, "Value", "Text");
-
-            return View();
         }
 
         [HttpPost]

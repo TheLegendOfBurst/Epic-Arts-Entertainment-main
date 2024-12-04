@@ -100,12 +100,11 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title" id="exampleModalLabel" style="color: #fc0fc0;">Editar Clientess</h1>
+                        <h1 class="modal-title" id="exampleModalLabel" style="color: #fc0fc0;">Editar Clientes</h1>
                         <button type="button" class="btn-close btn-close-custom" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form>
-                            <p style="color:#ac0404">Campos com * vermelho são obrigatórios</p>
                             <div class="mb-3 row">
                                 <div class="col-md-6">
                                     <input id="EdtNome" type="text" class="form-control" placeholder="Digite o nome do cliente">
@@ -168,36 +167,30 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title" id="exampleModalLabel">Excluir Cliente</h1>
+                        <h1 class="modal-title" id="exampleModalLabel" style="color: #fc0fc0;">Excluir Cliente</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form>
                             <div class="mb-3">
-                                <label for="nome">Nome</label>
-                                <input type="text" id="ExcNome" class="form-control" >
-
+                                <label for="nome">Nome:</label>
+                                <input type="text" id="ExcNome" class="form-control" style="width: 200px;">
                             </div>
                             <div class="mb-3">
-                                <label for="email">Email</label>
-                                <input type="email" id="ExcEmail" class="form-control" >
-
+                                <label for="email">Email:</label>
+                                <input type="email" id="ExcEmail" class="form-control" style="width: 200px;">
                             </div>
                             <div class="mb-3">
-                                <label for="telefone">Telefone</label>
-                                <input type="text" id="ExcTel" class="form-control" >
-
+                                <label for="telefone">Telefone:</label>
+                                <input type="text" id="ExcTel" class="form-control" style="width: 200px;">
                             </div>
-                            <input type="hidden" id="ExcId" class="form-control" >
-
+                            <input type="hidden" id="ExcId" class="form-control">
                         </form>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                             <button type="button" class="btn btn-danger" onclick="ExcluirUsuario()">Excluir</button>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </div>
