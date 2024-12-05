@@ -12,12 +12,14 @@ namespace Epic_Arts_Entertainment.Controllers
         private readonly AgendamentoRepositorio _agendamentoRepositorio;
         private readonly UsuarioRepositorio _usuarioRepositorio;
         private readonly ServicoRepositorio _servicoRepositorio;
+        private BdEpicArtsEntertainmentContext _context;
 
-        public AgendamentoController(AgendamentoRepositorio agendamentoRepositorio, UsuarioRepositorio usuarioRepositorio, ServicoRepositorio servicoRepositorio)
+        public AgendamentoController(AgendamentoRepositorio agendamentoRepositorio, UsuarioRepositorio usuarioRepositorio, ServicoRepositorio servicoRepositorio, BdEpicArtsEntertainmentContext context)
         {
             _agendamentoRepositorio = agendamentoRepositorio;
             _usuarioRepositorio = usuarioRepositorio;
             _servicoRepositorio = servicoRepositorio;
+            _context = context;
         }
 
         public IActionResult Admin()
