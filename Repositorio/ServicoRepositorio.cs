@@ -116,7 +116,7 @@ namespace Epic_Arts_Entertainment.Repositorios
             }
         }
 
-        public List<ServicoVM> ListarNomesServicos(string tipoServico, int id)
+        public List<ServicoVM> ListarNomesServicos()
         {
             // Recupera os serviços com filtragem e projeção para ServicoVM diretamente no banco de dados
             var query = _context.TbServicos.ToList();

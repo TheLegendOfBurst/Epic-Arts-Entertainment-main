@@ -19,41 +19,25 @@ namespace Epic_Arts_Entertainment.Controllers
 
         public IActionResult Index()
         {
-            // Lista de tipos de serviço
-            List<SelectListItem> tipoServico = new List<SelectListItem>
-    {
-        new SelectListItem { Value = "0", Text = "Desenvolvimento de Jogos" },
-        new SelectListItem { Value = "1", Text = "Criação de Roteiro e Narrativas" },
-        new SelectListItem { Value = "2", Text = "Design De Personagens e Ambientes" },
-        new SelectListItem { Value = "3", Text = "Marketing e Lançamento de Jogos" },
-        new SelectListItem { Value = "4", Text = "Teste e Garantia de Qualidade (QA)" },
-        new SelectListItem { Value = "5", Text = "Suporte e Manutenção de Jogos e Consoles" }
-    };
+            // Chama o método ListarNomesAgendamentos para obter a lista de usuários
+            var nomeServicos = _servicoRepositorio.ListarNomesServicos();
 
-            // Lista de valores fixos para o serviço
-            List<SelectListItem> valoresServico = new List<SelectListItem>
-    {
-        new SelectListItem { Value = "100", Text = "R$ 100" },
-        new SelectListItem { Value = "200", Text = "R$ 200" },
-        new SelectListItem { Value = "300", Text = "R$ 300" },
-        new SelectListItem { Value = "500", Text = "R$ 500" }
-    };
+            if (nomeServicos != null && nomeServicos.Any())
+            {
+                // Cria a lista de SelectListItem
+                var selectList = nomeServicos.Select(u => new SelectListItem
+                {
+                    Value = u.IdServico.ToString(),  // O valor do item será o ID do usuário
+                    Text = u.TipoServico             // O texto exibido será o nome do usuário
+                }).ToList();
 
-            // Passando as listas para a View
-            ViewBag.lstTipoServico = new SelectList(tipoServico, "Value", "Text");
-            ViewBag.lstValoresServico = new SelectList(valoresServico, "Value", "Text");
+                // Passa a lista para o ViewBag para ser utilizada na view
+                ViewBag.Servicos = selectList;
+            }
 
-            // Carregar os serviços já existentes
-            var servicos = _servicoRepositorio.ListarServicos();
-
-            // Mapeamento do tipo de serviço para o nome
-            var tiposServicoMap = tipoServico.ToDictionary(t => t.Value, t => t.Text);
-
-            // Passar os serviços e o mapeamento de tipos para a view
-            ViewBag.TiposServicoMap = tiposServicoMap;
-            return View(servicos);
+            var Servicos = _servicoRepositorio.ListarServicos();
+            return View(Servicos);
         }
-
 
         public IActionResult InserirServico(string tipoServico, decimal valor)
         {
