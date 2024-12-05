@@ -16,55 +16,34 @@ namespace Epic_Arts_Entertainment.Repositorios
             _context = context;
         }
 
-        public void Add(AgendamentoVM agendamento)
+        public bool InserirAgendamento(DateTime dtHoraAgendamento, DateOnly dataAgendamento, TimeOnly horario, int IdUsuario, int IdServico)
         {
-            var tbAgendamento = new TbAgendamento()
+            try
             {
-                DtHoraAgendamento = agendamento.DtHoraAgendamento,
-                DataAgendamento = agendamento.DataAgendamento,
-                Horario = agendamento.Horario,
-                IdUsuario = agendamento.IdUsuario,  // Vincula o usuário
-                IdServico = agendamento.IdServico   // Vincula o serviço
-            };
+                // Criando uma instância do modelo AtendimentoVM
+                var atendimento = new TbAgendamento
+                {
+                    DtHoraAgendamento = dtHoraAgendamento,
+                    DataAgendamento = dataAgendamento,
+                    Horario = horario,
+                    IdUsuario = IdUsuario,
+                    IdServico = IdServico
+                };
 
-            _context.TbAgendamentos.Add(tbAgendamento);
-            _context.SaveChanges();
-        }
+                // Adicionando o atendimento ao contexto
+                _context.TbAgendamentos.Add(atendimento);
+                _context.SaveChanges(); // Persistindo as mudanças no banco de dados
 
-        public void Delete(int id)
-        {
-            var tbAgendamento = _context.TbAgendamentos.FirstOrDefault(f => f.IdAgendamento == id);
-            if (tbAgendamento != null)
-            {
-                _context.TbAgendamentos.Remove(tbAgendamento);
-                _context.SaveChanges();
+                return true; // Retorna true indicando sucesso
             }
-            else
+            catch (Exception ex)
             {
-                throw new Exception("Agendamento não encontrado.");
-            }
-        }
-
-        public void Update(AgendamentoVM agendamento)
-        {
-            var tbAgendamento = _context.TbAgendamentos.FirstOrDefault(f => f.IdAgendamento == agendamento.IdAgendamento);
-            if (tbAgendamento != null)
-            {
-                tbAgendamento.DtHoraAgendamento = agendamento.DtHoraAgendamento;
-                tbAgendamento.DataAgendamento = agendamento.DataAgendamento;
-                tbAgendamento.Horario = agendamento.Horario;
-                tbAgendamento.IdUsuario = agendamento.IdUsuario;
-                tbAgendamento.IdServico = agendamento.IdServico;
-
-                _context.TbAgendamentos.Update(tbAgendamento);
-                _context.SaveChanges();
-            }
-            else
-            {
-                throw new Exception("Agendamento não encontrado.");
+                // Em caso de erro, pode-se logar a exceção (ex.Message)
+                return false; // Retorna false em caso de erro
             }
         }
 
+       
         public List<AgendamentoVM> ListarAgendamentos()
         {
             var listAte = new List<AgendamentoVM>();
