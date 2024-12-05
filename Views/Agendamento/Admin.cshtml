@@ -5,16 +5,11 @@
 }
 
 <body>
-    <header class="container">
-        <h1 class="section-title">
-            <a href="/Home/Index"><img src="~/images/Logo/Logo.png" alt="About-Image" style="width: 100px; height: 100px; "></a>
-        </h1>
-    </header>
-
-
     <section class="maneger-page-section">
-        <div class="container page-maneger">
-
+        <div class="container page-maneger servico-height">
+            <div class="logo-container text-center mt-3 mb-3">
+                <a href="/Home/Index"><img src="~/images/Logo/Logo.png" alt="About-Image" style="width: 100px; height: 100px; "></a>
+            </div>
             <div class="add-user-button">
                 <br>
                 <h1 class="section-title cliente-title-maneger">Gerenciamento de Agendamento</h1>
@@ -29,7 +24,6 @@
                         </div>
                     </div>
                     <div class="col-md-6 text-md-end">
-
                         <!-- Alteração para "text-md-end" para alinhar à direita apenas em telas médias e maiores -->
                         <button class="btn btn-danger btn-lg" onclick="" data-bs-toggle="modal" data-bs-target="#InserirAgendamento">
                             <i class="fa fa-plus"></i> Adicionar Agendamento
@@ -38,79 +32,77 @@
                 </div>
             </div>
 
-            <div class="table-container table-responsive">
-                <table id="TbClientes" class="table">
-                    <colgroup>
-                        <col class="tc-nome">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Nome</th>
-                            <th>Email</th>
-                            <th>Telefone</th>
-                            <th>Agendamento para a Data</th>
-                            <th>Horario</th>
-                            <th>Serviço</th>
-                            <th>Valor</th>
-                            <th>Confirmação</th>
-                            <th class="editar">Editar</th>
-                            <th class="excluir">Excluir</th>
-                        </tr>
-                    </thead>
-                  
-                </table>
-                <div class="table-container" style="max-height: 300px; overflow-y: auto;">
+            <!-- Contador de Registros Centralizado com Fonte Maior -->
+            <div style="text-align: center; color: #ac0404; margin-top: 10px;">
+                <strong style="font-size: 18px">Total de Usuários: <span id="registroCount">0</span></strong>
+            </div>
 
-
-                    <!-- Corpo da tabela rolável -->
-
-                    <div style="max-height: 300px; overflow-y: auto; overflow-x: auto;">
-                        <table id="TbAtendimentosBody" class="table" style="width: 100%; border-collapse: collapse; table-layout: fixed;">
-                            <tbody>
-                                @if (Model != null && Model.Any())
-                                {
-                                    @foreach (var agendamento in Model)
-                                    {
-                                        <tr>
-                                            <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; min-width: 50px">@agendamento.IdAgendamento</td>
-                                            <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; min-width: 150px">@agendamento.DtHoraAgendamento</td>
-                                            <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; min-width: 150px">@agendamento.DataAgendamento.ToString("dd/MM/yyyy")</td>
-                                            <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; min-width: 150px">@agendamento.Horario.ToString("HH:mm")</td>
-                                            <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; min-width: 150px">@agendamento.UsuarioNome</td>
-                                            <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; min-width: 150px; word-wrap: break-word;">@agendamento.UsuarioEmail</td>
-                                            <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; min-width: 150px">@agendamento.UsuarioTelefone</td>
-                                            <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; min-width: 150px">@agendamento.ServicoNome</td>
-                                            <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; min-width: 150px">@agendamento.ServicoValor.ToString("C")</td>
-                                            <td class="text-center" style="border: 1px solid #fc0fc0; min-width: 80px;">
-                                                <button class="btn btn-default" onclick="definirEdt('@agendamento.IdAgendamento', '@agendamento.UsuarioNome', '@agendamento.ServicoNome', '@agendamento.ServicoValor')" 
-                                                data-bs-toggle="modal" data-bs-target="#AlterarAgendamento" style="color: #fc0fc0;">
-                                                    <i class="fa fa-edit"></i>
-                                                </button>
-                                            </td>
-                                            <td class="text-center" style="border: 1px solid #fc0fc0; min-width: 80px;">
-                                                <button class="btn btn-default" onclick="definirExc('@agendamento.IdAgendamento', '@agendamento.UsuarioNome', '@agendamento.ServicoNome', '@agendamento.ServicoValor')" 
-                                                data-bs-toggle="modal" data-bs-target="#ExcluirAgendamento" style="color: #fc0fc0;">
-                                                    <i class="fa fa-trash"></i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    }
-                                }
-                                else
+            <div class="table-container" style="max-height: 400px; overflow-y: auto;">
+                <div>
+                    <table id="TbClientes" class="table" style="width: 100%; border-collapse: collapse;">
+                        <colgroup>
+                            <col class="tc-nome">
+                        </colgroup>
+                        <thead style="background-color: #ac0404; color: #fc0fc0;">
+                            <tr>
+                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">#</th>
+                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Nome</th>
+                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Email</th>
+                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Telefone</th>
+                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0;background-color: #000000;">Data do Agendamento</th>
+                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Horario</th>
+                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Serviço</th>
+                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Valor</th>
+                                <th class="editar" style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Editar</th>
+                                <th class="excluir" style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Excluir</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null && Model.Any())
+                            {
+                                @foreach (var agendamento in Model)
                                 {
                                     <tr>
-                                        <td colspan="11" style="text-align: center; color: #fc0fc0; padding: 8px;">Nenhum atendimento encontrado.</td>
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.IdAgendamento</td>
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.UsuarioNome</td> <!-- Nome do usuário -->
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.UsuarioEmail</td> <!-- Email do usuário -->
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.UsuarioTelefone</td> <!-- Telefone do usuário -->
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.DataAgendamento</td> <!-- Data do agendamento -->
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.Horario</td> <!-- Hora do agendamento -->
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.ServicoNome</td> <!-- Nome do serviço -->
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.ServicoValor</td> <!-- Valor do serviço -->
+
+                                        <td class="text-center" style="color: #ac0404; border: 1px solid #fc0fc0;">
+                                            <button class="btn btn-editar"
+                                                    onclick="definirEdt(@agendamento.IdAgendamento, '@agendamento.UsuarioNome', '@agendamento.UsuarioEmail', '@agendamento.UsuarioTelefone', '@agendamento.DataAgendamento', '@agendamento.Horario', '@agendamento.ServicoNome', '@agendamento.ServicoValor')"
+                                                    data-bs-toggle="modal" data-bs-target="#AlterarAgendamento">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                        </td>
+                                        <td class="text-center" style="color: #ac0404; border: 1px solid #fc0fc0;">
+                                            <button class="btn btn-excluir"
+                                                    onclick="definirExc(@agendamento.IdAgendamento, '@agendamento.UsuarioNome', '@agendamento.UsuarioEmail', '@agendamento.UsuarioTelefone', '@agendamento.DataAgendamento', '@agendamento.Horario', '@agendamento.ServicoNome', '@agendamento.ServicoValor')"
+                                                    data-bs-toggle="modal" data-bs-target="#ExcluirAgendamento">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </td>
+
                                     </tr>
                                 }
-                            </tbody>
-                        </table>
-                    </div>
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="11" style="text-align: center; color: #EAE7DC; padding: 8px;">Nenhum atendimento encontrado.</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </div>
 
         </div>
+
 
         <div class="modal fade" id="ExcluirAgendamento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -188,10 +180,9 @@
                                 <input type="hidden" id="TxtId" class="form-check-input" value="10:00" style="margin-right: 10px;" disabled>
                             </div>
 
-                            <!-- Adicione o atributo data-group para cada grupo de checkboxes -->
+                            <!-- Campo de data -->
                             <div class="mb-3 d-flex align-items-center">
-                                <label for="frutas">Escolha uma data:</label>
-                                <input id="data_agdt" type="date" class="form-control" style="width: 300px;" placeholder="Escolha a data do agendamento" oninput="consultarAgendamento();consultarAgendamentoManutencao()">
+                                <input id="data_agdt" type="date" class="form-control" style="width: 300px;" placeholder="Escolha a data do agendamento" oninput="consultarAgendamento()">
                             </div>
 
                             <div class="mb-3 row">
@@ -214,44 +205,49 @@
                                 <div class="col-md-6">
                                     <label style="color:red">*</label>
                                 </div>
+                            </div>
+
+                            <fieldset>
+                                <legend>Escolha o horário de atendimento:</legend>
 
                                 <div class="mb-3 d-flex align-items-center">
-                                    <input type="options" id="chk08" class="form-check-input" value="08:00" style="margin-right: 10px;" data-group="horario">
+                                    <input type="checkbox" id="chk08" class="form-check-input" value="08:00" style="margin-right: 10px;" data-group="horario" disabled>
                                     <label class="form-check-label" for="chk08">Atendimento das 8:00</label>
                                     <span id="Span08" style="color:red;"></span>
                                 </div>
 
                                 <div class="mb-3 d-flex align-items-center">
-                                    <input type="options" id="chk10" class="form-check-input" value="10:00" style="margin-right: 10px;" data-group="horario">
+                                    <input type="checkbox" id="chk10" class="form-check-input" value="10:00" style="margin-right: 10px;" data-group="horario" disabled>
                                     <label class="form-check-label" for="chk10">Atendimento das 10:00</label>
                                     <span id="Span10" style="color:red;"></span>
                                 </div>
 
                                 <div class="mb-3 d-flex align-items-center">
-                                    <input type="options" id="chk13" class="form-check-input" value="13:00" style="margin-right: 10px;" data-group="horario">
+                                    <input type="checkbox" id="chk13" class="form-check-input" value="13:00" style="margin-right: 10px;" data-group="horario" disabled>
                                     <label class="form-check-label" for="chk13">Atendimento das 13:00</label>
                                     <span id="Span13" style="color:red;"></span>
                                 </div>
 
                                 <div class="mb-3 d-flex align-items-center">
-                                    <input type="options" id="chk15" class="form-check-input" value="15:00" style="margin-right: 10px;" data-group="horario">
+                                    <input type="checkbox" id="chk15" class="form-check-input" value="15:00" style="margin-right: 10px;" data-group="horario" disabled>
                                     <label class="form-check-label" for="chk15">Atendimento das 15:00</label>
                                     <span id="Span15" style="color:red;"></span>
                                 </div>
 
                                 <div class="mb-3 d-flex align-items-center">
-                                    <input type="options" id="chk17" class="form-check-input" value="17:00" style="margin-right: 10px;" data-group="horario">
+                                    <input type="checkbox" id="chk17" class="form-check-input" value="17:00" style="margin-right: 10px;" data-group="horario" disabled>
                                     <label class="form-check-label" for="chk17">Atendimento das 17:00</label>
                                     <span id="Span17" style="color:red;"></span>
                                 </div>
 
                                 <div class="mb-3 d-flex align-items-center">
-                                    <input type="options" id="chk19" class="form-check-input" value="19:00" style="margin-right: 10px;" data-group="horario">
+                                    <input type="checkbox" id="chk19" class="form-check-input" value="19:00" style="margin-right: 10px;" data-group="horario" disabled>
                                     <label class="form-check-label" for="chk19">Atendimento das 19:00</label>
                                     <span id="Span19" style="color:red;"></span>
                                 </div>
+                            </fieldset>
 
-                                <input type="hidden" id="IdEdt" value="">
+                            <input type="hidden" id="IdEdt" value="">
                         </form>
                     </div>
                     <div class="modal-footer">
@@ -325,7 +321,6 @@
                                     <input id="data_a" type="text" class="form-control" style="width: 300px;" placeholder="Escolha a data do agendamento" oninput="consultarAgendamentoEdt();consultarAgendamentoManutencaoEdt()">
                                 </div>
                                 <div class="mb-3 d-flex align-items-center">
-                                    
                                 </div>
                             </div>
                             <input type="hidden" id="IdEdt" class="form-control" readonly>
@@ -341,18 +336,10 @@
             </div>
         </div>
 
+
     </section>
 
-    <!--Butao Voltar-->
-    <section class="container text-center">
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <div>
-                <button type="button" id="send-button2" class="nav-link active btn btn-danger btn-block" style="flex: 1; margin-left: 5px;" onclick="window.location.href = '/Home/Index';">
-                    Voltar
-                </button>
-            </div>
-        </div>
-    </section>
+
 
     <script src="~/lib/swiper/swiper-bundle.min.js"></script>
 

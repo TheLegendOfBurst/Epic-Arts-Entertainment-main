@@ -178,7 +178,9 @@ button:hover{
     padding: 0.5rem; /* Espaçamento interno */
 }
 
-    .btn-close-custom:hover {
+.btn-close-custom:hover {
         background-color: #f0f0f0; /* Cor ao passar o mouse */
         border-color: #999; /* Cor da borda ao passar o mouse */
-    }
+}
+
+

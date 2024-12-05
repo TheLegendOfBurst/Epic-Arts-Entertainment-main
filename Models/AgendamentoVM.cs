@@ -1,4 +1,6 @@
-﻿namespace Epic_Arts_Entertainment.Models
+﻿using Epic_Arts_Entertainment.ORM;
+
+namespace Epic_Arts_Entertainment.Models
 {
     public class AgendamentoVM
     {

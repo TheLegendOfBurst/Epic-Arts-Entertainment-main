@@ -115,5 +115,22 @@ namespace Epic_Arts_Entertainment.Repositorios
                 throw new Exception($"Erro ao excluir o servico: {ex.Message}");
             }
         }
+
+        public List<ServicoVM> ListarNomesServicos(string tipoServico, int id)
+        {
+            // Recupera os serviços com filtragem e projeção para ServicoVM diretamente no banco de dados
+            var query = _context.TbServicos.ToList();
+
+            // Projeta diretamente para ServicoVM e retorna como lista
+            var listServicos = _context.TbServicos
+                .Select(s => new ServicoVM
+                {
+                    IdServico = s.IdServico,
+                    TipoServico = s.TipoServico,
+                })
+                .ToList();
+
+            return listServicos;
+        }
     }
 }
