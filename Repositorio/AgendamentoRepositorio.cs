@@ -43,7 +43,65 @@ namespace Epic_Arts_Entertainment.Repositorios
             }
         }
 
-       
+        // Método para atualizar um atendimento
+        public bool AlterarAgendamento(int id, string data, int servico, TimeOnly horario)
+        {
+            try
+            {
+                TbAgendamento agt = _context.TbAgendamentos.Find(id);
+                DateOnly dtHoraAgendamento;
+                if (agt != null)
+                {
+                    agt.IdAgendamento = id;
+                    if (data != null)
+                    {
+                        if (DateOnly.TryParse(data, out dtHoraAgendamento))
+                        {
+                            agt.DataAgendamento = dtHoraAgendamento;
+                        }
+                    }
+
+                    // Corrigido a verificação do tipo TimeOnly
+                    if (horario != TimeOnly.MinValue)  // Verificando se o horário não é o valor padrão
+                    {
+                        agt.Horario = horario;
+                    }
+
+                    agt.IdServico = servico;
+                    _context.SaveChanges();
+                    return true;
+                }
+
+                return false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool ExcluirAgendamento(int id)
+        {
+            try
+            {
+
+
+                var agt = _context.TbAgendamentos.Where(a => a.IdAgendamento == id).FirstOrDefault();
+                if (agt != null)
+                {
+                    _context.TbAgendamentos.Remove(agt);
+
+                }
+                _context.SaveChanges();
+                return true;
+            }
+
+            catch (Exception)
+            {
+
+                return false;
+            }
+        }
         public List<AgendamentoVM> ListarAgendamentos()
         {
             var listAte = new List<AgendamentoVM>();
