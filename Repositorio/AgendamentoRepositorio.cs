@@ -80,6 +80,7 @@ namespace Epic_Arts_Entertainment.Repositorios
             }
         }
 
+
         public bool ExcluirAgendamento(int id)
         {
             try
@@ -102,6 +103,7 @@ namespace Epic_Arts_Entertainment.Repositorios
                 return false;
             }
         }
+
         public List<AgendamentoVM> ListarAgendamentos()
         {
             var listAte = new List<AgendamentoVM>();

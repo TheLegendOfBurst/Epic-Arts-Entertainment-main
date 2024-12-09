@@ -7,6 +7,7 @@
 
 <body>
     <section class="maneger-page-section">
+
         <div class="container page-maneger servico-height">
             <div class="logo-container text-center mt-3 mb-3">
                 <a href="/Home/Index"><img src="~/images/Logo/Logo.png" alt="About-Image" style="width: 100px; height: 100px; "></a>
@@ -117,50 +118,47 @@
                         <form>
                             <div class="mb-3">
                                 <label for="nome">Nome</label>
-                                <input type="text" id="ExcNome" class="form-control" placeholder="Digite seu nome..." readonly>
+                                <input type="text" id="ExcNome" class="form-control" readonly>
 
                             </div>
                             <div class="mb-3">
                                 <label for="email">Email</label>
-                                <input type="email" id="ExcEmail" class="form-control" placeholder="Digite seu email..." readonly>
+                                <input type="email" id="ExcEmail" class="form-control" readonly>
 
                             </div>
                             <div class="mb-3">
                                 <label for="telefone">Telefone</label>
-                                <input type="text" id="ExcTel" class="form-control" placeholder="Digite seu telefone..." readonly>
+                                <input type="text" id="ExcTel" class="form-control" readonly>
 
                             </div>
+
                             <div class="mb-3">
-                                <label for="telefone">Data de Agendamento</label>
-                                <input type="date" id="ExcAgendarData" class="form-control" placeholder="01/01/2000" readonly>
+                                <label for="telefone">Data do Agendamento</label>
+                                <input type="text" id="ExcData" class="form-control" readonly>
 
                             </div>
                             <div class="mb-3">
                                 <label for="telefone">Horario</label>
-                                <input type="text" id="ExcHorario" class="form-control" placeholder="08:00" readonly>
+                                <input type="text" id="ExcHorario" class="form-control" readonly>
 
                             </div>
                             <div class="mb-3">
-                                <label for="telefone">Servico</label>
-                                <input type="text" id="ExcServico" class="form-control" placeholder="Digite seu telefone..." readonly>
+                                <label for="telefone">Tecnica</label>
+                                <input type="text" id="ExcTecnica" class="form-control" readonly>
 
                             </div>
                             <div class="mb-3">
                                 <label for="telefone">Valor</label>
-                                <input type="text" id="ExcVal" class="form-control" placeholder="R$ 100,00" readonly>
-
-                            </div>
-                            <div class="mb-3">
-                                <label for="telefone">Confirmação</label>
-                                <input type="text" id="ExcConf" class="form-control" placeholder="Confirmado" readonly>
+                                <input type="text" id="ExcVal" class="form-control" readonly>
 
                             </div>
 
+                            <input type="hidden" id="ExcId" class="form-control" readonly>
 
                         </form>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                            <button type="button" class="btn btn-danger" onclick="ExcluirAgendamentoo()">Excluir</button>
+                            <button type="button" class="btn btn-danger" onclick="ExcluirAgendamento()">Excluir</button>
                         </div>
 
                     </div>

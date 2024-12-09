@@ -109,6 +109,14 @@ section {
     overflow: hidden !important;
 }
 
+.clienteagendamento-height {
+    background-color: var(--black) !important;
+    margin-top: 2.5em !important;
+    border-radius: 8px !important;
+    box-shadow: 2px 0 10px -2px #fc0fc0 !important;
+    overflow: hidden !important;
+}
+
 #send-button2 {
     z-index: 9999 !important; /* Força a prioridade do z-index */
 }
