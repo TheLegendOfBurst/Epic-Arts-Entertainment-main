@@ -22,74 +22,122 @@
 <body>
 
     <!-------------------- Header Area (Start) -------------------->
+    <header class="header">
+        @{
+            // Verifica se o usuário está autenticado e recupera os dados de ambiente
+            bool usuarioAutenticado = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("USUARIO_ID"));
+            string usuarioNome = Environment.GetEnvironmentVariable("USUARIO_NOME");
+            string tipoUsuario = Environment.GetEnvironmentVariable("USUARIO_TIPO");
+        }
+        <!-- Logo --> 
+        
 
-    <nav id="NavBar-2">
-        <span style="transform: translateX(20px);">
-            <i class="fas fa-home fa-lg" aria-hidden="true" style="color: #fc0fc0;"></i>
-            <a href="/Home/Index" style="margin-left: 10px; text-decoration: none;">Inicio</a>
-        </span>
+        <!-- Logo End -->
 
-        <div id="SubMenu-2" style="transform: translateX(18px); position: relative;">
-            <span style="display: flex; align-items: center;">
-                <i class="fa fa-user" aria-hidden="true" style="color: #fc0fc0;"></i>
-                <a id="loginButton" href="/Usuario/Login" style="margin-left: 10px; text-decoration: none;">Login</a>
-                <a href="/Home/Index" style="margin-left: 15px; text-decoration: none;">
-                    <i class="fa fa-arrow-left" aria-hidden="true" style="margin-right: 5px;"></i> <!-- Ícone de seta para a esquerda -->
-                    Voltar
-                </a>
-            </span>
-            <div id="SubMenu-2-content">
-                <a href="/Usuario/Index">
-                    <i class="fa fa-users" aria-hidden="true" style="margin-right: 20px;"></i>
-                    Usuarios
-                </a>
-                <a href="/Agendamento/Admin">
-                    <i class="fa fa-calendar" aria-hidden="true" style="margin-right: 20px;"></i>
-                    Agendamento Admin
-                </a>
-                <a href="/Agendamento/Cliente">
-                    <i class="fa fa-calendar" aria-hidden="true" style="margin-right: 20px;"></i>
-                    Agendamento User
-                </a>
-                <a href="/Agendamento/Cadastro">
-                    <i class="fa fa-address-book" aria-hidden="true" style="margin-right: 20px;"></i>
-                    Cadastro Agendamento
-                </a>
-                <a href="/Servico/Index">
-                    <i class="fa fa-file-archive" aria-hidden="true" style="margin-right: 20px;"></i>
-                    Gerenciamento de Servico
-                </a>
-                <a href="#logout">
-                    <i class="fa fa-file-archive" aria-hidden="true" style="margin-right: 20px;"></i>
-                    Relatório
-                </a>
+        <!-- Navbar -->
+        <nav class="navbar" style="display: flex; justify-content: flex-end; align-items: center; flex-wrap: wrap; padding-right: 100px; margin-top: -5px;">
+    <span style="display: flex; align-items: center; margin-right: 9px;">
+        <i class="fas fa-home fa-lg" aria-hidden="true" style="color: #fc0fc0;"></i>
+        <a href="/Home/Index" style="margin-left: 10px;">Inicio</a>
+    </span>
+
+
+    @if (usuarioAutenticado)
+    {
+        @if (tipoUsuario == "1")
+        {
+            <div class="dropdown">
+                <span style="display: flex; align-items: center; margin-right: 20px;">
+                    <i class="fa fa-user" aria-hidden="true" style="color: #ffffff;"></i>
+                    <a href="#" style="margin-left: 10px;">@usuarioNome</a>
+                    <i class="fa fa-chevron-down" aria-hidden="true" style="color: #fc0fc0; margin-left: 5px;"></i>
+                </span>
+                <div class="dropdown-content">
+                    <a href="/Usuario/Index">
+                        <i class="fa fa-users" aria-hidden="true" style="margin-right: 20px; color: #fc0fc0;"></i>
+                        Usuarios
+                    </a>
+                    <a href="/Agendamento/Admin">
+                        <i class="fa fa-calendar" aria-hidden="true" style="margin-right: 20px; color: #fc0fc0;"></i>
+                        Agendamento Admin
+                    </a>                           
+
+                    <a href="/Servico/Index">
+                        <i class="fa fa-file-archive" aria-hidden="true" style="margin-right: 20px; color: #fc0fc0;"></i>
+                        Serviços
+                    </a>
+                    <a href="#logout">
+                        <i class="fa fa-file-archive" aria-hidden="true" style="margin-right: 20px; color: #fc0fc0;"></i>
+                        Relatório
+                    </a>
+                    <a href="javascript:void(0);" onclick="logout()" style="padding: 7px; text-decoration: none; display: flex; align-items: center; margin: 5px;">
+                        <i class="fa fa-sign-out-alt" aria-hidden="true" style="margin-right: 8px;"></i> Sair
+                    </a>
+                </div>
             </div>
+
+        }
+        else {
+            <div class="dropdown">
+                <span style="display: flex; align-items: center; margin-right: 20px;">
+                    <i class="fa fa-user" aria-hidden="true" style="color: #fc0fc0;"></i>
+                    <a href="#" style="margin-left: 10px;">@usuarioNome</a>
+                    <i class="fa fa-chevron-down" aria-hidden="true" style="color: #fc0fc0; margin-left: 5px;"></i>
+                </span>
+                <div class="dropdown-content">
+                    <a href="/Agendamento/Cliente">
+                        <i class="fa fa-calendar" aria-hidden="true" style="margin-right: 20px; color: #fc0fc0;"></i>
+                        Agendamento User
+                    </a>
+                    <a href="/Agendamento/Cadastro">
+                        <i class="fa fa-file" aria-hidden="true" style="margin-right: 20px; color: #fc0fc0;"></i>
+                        Cadastro Agendamento
+                    </a>
+                    <a href="javascript:void(0);" onclick="logout()" style="padding: 7px; text-decoration: none; display: flex; align-items: center; margin: 5px;">
+                        <i class="fa fa-sign-out-alt" aria-hidden="true" style="margin-right: 8px;"></i> Sair
+                    </a>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <!-- Menu de Login (Quando o usuário não está autenticado) -->
+        <div class="dropdown" style="position: relative; display: inline-block;">
+            <span style="display: flex; align-items: center; margin-right: 20px;">
+                <i class="fa fa-user" aria-hidden="true" style="color: #fc0fc0;"></i>
+                <a href="/Usuario/Login" style="margin-left: 10px;">Login</a>
+            </span>
         </div>
-    </nav>
+    }
+
+</nav>
+
+    </header>
+    <!-------------------- Header Area (End) -------------------->
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const loginButton = document.getElementById('loginButton');
-            const submenu = document.getElementById('SubMenu-2-content');
-
-            // Função para mostrar o submenu
-            function showSubMenu() {
-                submenu.style.display = 'block';
-            }
-
-            // Função para ocultar o submenu
-            function hideSubMenu() {
-                submenu.style.display = 'none';
-            }
-
-            // Eventos para o botão Login
-            loginButton.addEventListener('mouseenter', showSubMenu);
-            loginButton.addEventListener('mouseleave', hideSubMenu);
-
-            // Eventos para o submenu
-            submenu.addEventListener('mouseenter', showSubMenu);
-            submenu.addEventListener('mouseleave', hideSubMenu);
-        });
+        function logout() {
+            // Envia a requisição AJAX para o servidor
+            $.ajax({
+                url: '/Usuario/Logout', // URL do método Logout no controller
+                type: 'POST', // Tipo de requisição (POST)
+                success: function (response) {
+                    // Se a requisição for bem-sucedida
+                    if (response.success) {
+                        // Redireciona para a página de login ou outra página conforme desejado
+                        window.location.href = '/Home/Index';
+                    } else {
+                        // Se houver uma mensagem de erro, exibe
+                        alert('Erro ao realizar o logout: ' + (response.message || 'Erro desconhecido'));
+                    }
+                },
+                error: function (xhr, status, error) {
+                    // Se ocorrer algum erro na requisição AJAX
+                    alert('Erro ao processar a solicitação de logout. Detalhes: ' + error);
+                }
+            });
+        }
     </script>
 
     <!-------------------- Header Area (End) -------------------->

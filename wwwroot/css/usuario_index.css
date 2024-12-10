@@ -109,6 +109,15 @@ section {
     overflow: hidden !important;
 }
 
+.cadastro-height {
+    background-color: var(--black) !important;
+    margin-top: 2.5em !important;
+    border-radius: 8px !important;
+    box-shadow: 2px 0 10px -2px #fc0fc0 !important;
+    height: 800px !important;
+    overflow: hidden !important;
+}
+
 .clienteagendamento-height {
     background-color: var(--black) !important;
     margin-top: 2.5em !important;

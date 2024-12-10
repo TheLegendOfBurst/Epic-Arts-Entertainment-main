@@ -1,4 +1,6 @@
-﻿@{
+﻿﻿@using System.Text.Json
+@model IEnumerable<Epic_Arts_Entertainment.Models.AgendamentoVM>
+@{
     Layout = "~/Views/Shared/_Layout_Gerenciamento.cshtml";
 }
 
@@ -32,53 +34,68 @@
                 </div>
             </div>
 
-            <div class="table-container table-responsive">
-                <table id="TbClientes" class="table">
-                    <colgroup>
-                        <col class="tc-nome">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Nome</th>
-                            <th>Email</th>
-                            <th>Telefone</th>
-                            <th>Agendamento para a Data</th>
-                            <th>Horario</th>
-                            <th>Servico</th>
-                            <th>Valor</th>
-                            <th>Confirmação</th>
-                            <th class="editar">Editar</th>
-                            <th class="excluir">Excluir</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+            <div class="table-container" style="max-height: 400px; overflow-y: auto;">
+                <div>
+                    <table id="TbAgendamentoBody" class="table" style="width: 100%; border-collapse: collapse;">
+                        <colgroup>
+                            <col class="tc-nome">
+                        </colgroup>
+                        <thead style="background-color: #ac0404; color: #fc0fc0;">
+                            <tr>
+                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">#</th>
+                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Nome</th>
+                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Email</th>
+                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Telefone</th>
+                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0;background-color: #000000;">Data do Agendamento</th>
+                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Horario</th>
+                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Serviço</th>
+                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Valor</th>
+                                <th class="editar" style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Editar</th>
+                                <th class="excluir" style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Excluir</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null && Model.Any())
+                            {
+                                @foreach (var agendamento in Model)
+                                {
+                                    <tr>
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.IdAgendamento</td>
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.UsuarioNome</td> <!-- Nome do usuário -->
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.UsuarioEmail</td> <!-- Email do usuário -->
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.UsuarioTelefone</td> <!-- Telefone do usuário -->
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.DataAgendamento</td> <!-- Data do agendamento -->
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.Horario</td> <!-- Hora do agendamento -->
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.ServicoNome</td> <!-- Nome do serviço -->
+                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.ServicoValor</td> <!-- Valor do serviço -->
 
-                        <tr>
-                            <td>Id</td>
-                            <td>Nome</td>
-                            <td>Email</td>
-                            <td>Telefone</td>
-                            <td>AgendarData</td>
-                            <td>Horario</td>
-                            <td>Servico</td>
-                            <td>Valor</td>
-                            <td>Confirmacao</td>
+                                        <td class="text-center" style="color: #ac0404; border: 1px solid #fc0fc0;">
+                                            <button class="btn btn-editar"
+                                                    onclick="definirEdt(@agendamento.IdAgendamento, '@agendamento.UsuarioNome', '@agendamento.UsuarioEmail', '@agendamento.UsuarioTelefone', '@agendamento.DataAgendamento', '@agendamento.Horario', '@agendamento.ServicoNome', '@agendamento.ServicoValor')"
+                                                    data-bs-toggle="modal" data-bs-target="#AlterarAgendamento">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                        </td>
+                                        <td class="text-center" style="color: #ac0404; border: 1px solid #fc0fc0;">
+                                            <button class="btn btn-excluir"
+                                                    onclick="definirExc(@agendamento.IdAgendamento, '@agendamento.UsuarioNome', '@agendamento.UsuarioEmail', '@agendamento.UsuarioTelefone', '@agendamento.DataAgendamento', '@agendamento.Horario', '@agendamento.ServicoNome', '@agendamento.ServicoValor')"
+                                                    data-bs-toggle="modal" data-bs-target="#ExcluirAgendamento">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </td>
 
-                            <td class="text-center">
-                                <button class="btn btn-default" onclick="definirEdt('Id','Nome', 'Email', 'Telefone', 'AgendarData','Horario', 'Servico', 'Valor', 'Confirmacao')" data-bs-toggle="modal" data-bs-target="#EditarAgendamento">
-                                    <i class="fa fa-edit" style="color: #F7F5F2;"></i>
-                                </button>
-                            </td>
-                            <td class="text-center">
-                                <button class="btn btn-default" onclick="definirExc('Id','Nome', 'Email', 'Telefone', 'AgendarData','Horario', 'Servico', 'Valor', 'Confirmacao')" data-bs-toggle="modal" data-bs-target="#ExcluirAgendamento">
-                                    <i class="fa fa-trash" style="color: #e61616;"></i>
-                                </button>
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="11" style="text-align: center; color: #EAE7DC; padding: 8px;">Nenhum atendimento encontrado.</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
         </div>

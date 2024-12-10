@@ -70,6 +70,12 @@ namespace Epic_Arts_Entertainment.Controllers
             return View(atendimentos);
         }
 
+        public IActionResult Cliente()
+        {
+            var atendimentos = _agendamentoRepositorio.ListarAgendamentosClientes();
+            return View(atendimentos);
+        }
+
         public IActionResult InserirAgendamento(DateTime dtHoraAgendamento, DateOnly dataAgendamento, TimeOnly horario, int IdUsuario, int IdServico)
         {
             try
@@ -94,14 +100,14 @@ namespace Epic_Arts_Entertainment.Controllers
             }
         }
 
-        public IActionResult InserirAgendamentoCliente(DateTime dtHoraAgendamento, DateOnly dataAtendimento, TimeOnly horario, int fkUsuarioId, int fkServicoId)
+        public IActionResult InserirAgendamentoCliente(DateTime dtHoraAgendamento, DateOnly dataAgendamento, TimeOnly horario, int IdUsuario, int IdServico)
         {
             string id = Environment.GetEnvironmentVariable("USUARIO_ID");
-            int IdUsuario = Int32.Parse(id);
+            int IdUsuarioLocal = Int32.Parse(id);
             try
             {
                 // Chama o método do repositório que realiza a inserção no banco de dados
-                var resultado = _agendamentoRepositorio.InserirAgendamento(dtHoraAgendamento, dataAtendimento, horario, IdUsuario, fkServicoId);
+                var resultado = _agendamentoRepositorio.InserirAgendamento(dtHoraAgendamento, dataAgendamento, horario, IdUsuarioLocal, IdServico);
 
                 // Verifica o resultado da inserção
                 if (resultado)
@@ -119,6 +125,7 @@ namespace Epic_Arts_Entertainment.Controllers
                 return Json(new { success = false, message = "Erro ao processar a solicitação. Detalhes: " + ex.Message });
             }
         }
+
 
         public IActionResult AlterarAgendamento(int id, string data, int servico, TimeOnly horario)
         {
