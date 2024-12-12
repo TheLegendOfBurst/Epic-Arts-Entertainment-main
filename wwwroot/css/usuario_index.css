@@ -3,13 +3,12 @@
 
 
 :root {
-    --red: #fc0fc0;
+    --red: #db22ac;
     --black: #000000;
     --white: #000000;
     --grey: #000000;
-    --purple:#fc0fc0;
-    --cinza:#575757;
-   
+    --purple: #db22ac;
+    --cinza: #575757;
 }
 
 * {
@@ -158,12 +157,12 @@ footer {
 }
 
 .agendamento-height {
-    background-color: var(--black);
-    margin-top: 2.5em;
-    border-radius: 8px;
-    box-shadow: 2px 0 10px -2px var(--red);
+    background-color: var(--black) !important;
+    margin-top: 2.5em !important;
+    border-radius: 8px !important;
+    box-shadow: 2px 0 10px -2px var(--red) !important;
     height: 780px !important;
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 label {
@@ -201,3 +200,25 @@ button:hover{
 }
 
 
+/*Cliente Botao adicionar*/
+.adicionar-agendamento-cliente-btn {
+    background-color: #DB22AC; /* Cor de fundo personalizada */
+    color: black !important; /* Cor do texto branca com !important */
+    border-color: #DB22AC; /* Cor da borda personalizada */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 12px 24px; /* Espaçamento interno */
+    font-size: 18px; /* Tamanho da fonte */
+    text-transform: uppercase; /* Transformar o texto em maiúsculas */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para fundo e cor do texto */
+}
+
+    .adicionar-agendamento-cliente-btn:hover {
+        background-color: black; /* Cor de fundo quando o mouse passar por cima */
+        color: #DB22AC !important; /* Cor do texto rosa (#DB22AC) quando o mouse passar por cima */
+        border-color: #db22ac; /* Cor da borda quando o mouse passar por cima */
+    }
+
+    /* Para garantir que o ícone dentro do botão não fique deslocado */
+    .adicionar-agendamento-cliente-btn i {
+        margin-right: 8px;
+    }
