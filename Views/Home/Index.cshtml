@@ -217,7 +217,7 @@
         <div class="heading" style="text-align: center">
             <h2>Meus <span>Serviços</span></h2>
             <br />
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #db22ac;  border-color: #db22ac; color: black">Agendar</button>
+            <button type="button" class="btn btn-secondary adicionar-agendamento-cliente-btn" data-bs-dismiss="modal" onclick="verificarUsuarioLogado()">Agendar</button>
         </div>
 
         <div class="box-container">
@@ -724,6 +724,21 @@
             });
             e.preventDefault();
         });
+    </script>
+
+    <!--Botão Agendar-->
+    <script>
+        function verificarUsuarioLogado() {
+            var usuarioId = '@Environment.GetEnvironmentVariable("USUARIO_ID")'; // Variável do ambiente passada pelo backend
+            console.log(usuarioId)
+            if (usuarioId !== "") { // Verifica se o usuário está logado
+                // Se o usuário estiver logado, redireciona para a página de agendamento
+                window.location.href = "/Agendamento/Cadastro";
+            } else {
+                // Se não estiver logado, redireciona para a página de login
+                window.location.href = "/Usuario/Login";
+            }
+        }
     </script>
 
     <!--SubMenu-->

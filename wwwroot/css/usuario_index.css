@@ -94,7 +94,7 @@ section {
     background-color: var(--black) !important;
     margin-top: 2.5em !important;
     border-radius: 8px !important;
-    box-shadow: 2px 0 10px -2px #fc0fc0 !important;
+    box-shadow: 2px 0 10px -2px #db22ac !important;
     height: 845px !important;
     overflow: hidden !important;
 }
@@ -103,7 +103,7 @@ section {
     background-color: var(--black) !important;
     margin-top: 2.5em !important;
     border-radius: 8px !important;
-    box-shadow: 2px 0 10px -2px #fc0fc0 !important;
+    box-shadow: 2px 0 10px -2px #db22ac !important;
     height: 750px !important;
     overflow: hidden !important;
 }
@@ -112,7 +112,7 @@ section {
     background-color: var(--black) !important;
     margin-top: 2.5em !important;
     border-radius: 8px !important;
-    box-shadow: 2px 0 10px -2px #fc0fc0 !important;
+    box-shadow: 2px 0 10px -2px #db22ac !important;
     height: 800px !important;
     overflow: hidden !important;
 }
@@ -121,7 +121,7 @@ section {
     background-color: var(--black) !important;
     margin-top: 2.5em !important;
     border-radius: 8px !important;
-    box-shadow: 2px 0 10px -2px #fc0fc0 !important;
+    box-shadow: 2px 0 10px -2px #db22ac !important;
     overflow: hidden !important;
 }
 
@@ -173,7 +173,7 @@ label {
 # Botão voltar e botoes normais
 --------------------------------------------------------------*/
 button{
-    background-color: #fc0fc0 !important;
+    background-color: #db22ac !important;
     border: none !important;
     color: var(--black) !important;
     transition: .5s;

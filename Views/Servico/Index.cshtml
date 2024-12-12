@@ -38,11 +38,11 @@
                         </colgroup>
                         <thead>
                             <tr>
-                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 50px; position: sticky; top: 0; background-color: #0000000;">#</th>
-                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 900px; position: sticky; top: 0; background-color: #000000;">Nome do Serviço</th>
-                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 200px; position: sticky; top: 0; background-color: #000000;">Valor do Serviço</th>
-                                <th class="editar" style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 50px; position: sticky; top: 0; background-color: #000000;">Editar</th>
-                                <th class="excluir" style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 50px; position: sticky; top: 0; background-color: #000000;">Excluir</th>
+                                <th style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 50px; position: sticky; top: 0; background-color: #0000000;">#</th>
+                                <th style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 900px; position: sticky; top: 0; background-color: #000000;">Nome do Serviço</th>
+                                <th style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 200px; position: sticky; top: 0; background-color: #000000;">Valor do Serviço</th>
+                                <th class="editar" style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 50px; position: sticky; top: 0; background-color: #000000;">Editar</th>
+                                <th class="excluir" style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 50px; position: sticky; top: 0; background-color: #000000;">Excluir</th>
                             </tr>
                         </thead>
                     </table>
@@ -56,17 +56,17 @@
                                     @foreach (var servico in Model)
                                     {
                                         <tr>
-                                            <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 50px">@servico.IdServico</td>
-                                            <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 220px">@servico.TipoServico</td>
-                                            <td style="color: #fc0fc0; border: 1px solid #fc0fc0; padding: 8px; width: 250px">@servico.Valor.ToString("C")</td> <!-- Formato de moeda -->
+                                            <td style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 50px">@servico.IdServico</td>
+                                            <td style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 220px">@servico.TipoServico</td>
+                                            <td style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 250px">@servico.Valor.ToString("C")</td> <!-- Formato de moeda -->
 
-                                            <td class="text-center" style="border: 1px solid #fc0fc0; width: 80px;">
-                                                <button class="btn btn-default" onclick="definirEdt('@servico.IdServico', '@servico.TipoServico', '@servico.Valor')" data-bs-toggle="modal" data-bs-target="#EditarServico" style="color: #fc0fc0;">
+                                            <td class="text-center" style="border: 1px solid #db22ac; width: 80px;">
+                                                <button class="btn btn-default" onclick="definirEdt('@servico.IdServico', '@servico.TipoServico', '@servico.Valor')" data-bs-toggle="modal" data-bs-target="#EditarServico" style="color: #db22ac;">
                                                     <i class="fa fa-edit"></i>
                                                 </button>
                                             </td>
-                                            <td class="text-center" style="border: 1px solid #fc0fc0; width: 80px;">
-                                                <button class="btn btn-default" onclick="definirExc('@servico.IdServico', '@servico.TipoServico', '@servico.Valor')" data-bs-toggle="modal" data-bs-target="#ExcluirServico" style="color: #fc0fc0;">
+                                            <td class="text-center" style="border: 1px solid #db22ac; width: 80px;">
+                                                <button class="btn btn-default" onclick="definirExc('@servico.IdServico', '@servico.TipoServico', '@servico.Valor')" data-bs-toggle="modal" data-bs-target="#ExcluirServico" style="color: #db22ac;">
                                                     <i class="fa fa-trash"></i>
                                                 </button>
                                             </td>
@@ -76,7 +76,7 @@
                                 else
                                 {
                                     <tr>
-                                        <td colspan="5" style="text-align: center; color: #fc0fc0; padding: 8px;">Nenhum serviço encontrado.</td>
+                                        <td colspan="5" style="text-align: center; color: #db22ac; padding: 8px;">Nenhum serviço encontrado.</td>
                                     </tr>
                                 }
                             </tbody>
@@ -98,7 +98,7 @@
                         <form>
                             <div class="mb-3">
                                 <label for="IdServico">Id do Serviço</label>
-                                <input style="background-color: #000000; color: #fc0fc0" type="number" id="ExcId" class="form-control" readonly>
+                                <input style="background-color: #000000; color: #db22ac" type="number" id="ExcId" class="form-control" readonly>
                             </div>
                         </form>
                         <div class="modal-footer">
@@ -177,7 +177,7 @@
     </section>
 
     <!-- Contador de Registros Centralizado com Fonte Maior -->
-    <div style="text-align: center; color: #fc0fc0; margin-top: 10px;">
+    <div style="text-align: center; color: #db22ac; margin-top: 10px;">
         <strong style="font-size: 18px">Total de Serviços: <span id="registroCount">0</span></strong>
     </div>
 

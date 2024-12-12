@@ -16,8 +16,8 @@
 
             <!-- Título -->
             <div class="container">
-                <div class="modal-header" style="background-color: #000000; color: white; border-color: #fc0fc0;">
-                    <h1 class="modal-title" id="exampleModalLabel" style="color: #fc0fc0;">Adicionar Agendamento</h1>
+                <div class="modal-header" style="background-color: #000000; color: white; border-color: #db22ac;">
+                    <h1 class="modal-title" id="exampleModalLabel" style="color: #db22ac;">Adicionar Agendamento</h1>
                 </div>
                 
                 <!-- Corpo do modal -->
@@ -32,7 +32,7 @@
 
                         <!-- Campo de data -->
                         <div class="mb-3 d-flex align-items-center">
-                            <input id="data_agdt" type="date" class="form-control" style="width: 340px;" placeholder="Escolha a data do agendamento" oninput="consultarAgendamento()" required>
+                            <input id="data_agdt" type="date" class="form-control" style="width: 300px;" placeholder="Escolha a data do agendamento" oninput="consultarAgendamento()" min="{{ today }}" required>
                             <label for="data_agdt" style="color:red; margin-left: 5px;">*</label>
                         </div>
 
@@ -293,6 +293,10 @@
                 }
             });
         }
+    </script>
+    <script>
+        // Definindo a data mínima como a data atual usando JavaScript
+        document.getElementById('data_agdt').setAttribute('min', new Date().toISOString().split('T')[0]);
     </script>
 
 </body>

@@ -41,18 +41,18 @@
                         <colgroup>
                             <col class="tc-nome">
                         </colgroup>
-                        <thead style="background-color: #ac0404; color: #fc0fc0;">
+                        <thead style="background-color: #ac0404; color: #db22ac;">
                             <tr>
-                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">#</th>
-                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Nome</th>
-                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Email</th>
-                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Telefone</th>
-                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0;background-color: #000000;">Data do Agendamento</th>
-                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Horario</th>
-                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Serviço</th>
-                                <th style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Valor</th>
-                                <th class="editar" style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Editar</th>
-                                <th class="excluir" style="color: #fc0fc0; border: 1px solid #fc0fc0; background-color: #000000;">Excluir</th>
+                                <th style="color: #db22ac; border: 1px solid #db22ac; background-color: #000000;">#</th>
+                                <th style="color: #db22ac; border: 1px solid #db22ac; background-color: #000000;">Nome</th>
+                                <th style="color: #db22ac; border: 1px solid #db22ac; background-color: #000000;">Email</th>
+                                <th style="color: #db22ac; border: 1px solid #db22ac; background-color: #000000;">Telefone</th>
+                                <th style="color: #db22ac; border: 1px solid #db22ac;background-color: #000000;">Data do Agendamento</th>
+                                <th style="color: #db22ac; border: 1px solid #db22ac; background-color: #000000;">Horario</th>
+                                <th style="color: #db22ac; border: 1px solid #db22ac; background-color: #000000;">Serviço</th>
+                                <th style="color: #db22ac; border: 1px solid #db22ac; background-color: #000000;">Valor</th>
+                                <th class="editar" style="color: #db22ac; border: 1px solid #db22ac; background-color: #000000;">Editar</th>
+                                <th class="excluir" style="color: #db22ac; border: 1px solid #db22ac; background-color: #000000;">Excluir</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -61,23 +61,23 @@
                                 @foreach (var agendamento in Model)
                                 {
                                     <tr>
-                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.IdAgendamento</td>
-                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.UsuarioNome</td> <!-- Nome do usuário -->
-                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.UsuarioEmail</td> <!-- Email do usuário -->
-                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.UsuarioTelefone</td> <!-- Telefone do usuário -->
-                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.DataAgendamento</td> <!-- Data do agendamento -->
-                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.Horario</td> <!-- Hora do agendamento -->
-                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.ServicoNome</td> <!-- Nome do serviço -->
-                                        <td style="color: #fc0fc0; border: 1px solid #fc0fc0;">@agendamento.ServicoValor</td> <!-- Valor do serviço -->
+                                        <td style="color: #db22ac; border: 1px solid #db22ac;">@agendamento.IdAgendamento</td>
+                                        <td style="color: #db22ac; border: 1px solid #db22ac;">@agendamento.UsuarioNome</td> <!-- Nome do usuário -->
+                                        <td style="color: #db22ac; border: 1px solid #db22ac;">@agendamento.UsuarioEmail</td> <!-- Email do usuário -->
+                                        <td style="color: #db22ac; border: 1px solid #db22ac;">@agendamento.UsuarioTelefone</td> <!-- Telefone do usuário -->
+                                        <td style="color: #db22ac; border: 1px solid #db22ac;">@agendamento.DataAgendamento</td> <!-- Data do agendamento -->
+                                        <td style="color: #db22ac; border: 1px solid #db22ac;">@agendamento.Horario</td> <!-- Hora do agendamento -->
+                                        <td style="color: #db22ac; border: 1px solid #db22ac;">@agendamento.ServicoNome</td> <!-- Nome do serviço -->
+                                        <td style="color: #db22ac; border: 1px solid #db22ac;">@agendamento.ServicoValor</td> <!-- Valor do serviço -->
 
-                                        <td class="text-center" style="color: #ac0404; border: 1px solid #fc0fc0;">
+                                        <td class="text-center" style="color: #ac0404; border: 1px solid #db22ac;">
                                             <button class="btn btn-editar"
                                                     onclick="definirEdt(@agendamento.IdAgendamento, '@agendamento.UsuarioNome', '@agendamento.UsuarioEmail', '@agendamento.UsuarioTelefone', '@agendamento.DataAgendamento', '@agendamento.Horario', '@agendamento.ServicoNome', '@agendamento.ServicoValor')"
                                                     data-bs-toggle="modal" data-bs-target="#AlterarAgendamento">
                                                 <i class="fa fa-edit"></i>
                                             </button>
                                         </td>
-                                        <td class="text-center" style="color: #ac0404; border: 1px solid #fc0fc0;">
+                                        <td class="text-center" style="color: #ac0404; border: 1px solid #db22ac;">
                                             <button class="btn btn-excluir"
                                                     onclick="definirExc(@agendamento.IdAgendamento, '@agendamento.UsuarioNome', '@agendamento.UsuarioEmail', '@agendamento.UsuarioTelefone', '@agendamento.DataAgendamento', '@agendamento.Horario', '@agendamento.ServicoNome', '@agendamento.ServicoValor')"
                                                     data-bs-toggle="modal" data-bs-target="#ExcluirAgendamento">
@@ -103,7 +103,7 @@
 
         <!-- Contador de Registros Centralizado com Fonte Maior -->
         <div style="text-align: center; margin-top: 10px;">
-            <strong style="font-size: 18px; color: #fc0fc0;">Total de Usuários: <span id="registroCount" style="color: #fc0fc0;">0</span></strong>
+            <strong style="font-size: 18px; color: #db22ac;">Total de Usuários: <span id="registroCount" style="color: #db22ac;">0</span></strong>
             </div>
 
 
@@ -180,10 +180,10 @@
                 <div class="mb-3 d-flex align-items-center">
                     <input type="hidden" id="TxtId" class="form-check-input" value="10:00" style="margin-right: 10px;" disabled>
                 </div>
-
+                
                 <!-- Campo de data -->
                 <div class="mb-3 d-flex align-items-center">
-                    <input id="data_agdt" type="date" class="form-control" style="width: 300px;" placeholder="Escolha a data do agendamento" oninput="consultarAgendamento()">
+                    <input id="data_agdt" type="date" class="form-control" style="width: 300px;" placeholder="Escolha a data do agendamento" oninput="consultarAgendamento()" min="{{ today }}">
                 </div>
 
                 <div class="mb-3 row">
@@ -319,8 +319,9 @@
                                 </div>
                             </div>
                             <div id="divCampos" style="border: 2px solid #000; padding: 10px; margin: 10px; display: none;">
+                                <!-- Campo de data -->
                                 <div class="mb-3 d-flex align-items-center">
-                                    <input id="data_a" type="date" class="form-control" style="width: 300px;" placeholder="Escolha a data do agendamento" oninput="consultarAgendamentoEdt()">
+                                    <input id="data_a" type="date" class="form-control" style="width: 300px;" placeholder="Escolha a data do agendamento" oninput="consultarAgendamentoEdt()" min="{{ today }}">
                                 </div>
                                 <div class="mb-3 d-flex align-items-center">
                                     @Html.DropDownList("DropHorario", ViewBag.lstHorarios, "Escolha o Horario", new { @class = "chosen-select form-control", @style = "width:420px;" })
@@ -766,7 +767,12 @@
              }
          });
      }
-  
-    </script>
 
+
+    </script>
+    <script>
+        // Definindo a data mínima como a data atual usando JavaScript
+        document.getElementById('data_agdt').setAttribute('min', new Date().toISOString().split('T')[0]);
+        document.getElementById('data_a').setAttribute('min', new Date().toISOString().split('T')[0]);
+    </script>
 </body>

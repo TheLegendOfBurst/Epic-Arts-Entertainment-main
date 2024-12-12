@@ -34,7 +34,7 @@
             </div>
 
             <!-- Contador de Registros Centralizado com Fonte Maior -->
-            <div style="text-align: center; color: #ac0404; margin-top: 10px;">
+            <div style="text-align: center; color: #000000; margin-top: 10px;">
                 <strong style="font-size: 18px">Total de Usuários: <span id="registroCount">0</span></strong>
             </div>
 
@@ -43,16 +43,16 @@
                 <div class="table-responsive">
                     <table id="TbClientes" class="table" style="width: 100%; border-collapse: collapse; table-layout: fixed;">
                         <!-- Cabeçalho fixo -->
-                        <thead style="background-color: #ac0404; color: #F7F5F2;">
+                        <thead style="background-color: #000000; color: #db22ac;">
                             <tr>
-                                <th style="color: #F7F5F2; border: 1px solid #ddd; padding: 8px; width: 50px; position: sticky; top: 0; background-color: #ac0404;">#</th>
-                                <th style="color: #F7F5F2; border: 1px solid #ddd; padding: 8px; width: 190px; position: sticky; top: 0; background-color: #ac0404;">Nome</th>
-                                <th style="color: #F7F5F2; border: 1px solid #ddd; padding: 8px; width: 230px; position: sticky; top: 0; background-color: #ac0404;">Senha</th>
-                                <th style="color: #F7F5F2; border: 1px solid #ddd; padding: 8px; width: 312px; position: sticky; top: 0; background-color: #ac0404;">Email</th>
-                                <th style="color: #F7F5F2; border: 1px solid #ddd; padding: 8px; width: 160px; position: sticky; top: 0; background-color: #ac0404;">Telefone</th>
-                                <th style="color: #F7F5F2; border: 1px solid #ddd; padding: 8px; width: 170px; position: sticky; top: 0; background-color: #ac0404;">Tipo de Usuário</th>
-                                <th class="editar" style="color: #F7F5F2; border: 1px solid #ddd; padding: 8px; position: sticky; top: 0; background-color: #ac0404;">Editar</th>
-                                <th class="excluir" style="color: #F7F5F2; border: 1px solid #ddd; padding: 8px; position: sticky; top: 0; background-color: #ac0404;">Excluir</th>
+                                <th style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 50px; position: sticky; top: 0; background-color: #000000;">#</th>
+                                <th style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 190px; position: sticky; top: 0; background-color: #000000;">Nome</th>
+                                <th style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 230px; position: sticky; top: 0; background-color: #000000;">Senha</th>
+                                <th style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 312px; position: sticky; top: 0; background-color: #000000;">Email</th>
+                                <th style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 160px; position: sticky; top: 0; background-color: #000000;">Telefone</th>
+                                <th style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 170px; position: sticky; top: 0; background-color: #000000;">Tipo de Usuário</th>
+                                <th class="editar" style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; position: sticky; top: 0; background-color: #000000;">Editar</th>
+                                <th class="excluir" style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; position: sticky; top: 0; background-color: #000000;">Excluir</th>
                             </tr>
                         </thead>
                     </table>
@@ -66,28 +66,28 @@
                                     @foreach (var usuario in Model)
                                     {
                                         <tr>
-                                            <td style="color: #ac0404; border: 1px solid #ddd; padding: 8px;width: 50px">@usuario.IdUsuario</td>
-                                            <td style="color: #ac0404; border: 1px solid #ddd; padding: 8px;width: 190px">@usuario.Nome</td>
-                                            <td style="color: #ac0404; border: 1px solid #ddd; padding: 8px; width: 230px">@usuario.Senha</td>
-                                            <td style="color: #ac0404; border: 1px solid #ddd; padding: 8px; width: 312px">@usuario.Email</td>
-                                            <td style="color: #ac0404; border: 1px solid #ddd; padding: 8px; width: 160px">@usuario.Telefone</td>
+                                            <td style="color: #db22ac; border: 1px solid #db22ac; padding: 8px;width: 50px">@usuario.IdUsuario</td>
+                                            <td style="color: #db22ac; border: 1px solid #db22ac; padding: 8px;width: 190px">@usuario.Nome</td>
+                                            <td style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 230px">@usuario.Senha</td>
+                                            <td style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 312px">@usuario.Email</td>
+                                            <td style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 160px">@usuario.Telefone</td>
 
                                             @if (usuario.TipoUsuario == 1)
                                             {
-                                                <td style="color: #ac0404; border: 1px solid #ddd; padding: 8px; width: 170px">Administrador</td>
+                                                <td style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 170px">Administrador</td>
                                             }
                                             else
                                             {
-                                                <td style="color: #ac0404; border: 1px solid #ddd; padding: 8px; width: 170px">Cliente</td>
+                                                <td style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 170px">Cliente</td>
                                             }
 
-                                            <td class="text-center" style="border: 1px solid #ddd;">
-                                                <button class="btn btn-default" onclick="definirEdt('@usuario.IdUsuario', '@usuario.Nome','@usuario.Email', '@usuario.Senha', '@usuario.TipoUsuario', '@usuario.Telefone')" data-bs-toggle="modal" data-bs-target="#EditarUsuario" style="color: #ac0404;">
+                                            <td class="text-center" style="border: 1px solid #db22ac;">
+                                                <button class="btn btn-default" onclick="definirEdt('@usuario.IdUsuario', '@usuario.Nome','@usuario.Email', '@usuario.Senha', '@usuario.TipoUsuario', '@usuario.Telefone')" data-bs-toggle="modal" data-bs-target="#EditarUsuario" style="color: #000000;">
                                                     <i class="fa fa-edit"></i>
                                                 </button>
                                             </td>
-                                            <td class="text-center" style="border: 1px solid #ddd;">
-                                                <button class="btn btn-default" onclick="definirExc('@usuario.IdUsuario', '@usuario.Nome', '@usuario.Email', '@usuario.Telefone')" data-bs-toggle="modal" data-bs-target="#ExcluirUsuario" style="color: #ac0404;">
+                                            <td class="text-center" style="border: 1px solid #db22ac;">
+                                                <button class="btn btn-default" onclick="definirExc('@usuario.IdUsuario', '@usuario.Nome', '@usuario.Email', '@usuario.Telefone')" data-bs-toggle="modal" data-bs-target="#ExcluirUsuario" style="color: #000000;">
                                                     <i class="fa fa-trash"></i>
                                                 </button>
                                             </td>
@@ -120,7 +120,7 @@
                     </div>
                     <div class="modal-body">
                         <form>
-                            <p style="color:#ac0404">Campos com * vermelho são obrigatórios</p>
+                            <p style="color:#000000">Campos com * vermelho são obrigatórios</p>
                             <div class="mb-3 row">
                                 <div class="col-md-6">
                                     <input id="EdtNome" type="text" class="form-control" placeholder="Digite o nome do cliente">
@@ -190,17 +190,17 @@
                         <form>
                             <div class="mb-3">
                                 <label for="nome">Nome</label>
-                                <input style="background-color: #ac0404; color: #F7F5F2" type="text" id="ExcNome" class="form-control" readonly>
+                                <input style="background-color: #000000; color: #db22ac" type="text" id="ExcNome" class="form-control" readonly>
 
                             </div>
                             <div class="mb-3">
                                 <label for="email">Email</label>
-                                <input style="background-color: #ac0404; color: #F7F5F2" type="email" id="ExcEmail" class="form-control" readonly>
+                                <input style="background-color: #000000; color: #db22ac" type="email" id="ExcEmail" class="form-control" readonly>
 
                             </div>
                             <div class="mb-3">
                                 <label for="telefone">Telefone</label>
-                                <input style="background-color: #ac0404; color: #F7F5F2" type="text" id="ExcTel" class="form-control" readonly>
+                                <input style="background-color: #000000; color: #db22ac" type="text" id="ExcTel" class="form-control" readonly>
 
                             </div>
                             <input type="hidden" id="ExcId" class="form-control" readonly>
@@ -228,7 +228,7 @@
 
                     <div class="modal-body">
                         <form>
-                            <p style="color: #ac0404">Campos com * vermelho são obrigatórios</p>
+                            <p style="color: #000000">Campos com * vermelho são obrigatórios</p>
                             <div class="mb-3 row">
                                 <div class="col-md-6">
                                     <input id="Nome" type="text" class="form-control" placeholder="Digite o nome do cliente">
