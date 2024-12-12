@@ -162,7 +162,7 @@ footer {
     margin-top: 2.5em;
     border-radius: 8px;
     box-shadow: 2px 0 10px -2px var(--red);
-    height: 630px;
+    height: 780px !important;
     overflow: hidden;
 }
 
