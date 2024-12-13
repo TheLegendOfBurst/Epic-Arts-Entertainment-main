@@ -174,19 +174,26 @@ namespace Epic_Arts_Entertainment.Repositorios
 
         public List<AgendamentoVM> ConsultarAgendamento(string datap)
         {
-            DateOnly data = DateOnly.ParseExact(datap, "yyyy-MM-dd", CultureInfo.InvariantCulture);
-            string dataFormatada = data.ToString("yyyy-MM-dd"); // Formato desejado: "yyyy-MM-dd"
-            Console.WriteLine(dataFormatada);
+            if (string.IsNullOrEmpty(datap))
+            {
+                // Se o parâmetro for vazio ou nulo, retornamos uma lista vazia ou podemos tratar conforme necessário
+                Console.WriteLine("O parâmetro 'datap' está vazio ou nulo.");
+                return new List<AgendamentoVM>(); // Retorna uma lista vazia
+            }
 
             try
             {
-                // Consulta ao banco de dados, convertendo para o tipo AtendimentoVM
+                // Tenta converter a string para DateOnly, caso contrário retorna uma lista vazia
+                DateOnly data = DateOnly.ParseExact(datap, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+                string dataFormatada = data.ToString("yyyy-MM-dd"); // Formato desejado: "yyyy-MM-dd"
+                Console.WriteLine(dataFormatada);
+
+                // Consulta ao banco de dados, convertendo para o tipo AgendamentoVM
                 var ListaAgendamento = _context.TbAgendamentos
                     .Where(a => a.DataAgendamento == DateOnly.Parse(dataFormatada))
                     .Select(a => new AgendamentoVM
                     {
-                        // Mapear as propriedades de TbAtendimento para AtendimentoVM
-                        // Suponha que TbAtendimento tenha as propriedades Id, DataAtendimento, e outras:
+                        // Mapear as propriedades de TbAgendamento para AgendamentoVM
                         IdAgendamento = a.IdAgendamento,
                         DtHoraAgendamento = a.DtHoraAgendamento,
                         DataAgendamento = DateOnly.Parse(dataFormatada),

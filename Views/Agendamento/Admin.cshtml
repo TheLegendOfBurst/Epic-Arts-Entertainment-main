@@ -27,7 +27,7 @@
                     </div>
                     <div class="col-md-6 text-md-end">
                         <!-- Alteração para "text-md-end" para alinhar à direita apenas em telas médias e maiores -->
-                        <button class="btn btn-danger btn-lg" onclick="" data-bs-toggle="modal" data-bs-target="#InserirAgendamento">
+                        <button class="btn btn-danger btn-lg" onclick="limparFormulario()" data-bs-toggle="modal" data-bs-target="#InserirAgendamento">
                             <i class="fa fa-plus"></i> Adicionar Agendamento
                         </button>
                     </div>
@@ -176,19 +176,18 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                      <form>
-                <div class="mb-3 d-flex align-items-center">
-                    <input type="hidden" id="TxtId" class="form-check-input" value="10:00" style="margin-right: 10px;" disabled>
-                </div>
-                
-                <!-- Campo de data -->
-                <div class="mb-3 d-flex align-items-center">
-                    <input id="data_agdt" type="date" class="form-control" style="width: 300px;" placeholder="Escolha a data do agendamento" oninput="consultarAgendamento()" min="{{ today }}">
-                </div>
-
-                <div class="mb-3 row">
-                    <div class="col-md-6">
-                        @Html.DropDownList("DropUsuario",
+                        <form>
+                            <div class="mb-3 d-flex align-items-center">
+                                <input type="hidden" id="TxtId" class="form-check-input" value="10:00" style="margin-right: 10px;" disabled>
+                                </div>
+                                
+                                <!-- Campo de data -->
+                                <div class="mb-3 d-flex align-items-center">
+                                    <input id="data_agdt" type="date" class="form-control" style="width: 300px;" placeholder="Escolha a data do agendamento" oninput="consultarAgendamento()" min="{{ today }}">
+                                </div>
+                                <div class="mb-3 row">
+                                    <div class="col-md-6">
+                                        @Html.DropDownList("DropUsuario",
                                  new SelectList(ViewBag.Usuarios, "Value", "Text", null),
                                  "Escolha o usuário",
                                  new { @class = "form-control", @style = "width:230px; background-color: #EAE7DC; color: #333;", required = "required" })
@@ -214,44 +213,43 @@
                     <legend>Escolha o horário de atendimento:</legend>
 
                     <div class="mb-3 d-flex align-items-center">
-                        <input type="checkbox" id="chk08" class="form-check-input" value="08:00" style="margin-right: 10px;" data-group="horario" disabled>
+                        <input type="checkbox" id="chk08" class="form-check-input" value="08:00" style="margin-right: 10px;" data-group="horario">
                         <label class="form-check-label" for="chk08">Atendimento das 8:00</label>
                         <span id="Span08" style="color:red;"></span>
                     </div>
 
                     <div class="mb-3 d-flex align-items-center">
-                        <input type="checkbox" id="chk10" class="form-check-input" value="10:00" style="margin-right: 10px;" data-group="horario" disabled>
+                        <input type="checkbox" id="chk10" class="form-check-input" value="10:00" style="margin-right: 10px;" data-group="horario">
                         <label class="form-check-label" for="chk10">Atendimento das 10:00</label>
                         <span id="Span10" style="color:red;"></span>
                     </div>
 
                     <div class="mb-3 d-flex align-items-center">
-                        <input type="checkbox" id="chk13" class="form-check-input" value="13:00" style="margin-right: 10px;" data-group="horario" disabled>
+                        <input type="checkbox" id="chk13" class="form-check-input" value="13:00" style="margin-right: 10px;" data-group="horario">
                         <label class="form-check-label" for="chk13">Atendimento das 13:00</label>
                         <span id="Span13" style="color:red;"></span>
                     </div>
 
                     <div class="mb-3 d-flex align-items-center">
-                        <input type="checkbox" id="chk15" class="form-check-input" value="15:00" style="margin-right: 10px;" data-group="horario" disabled>
+                        <input type="checkbox" id="chk15" class="form-check-input" value="15:00" style="margin-right: 10px;" data-group="horario">
                         <label class="form-check-label" for="chk15">Atendimento das 15:00</label>
                         <span id="Span15" style="color:red;"></span>
                     </div>
 
                     <div class="mb-3 d-flex align-items-center">
-                        <input type="checkbox" id="chk17" class="form-check-input" value="17:00" style="margin-right: 10px;" data-group="horario" disabled>
+                        <input type="checkbox" id="chk17" class="form-check-input" value="17:00" style="margin-right: 10px;" data-group="horario">
                         <label class="form-check-label" for="chk17">Atendimento das 17:00</label>
                         <span id="Span17" style="color:red;"></span>
                     </div>
 
                     <div class="mb-3 d-flex align-items-center">
-                        <input type="checkbox" id="chk19" class="form-check-input" value="19:00" style="margin-right: 10px;" data-group="horario" disabled>
+                        <input type="checkbox" id="chk19" class="form-check-input" value="19:00" style="margin-right: 10px;" data-group="horario">
                         <label class="form-check-label" for="chk19">Atendimento das 19:00</label>
                         <span id="Span19" style="color:red;"></span>
                     </div>
                 </fieldset>
-
-    <input type="hidden" id="IdEdt" value="">
-</form>
+                <input type="hidden" id="IdEdt" value="">
+            </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -456,48 +454,48 @@
      }
 
      function consultarAgendamento() {
-         ativarCheckboxes()
-         limparTextosSpans()
-         desmarcarCheckboxes()
+            ativarCheckboxes()
+            limparTextosSpans()
+            desmarcarCheckboxes()
 
-         var data = $("#data_agdt").val();
-         $.ajax({
-             type: "GET",
-             url: "/Agendamento/ConsultarAgendamento",
-             data: { data: data },
-             success: function (response) {
+            var data = $("#data_agdt").val();
+            $.ajax({
+                type: "GET",
+                url: "/Agendamento/ConsultarAgendamento",
+                data: { data: data },
+                success: function (response) {
 
-                 response.forEach(function (item) {
-                     console.log(item.horario);
+                    response.forEach(function (item) {
+                        console.log(item.horario);
 
-                     switch (item.horario) {
-                         case "08:00:00":
-                             $("#chk08").prop("disabled", true).prop("checked", true);  // Marcar e desabilitar
-                             $("#Span08").text("Horario Indisponivel");
-                             break;
-                         case "10:00:00":
-                             $("#chk10").prop("disabled", true).prop("checked", true);  // Marcar e desabilitar
-                             $("#Span10").text("Horario Indisponivel");
-                             break;
-                         case "13:00:00":
-                             $("#chk13").prop("disabled", true).prop("checked", true);  // Marcar e desabilitar
-                             $("#Span13").text("Horario Indisponivel");
-                             break;
-                         case "15:00:00":
-                             $("#chk15").prop("disabled", true).prop("checked", true);  // Marcar e desabilitar
-                             $("#Span15").text("Horario Indisponivel");
-                             break;
-                         case "17:00:00":
-                             $("#chk17").prop("disabled", true).prop("checked", true);  // Marcar e desabilitar
-                             $("#Span17").text("Horario Indisponivel");
-                             break;
-                         case "19:00:00":
-                             $("#chk19").prop("disabled", true).prop("checked", true);  // Marcar e desabilitar
-                             $("#Span19").text("Horario Indisponivel");
-                             break;
-                         default:
-                             break;
-                     }
+                        switch (item.horario) {
+                            case "08:00:00":
+                                $("#chk08").prop("disabled", true).prop("checked", true);  // Marcar e desabilitar
+                                $("#Span08").text("Horario Indisponivel");
+                                break;
+                            case "10:00:00":
+                                $("#chk10").prop("disabled", true).prop("checked", true);  // Marcar e desabilitar
+                                $("#Span10").text("Horario Indisponivel");
+                                break;
+                            case "13:00:00":
+                                $("#chk13").prop("disabled", true).prop("checked", true);  // Marcar e desabilitar
+                                $("#Span13").text("Horario Indisponivel");
+                                break;
+                            case "15:00:00":
+                                $("#chk15").prop("disabled", true).prop("checked", true);  // Marcar e desabilitar
+                                $("#Span15").text("Horario Indisponivel");
+                                break;
+                            case "17:00:00":
+                                $("#chk17").prop("disabled", true).prop("checked", true);  // Marcar e desabilitar
+                                $("#Span17").text("Horario Indisponivel");
+                                break;
+                            case "19:00:00":
+                                $("#chk19").prop("disabled", true).prop("checked", true);  // Marcar e desabilitar
+                                $("#Span19").text("Horario Indisponivel");
+                                break;
+                            default:
+                                break;
+                        }
                  });
              },
              error: function (error) {
@@ -581,37 +579,37 @@
          checkboxes.forEach(function (checkbox) {
              checkbox.checked = false;
          });
-     }                       
+     }
 
-     function limparFormulario() {
-         var usuarioId = "@Context.Session.GetString("UsuarioId")";
-         document.getElementById("TxtId").value = usuarioId;
+        function limparFormulario() {
+            console.log("Função de limpeza chamada");
 
-         // Limpar campos de texto
-         document.querySelectorAll('#InserirAgendamento input[type="text"]').forEach(function (input) {
-             input.value = '';
-         });
+            // Limpar o campo de data
+            document.querySelector('#data_agdt').value = '';  // Limpa o campo de data
 
-         // Limpar campos de seleção
-         document.querySelectorAll('#InserirAgendamento select').forEach(function (select) {
-             select.selectedIndex = 0;
-         });
+            // Limpar campos de texto, mas não os de data
+            document.querySelectorAll('#InserirAgendamento input[type="text"]:not(#data_agdt)').forEach(function (input) {
+                input.value = '';
+            });
 
-         // Desmarcar checkboxes
+            // Limpar campos de seleção
+            document.querySelectorAll('#InserirAgendamento select').forEach(function (select) {
+                select.selectedIndex = 0;
+            });
 
-         // Limpar spans
-         document.querySelectorAll('#InserirAgendamento span').forEach(function (span) {
-             span.textContent = '';
-         });
+            // Desmarcar checkboxes
+            document.querySelectorAll('#InserirAgendamento input[type="checkbox"]').forEach(function (checkbox) {
+                checkbox.checked = false;
+                checkbox.disabled = true;
+            });
 
-         document.querySelectorAll('#InserirAgendamento input[type="checkbox"]').forEach(function (checkbox) {
-             checkbox.checked = false;
-             checkbox.disabled = true;
-         });
+            // Limpar spans
+            document.querySelectorAll('#InserirAgendamento span').forEach(function (span) {
+                span.textContent = '';
+            });
+        }
 
-     }                        
-
-     function obterDataHoraFormatada() {
+        function obterDataHoraFormatada() {
          // Obtém a data e hora atuais
          var dataHoraAtual = new Date();
 
@@ -628,56 +626,74 @@
          return dataHoraFormatada;
      }
 
-     function InserirAgendamento() {
+        function InserirAgendamento() {
+            // Data from hidden field or any other necessary values
+            var dataC = obterDataHoraFormatada();  // Assuming this function formats the current date/time.
+            var data = $("#data_agdt").val();
+            var usuario = $("#DropUsuario").val();  // Getting value for "DropUsuario"
+            var tipoServico = $('#TipoServico option:selected').val(); // Getting value for "TipoServico"
+            var atendimentos = [];
 
-         // Data from hidden field or any other necessary values
-         var dataC = obterDataHoraFormatada();  // Assuming this function formats the current date/time.
-         var data = $("#data_agdt").val();
-         var usuario = $("#DropUsuario").val();  // Getting value for "DropUsuario"
-         var tipoServico = $('#TipoServico option:selected').val(); // Getting value for "TipoServico"
-         var atendimentos = [];
+            // Check if any time slots are selected and push them into the atendimentos array
+            if ($("#chk08").prop("checked")) atendimentos.push($("#chk08").val());
+            if ($("#chk10").prop("checked")) atendimentos.push($("#chk10").val());
+            if ($("#chk13").prop("checked")) atendimentos.push($("#chk13").val());
+            if ($("#chk15").prop("checked")) atendimentos.push($("#chk15").val());
+            if ($("#chk17").prop("checked")) atendimentos.push($("#chk17").val());
+            if ($("#chk19").prop("checked")) atendimentos.push($("#chk19").val());
 
-         // Check if the time slots are selected and push them into the atendimentos array
-         if ($("#chk08").prop("checked")) atendimentos.push($("#chk08").val());
-         if ($("#chk10").prop("checked")) atendimentos.push($("#chk10").val());
-         if ($("#chk13").prop("checked")) atendimentos.push($("#chk13").val());
-         if ($("#chk15").prop("checked")) atendimentos.push($("#chk15").val());
-         if ($("#chk17").prop("checked")) atendimentos.push($("#chk17").val());
-         if ($("#chk19").prop("checked")) atendimentos.push($("#chk19").val());
+            // Validation
+            if (!data) {
+                alert("Por favor, selecione uma data para o agendamento.");
+                return;  // Stop the function if the date is not selected
+            }
 
-     
+            if (!usuario) {
+                alert("Por favor, selecione um usuário.");
+                return;  // Stop the function if the user is not selected
+            }
 
-         // Collect data for AJAX request
-         var dados = {
-             dtHoraAgendamento: dataC,
-             dataAgendamento: data,
-             horario: atendimentos,
-             IdUsuario: usuario,
-             IdServico: tipoServico,
-         
-         };
-         console.log(dados)
+            if (!tipoServico) {
+                alert("Por favor, selecione o tipo de serviço.");
+                return;  // Stop the function if the service type is not selected
+            }
 
-         // Perform the AJAX request
-         $.ajax({
-             url: '/Agendamento/InserirAgendamento',
-             type: "POST",
-             dataType: "json",
-             data: dados,
-             success: function (response) {
-                 if (response.success) {
-                     alert("Agendamento(s) cadastrado(s) com sucesso!");
-                     $('#InserirAgendamento').modal('hide');  // Close the modal
-                     location.reload();  // Reload the page
-                 } else {
-                     alert("Erro ao cadastrar agendamento(s).");
-                 }
-             },
-             error: function (xhr, textStatus, errorThrown) {
-                 alert("Erro ao cadastrar agendamento(s): " + errorThrown);
-             }
-         });
-     }
+            if (atendimentos.length === 0) {
+                alert("Por favor, selecione ao menos um horário para o agendamento.");
+                return;  // Stop the function if no time slots are selected
+            }
+
+            // Collect data for AJAX request
+            var dados = {
+                dtHoraAgendamento: dataC,
+                dataAgendamento: data,
+                horario: atendimentos,
+                IdUsuario: usuario,
+                IdServico: tipoServico,
+            };
+
+            console.log(dados);  // Debugging: to check if the data is correct
+
+            // Perform the AJAX request
+            $.ajax({
+                url: '/Agendamento/InserirAgendamento',
+                type: "POST",
+                dataType: "json",
+                data: dados,
+                success: function (response) {
+                    if (response.success) {
+                        alert("Agendamento(s) cadastrado(s) com sucesso!");
+                        $('#InserirAgendamento').modal('hide');  // Close the modal
+                        location.reload();  // Reload the page
+                    } else {
+                        alert("Erro ao cadastrar agendamento(s).");
+                    }
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    alert("Erro ao cadastrar agendamento(s): " + errorThrown);
+                }
+            });
+        }
 
      function AlterarAgendamento() {
 

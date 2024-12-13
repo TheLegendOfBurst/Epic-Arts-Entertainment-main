@@ -237,12 +237,14 @@
 
         // Função para inserir agendamento
         function InserirAgendamento() {
+            // Data from hidden field or any other necessary values
             var dataC = obterDataHoraFormatada();
             var data = $("#data_agdt").val();
             var usuario = $("#DropUsuario").val();
             var tipoServico = $('#TipoServico option:selected').val();
             var atendimentos = [];
 
+            // Check if the time slots are selected and push them into the atendimentos array
             if ($("#chk08").prop("checked")) atendimentos.push($("#chk08").val());
             if ($("#chk10").prop("checked")) atendimentos.push($("#chk10").val());
             if ($("#chk13").prop("checked")) atendimentos.push($("#chk13").val());
@@ -250,21 +252,23 @@
             if ($("#chk17").prop("checked")) atendimentos.push($("#chk17").val());
             if ($("#chk19").prop("checked")) atendimentos.push($("#chk19").val());
 
+            // Validation checks
             if (!data) {
                 alert("Por favor, selecione uma data de atendimento.");
-                return;
+                return; // Stop execution if validation fails
             }
 
-            if (!tipoServico) {
+            if (!tipoServico || tipoServico === "") {
                 alert("Por favor, selecione o tipo de serviço.");
-                return;
+                return; // Stop execution if validation fails
             }
 
             if (atendimentos.length === 0) {
                 alert("Por favor, selecione ao menos um horário.");
-                return;
+                return; // Stop execution if no time slots are selected
             }
 
+            // Collect data for AJAX request
             var dados = {
                 dtHoraAgendamento: dataC,
                 dataAgendamento: data,
@@ -275,6 +279,7 @@
 
             console.log(dados);
 
+            // Perform the AJAX request
             $.ajax({
                 url: '/Agendamento/InserirAgendamentoCliente',
                 type: "POST",
@@ -283,7 +288,7 @@
                 success: function (response) {
                     if (response.success) {
                         alert("Agendamento cadastrado com sucesso!");
-                        location.reload();
+                        location.reload();  // Reload the page
                     } else {
                         alert("Erro ao cadastrar agendamento(s).");
                     }
