@@ -6,6 +6,13 @@
 }
 
 <body>
+
+    <!-- Overlay e Loader -->
+    <div id="overlay" style="display: none;"></div>
+    <div id="loader" style="display: none;">
+        <i class="fa fa-spinner fa-spin"></i> Carregando...
+    </div>
+
     <section class="maneger-page-section">
 
         <div class="container page-maneger servico-height">
@@ -663,6 +670,10 @@
                 return;  // Stop the function if no time slots are selected
             }
 
+            // Show the overlay and loader
+            $("#overlay").show();  // Exibir o overlay escuro
+            $("#loader").show();   // Exibir o loader
+
             // Collect data for AJAX request
             var dados = {
                 dtHoraAgendamento: dataC,
@@ -681,6 +692,11 @@
                 dataType: "json",
                 data: dados,
                 success: function (response) {
+
+                    // Hide the overlay and loader after the response
+                    $("#overlay").hide();
+                    $("#loader").hide();
+
                     if (response.success) {
                         alert("Agendamento(s) cadastrado(s) com sucesso!");
                         $('#InserirAgendamento').modal('hide');  // Close the modal
@@ -725,6 +741,10 @@
                  horario = ""
 
          }
+         // Show the overlay and loader
+            $("#overlay").show();  // Exibir o overlay escuro
+            $("#loader").show();   // Exibir o loader
+
          var dados = {
              id: id,
              data: data,
@@ -739,13 +759,17 @@
              dataType: "json",
              data: dados,
              success: function (response) {
+                 // Hide the overlay and loader after the response
+                    $("#overlay").hide();
+                    $("#loader").hide();
                  if (response.success) {
                      alert("Agendamento(s) Alterados(s) com sucesso!");
                      $('#EditarAgendamento').modal('hide'); // Substitua 'seuModal' pelo ID do seu modal
                      // Atualizar a página
                      location.reload();
                  } else {
-                     alert("Erro ao alterar agendamento(s).");
+                     
+                  alert("Erro ao alterar agendamento(s).");
                  }
              },
              error: function (xhr, textStatus, errorThrown) {

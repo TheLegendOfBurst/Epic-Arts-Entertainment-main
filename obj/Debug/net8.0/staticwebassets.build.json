@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SCQX/MadwxYEQkyYT1HVH0nIFoPsGpY4yJTVXkY27LQ=",
+  "Hash": "rtDkdaP3q53ixcK1wPE0J+u/95Hdr59LcufuTJvHDNE=",
   "Source": "Epic Arts Entertainment",
   "BasePath": "_content/Epic Arts Entertainment",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\gerenciamento_index.css"
+    },
+    {
+      "Identity": "C:\\Users\\Aluno Noite\\Downloads\\DaviG\\Site\\Epic-Arts-Entertainment-main\\wwwroot\\css\\loader.css",
+      "SourceId": "Epic Arts Entertainment",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Aluno Noite\\Downloads\\DaviG\\Site\\Epic-Arts-Entertainment-main\\wwwroot\\",
+      "BasePath": "_content/Epic Arts Entertainment",
+      "RelativePath": "css/loader.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\loader.css"
     },
     {
       "Identity": "C:\\Users\\Aluno Noite\\Downloads\\DaviG\\Site\\Epic-Arts-Entertainment-main\\wwwroot\\css\\login.css",

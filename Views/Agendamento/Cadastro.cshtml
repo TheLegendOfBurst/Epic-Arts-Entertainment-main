@@ -4,6 +4,12 @@
 
 <body>
 
+     <!-- Overlay e Loader -->
+    <div id="overlay" style="display: none;"></div>
+    <div id="loader" style="display: none;">
+        <i class="fa fa-spinner fa-spin"></i> Carregando...
+    </div>
+
     <!-- Início da seção de gerenciamento -->
     <section class="maneger-page-section">
         <div class="container page-maneger cadastro-height">
@@ -268,6 +274,10 @@
                 return; // Stop execution if no time slots are selected
             }
 
+            // Show the overlay and loader
+            $("#overlay").show();  // Exibir o overlay escuro
+            $("#loader").show();   // Exibir o loader
+
             // Collect data for AJAX request
             var dados = {
                 dtHoraAgendamento: dataC,
@@ -287,6 +297,10 @@
                 data: dados,
                 success: function (response) {
                     if (response.success) {
+                        // Hide the overlay and loader after the response
+                    $("#overlay").hide();
+                    $("#loader").hide();
+
                         alert("Agendamento cadastrado com sucesso!");
                         location.reload();  // Reload the page
                     } else {
