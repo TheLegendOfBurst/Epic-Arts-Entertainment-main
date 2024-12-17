@@ -36,7 +36,7 @@
                 </div>
             </div>
 
-            <div class="table-container">
+            <div class="table-container ">
                 <div class="table-responsive">
                     <table id="TbClientes" class="table">
                         <colgroup>
@@ -44,7 +44,7 @@
                         </colgroup>
                         <thead>
                             <tr>
-                                <th style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 50px; position: sticky; top: 0; background-color: #0000000;">#</th>
+                                <th style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 50px; position: sticky; top: 0; background-color: #000000;">#</th>
                                 <th style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 900px; position: sticky; top: 0; background-color: #000000;">Nome do Serviço</th>
                                 <th style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 200px; position: sticky; top: 0; background-color: #000000;">Valor do Serviço</th>
                                 <th class="editar" style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 50px; position: sticky; top: 0; background-color: #000000;">Editar</th>
@@ -52,37 +52,40 @@
                             </tr>
                         </thead>
                     </table>
-
                     <!-- Corpo da tabela rolável -->
                     <div style="max-height: 300px; overflow-y: auto; overflow-x: hidden;">
-                        <table id="TbServicosBody" class="table" style="width: 100%; border-collapse: collapse; table-layout: fixed;">
+                        <table id="TbServicosBody" class="table-responsive" style="width: 100%; border-collapse: collapse; table-layout: fixed;">
                             <tbody>
                                 @if (Model != null && Model.Any())
+
                                 {
                                     @foreach (var servico in Model)
+
                                     {
                                         <tr>
                                             <td style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 50px">@servico.IdServico</td>
-                                            <td style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 220px">@servico.TipoServico</td>
-                                            <td style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 250px">@servico.Valor.ToString("C")</td> <!-- Formato de moeda -->
+                                            <td style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 840px">@servico.TipoServico</td>
+                                            <td style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 200px">@servico.Valor.ToString("C")</td> <!-- Formato de moeda -->
 
-                                            <td class="text-center" style="border: 1px solid #db22ac; width: 80px;">
-                                                <button class="btn btn-default" onclick="definirEdt('@servico.IdServico', '@servico.TipoServico', '@servico.Valor')" data-bs-toggle="modal" data-bs-target="#AtualizarServico" style="color: #db22ac;">
+                                            <td class="text-center" style="border: 1px solid #db22ac; width: 50px;">
+                                                <button class="btn btn-default" onclick="definirEdt('@servico.IdServico', '@servico.TipoServico', '@servico.Valor')" data-bs-toggle="modal" data-bs-target="#AtualizarServico" style="color: #000000;">
                                                     <i class="fa fa-edit"></i>
                                                 </button>
                                             </td>
-                                            <td class="text-center" style="border: 1px solid #db22ac; width: 80px;">
-                                                <button class="btn btn-default" onclick="definirExc('@servico.IdServico', '@servico.TipoServico', '@servico.Valor')" data-bs-toggle="modal" data-bs-target="#ExcluirServico" style="color: #db22ac;">
+                                            <td class="text-center" style="border: 1px solid #db22ac; width: 50px;">
+                                                <button class="btn btn-default" onclick="definirExc('@servico.IdServico', '@servico.TipoServico', '@servico.Valor')" data-bs-toggle="modal" data-bs-target="#ExcluirServico" style="color: #000000;">
                                                     <i class="fa fa-trash"></i>
                                                 </button>
                                             </td>
                                         </tr>
                                     }
                                 }
+
                                 else
+
                                 {
                                     <tr>
-                                        <td colspan="5" style="text-align: center; color: #db22ac; padding: 8px;">Nenhum serviço encontrado.</td>
+                                        <td colspan="5" style="text-align: center; color: #EAE7DC; padding: 8px;">Nenhum serviço encontrado.</td>
                                     </tr>
                                 }
                             </tbody>
@@ -90,8 +93,13 @@
                     </div>
                 </div>
             </div>
-
+            <br>
+            <!-- Contador de Registros Centralizado com Fonte Maior -->
+            <div style="text-align: center; color: #db22ac; margin-top: 10px;">
+                <strong style="font-size: 18px">Total de Serviços: <span id="registroCount">0</span></strong>
+            </div>
         </div>
+
 
         <div class="modal fade" id="ExcluirServico" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -190,10 +198,7 @@
 
     </section>
 
-    <!-- Contador de Registros Centralizado com Fonte Maior -->
-    <div style="text-align: center; color: #db22ac; margin-top: 10px;">
-        <strong style="font-size: 18px">Total de Serviços: <span id="registroCount">0</span></strong>
-    </div>
+    
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
