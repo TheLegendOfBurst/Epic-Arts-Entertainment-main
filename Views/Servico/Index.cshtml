@@ -67,7 +67,7 @@
                                             <td style="color: #db22ac; border: 1px solid #db22ac; padding: 8px; width: 250px">@servico.Valor.ToString("C")</td> <!-- Formato de moeda -->
 
                                             <td class="text-center" style="border: 1px solid #db22ac; width: 80px;">
-                                                <button class="btn btn-default" onclick="definirEdt('@servico.IdServico', '@servico.TipoServico', '@servico.Valor')" data-bs-toggle="modal" data-bs-target="#EditarServico" style="color: #db22ac;">
+                                                <button class="btn btn-default" onclick="definirEdt('@servico.IdServico', '@servico.TipoServico', '@servico.Valor')" data-bs-toggle="modal" data-bs-target="#AtualizarServico" style="color: #db22ac;">
                                                     <i class="fa fa-edit"></i>
                                                 </button>
                                             </td>
@@ -152,7 +152,7 @@
             </div>
         </div>
 
-        <div class="modal fade" id="EditarServico" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="AtualizarServico" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -161,9 +161,16 @@
                     </div>
                     <div class="modal-body">
                         <form>
-                            <div class="mb-3">
-                                <label for="EdtNome">Nome do Serviço</label>
-                                <input type="text" id="EdtNome" class="form-control" placeholder="Desenvolvimento FrontEnd">
+                            <div class="mb-3 row">
+                                <div class="col-md-6">
+                                    @Html.DropDownList("EdtTipoServico",
+                                             new SelectList(ViewBag.Servicos, "Value", "Text", null),
+                                             "Escolha o serviço",
+                                             new { @class = "form-control", @style = "width:230px; background-color: #EAE7DC; color: #333;", required = "required" })
+                                </div>
+                                <div class="col-md-6">
+                                    <label style="color:red">*</label>
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <label for="EdtValor">Valor do Serviço</label>
@@ -179,6 +186,7 @@
                 </div>
             </div>
         </div>
+>
 
     </section>
 
@@ -194,12 +202,45 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
 
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Adiciona o SweetAlert2 -->
+
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Função para remover o asterisco
+            function removerAsterisco(campo) {
+                var label = campo.closest('.row').querySelector('label');
+
+                // Verifica se o campo foi preenchido
+                if (campo.value.trim() !== "") {
+                    label.style.display = 'none'; // Remove o asterisco
+                } else {
+                    label.style.display = 'inline'; // Exibe o asterisco novamente se o campo estiver vazio
+                }
+            }
+
+            // Função para aplicar o evento de input em todos os campos
+            function adicionarEventos() {
+                // Campos de texto
+                var campos = ['#Nome', '#Senha', ' ', '#Telefone', '#TipoUsuario'];
+
+                campos.forEach(function (seletor) {
+                    var campo = document.querySelector(seletor);
+                    if (campo) {
+                        campo.addEventListener('input', function () {
+                            removerAsterisco(campo);
+                        });
+                    }
+                });
+            }
+
+            // Inicializa os eventos
+            adicionarEventos();
+        });
 
         document.addEventListener("DOMContentLoaded", function () {
             // Função para verificar se o campo foi preenchido e esconder o asterisco
             function verificarPreenchimento(campo, label) {
-                // Verifica se o campo está preenchido (para input) ou se o select não tem o valor padrão
                 if (campo.value.trim() !== "" || (campo.tagName === "SELECT" && campo.selectedIndex !== 0)) {
                     label.style.display = 'none'; // Esconde o asterisco
                 } else {
@@ -211,8 +252,11 @@
             function adicionarEventos() {
                 // Campos a serem monitorados
                 const campos = [
-                    { id: '#TipoServico', type: 'select' },  // Campo select
-                    { id: '#Valor', type: 'input' }         // Campo input
+                    { id: '#EdtNome', type: 'input' },
+                    { id: '#EdtSenha', type: 'input' },
+                    { id: '#EdtEmail', type: 'input' },
+                    { id: '#EdtTel', type: 'input' },
+                    { id: '#EdtTipoUsuario', type: 'select' }
                 ];
 
                 campos.forEach(function (campoInfo) {
@@ -239,29 +283,51 @@
             // Inicializa os eventos
             adicionarEventos();
 
-            // Função para limpar os campos do modal quando for aberto
-            window.limparCamposInserirServico = function () {
-                // Limpar campos de texto
-                document.querySelector('#Valor').value = '';
-                document.querySelector('#TipoServico').selectedIndex = 0;  // Reseta o select para a opção "Escolha o tipo de Serviço"
+            // Função que preenche os campos ao editar o usuário
+            window.definirEdt = function (id, Nome, Email, Senha, TipoUsuario, Telefone) {
+                $('#EdtId').val(id);
+                $('#EdtNome').val(Nome);
+                $('#EdtSenha').val(Senha);
+                $('#EdtEmail').val(Email);
+                $('#EdtTel').val(Telefone);
 
-                // Mostrar novamente os asteriscos
+                // Preenche o campo de senha, se necessário
+                var senhaValue = "";
+                if (Senha) {
+                    $('#EdtSenha').val(Senha);
+                    senhaValue = Senha;
+                }
+
+                // Atualiza o tipo de usuário no dropdown
+                if ($('#EdtTipoUsuario').length > 0) {
+                    $('#EdtTipoUsuario option').filter(function () {
+                        return $(this).val() === TipoUsuario;
+                    }).prop('selected', true);
+                    $('#EdtTipoUsuario').trigger('chosen:updated');
+                } else {
+                    console.error("DropDownList não encontrado.");
+                }
+
+                // Verifica o preenchimento dos campos e esconde os asteriscos
                 const campos = [
-                    { id: '#TipoServico', type: 'select' },
-                    { id: '#Valor', type: 'input' }
+                    { id: '#EdtNome', type: 'input' },
+                    { id: '#EdtSenha', type: 'input' },
+                    { id: '#EdtEmail', type: 'input' },
+                    { id: '#EdtTel', type: 'input' },
+                    { id: '#EdtTipoUsuario', type: 'select' }
                 ];
 
+                // Chama a função de verificação para cada campo ao preencher os dados
                 campos.forEach(function (campoInfo) {
                     const campo = document.querySelector(campoInfo.id);
                     const label = campo.closest('.row').querySelector('label');
-                    label.style.display = 'inline'; // Mostrar asterisco
+                    verificarPreenchimento(campo, label);
                 });
             }
         });
-
+       
         $(document).ready(function () {
-
-         // Função para atualizar o contador de registros visíveis
+            // Função para atualizar o contador de registros visíveis
             function atualizarContador() {
                 var visibleRows = $('#TbServicosBody tbody tr:visible').length; // Conta as linhas visíveis
                 $('#registroCount').text(visibleRows); // Atualiza o contador
@@ -287,116 +353,227 @@
             atualizarContador();
         });
 
-        function definirEdt(id, Nome, Valor) {
+        function definirEdt(id, tiposervico, valor) {
+            console.log("tiposervico recebido:", tiposervico);  // Verifique o valor que está sendo passado para a função
+
             $('#EdtId').val(id);
-            $('#EdtNome').val(Nome);
-            $('#EdtValor').val(Valor);
+            $('#EdtValor').val(valor);
+
+            if ($('#EdtTipoServico').length > 0) {
+                console.log("Procurando valor no dropdown EdtTipoServico:", tiposervico);
+
+                // Percorrer todas as opções para encontrar o valor correto
+                var optionFound = false;
+
+                $('#EdtTipoServico option').each(function () {
+                    // Comparar o texto das opções com o texto recebido
+                    if ($(this).text() === tiposervico) {
+                        // Marca a opção como selecionada
+                        $(this).prop('selected', true);
+                        optionFound = true;
+                    }
+                });
+
+                if (optionFound) {
+                    // Atualiza o chosen, se necessário
+                    $('#EdtTipoServico').trigger('chosen:updated');
+
+                    // Imprime no console o valor da opção selecionada
+                    var selectedValue = $('#EdtTipoServico').val();
+                    console.log("Valor selecionado no dropdown EdtTipoServico:", selectedValue);
+                } else {
+                    console.log("Opção não encontrada no dropdown.");
+                }
+            } else {
+                console.error("DropDownList 'EdtTipoServico' não encontrado.");
+            }
         }
 
-        function definirExc(id, Nome, Valor) {
+        function definirExc(id, nome, valor) {
+            console.log(id, nome, valor)
             $('#ExcId').val(id);
-            $('#ExcNome').val(Nome);
-            $('#ExcValor').val(Valor);
+            $('#ExcServico').val(nome);
+            $('#ExcValor').val(valor);
         }
-
+        
         function InserirServico() {
-    // Coleta os valores dos campos HTML
-    var valor = $('#Valor').val();
-    var tipoServico = $('#TipoServico option:selected').val();
 
-    // Validação dos campos
-    if (tipoServico === "" || tipoServico === "Escolha o tipo de Serviço") {
-        alert("Por favor, selecione o tipo de serviço.");
-        return;
-    }
-    if (valor.trim() === "") {
-        alert("Por favor, insira um valor válido.");
-        return;
-    }
-            // Show the overlay and loader
-            $("#overlay").show();  // Exibir o overlay escuro
-            $("#loader").show();   // Exibir o loader
+             var tipoServico = $('#TipoServico option:selected').text();
+             var Valor = $('#Valor').val();
 
-    // Cria o objeto de dados que será enviado
-    var dados = {
-        tipoServico: tipoServico,
-        valor: valor
-    };
 
-    // Requisição AJAX para o método InserirServico
-    $.ajax({
-        url: '/Servico/InserirServico', // URL do método no controlador
-        type: "POST",
-        dataType: "json",
-        data: dados,
-        success: function (resultado) {
-                    // Hide the overlay and loader after the response
+             if (tipoServico === "" || tipoServico === "Escolha o serviço") {
+                alert("Por favor, selecione um Serviço Valido.");
+                 return;
+             }
+             if (Valor.trim() === "") {
+                 alert("Por favor, insira um Valor Valido.");
+                 return;
+             }
+
+             // Show the overlay and loader
+             $("#overlay").show();  // Exibir o overlay escuro
+             $("#loader").show();   // Exibir o loader
+
+
+             // Objeto com os dados para enviar via AJAX
+             var dados = {
+                 tipoServico: tipoServico,
+                 Valor: Valor
+             };
+
+             console.log(dados); // Verifica os dados antes de enviar
+
+             // Requisição AJAX
+             $.ajax({
+                 url: '@Url.Action("InserirServico", "Servico")', // Substitua "NomeDoController" pelo nome da sua controller
+                 type: 'POST',
+                 dataType: 'json',
+                 data: dados,
+                 success: function (resultado) {
+                    // Hide the overlay and loader after the resultado
                     $("#overlay").hide();
                     $("#loader").hide();
-            // Verifica o sucesso da operação
-            if (resultado.success) {
-                alert(resultado.message); // Exibe a mensagem de sucesso
-                $('#InserirServico').modal('hide'); // Fecha o modal após a inserção
-                location.reload(); // Recarrega a página para atualizar a lista de serviços
-            } else {
-                alert(resultado.message); // Exibe a mensagem de erro
-            }
-        },
-        error: function (xhr, status, error) {
-            console.error("Erro ao inserir serviço:", status, error, xhr.responseText);
-            alert('Erro na requisição AJAX: ' + xhr.responseText);
-        }
-    });
-}
 
+                    if (resultado.success) {
+                        Swal.fire({
+                            position: "top-end",
+                            icon: 'success',
+                            title: 'Sucesso',
+                            text: 'Servico cadastrado com sucesso!',
+                            confirmButtonText: 'OK',
+                            width: '400px',  // Defina a largura desejada aqui
+                            padding: '20px', // Ajuste o preenchimento interno do alerta
+                            customClass: {
+                                popup: 'custom-popup'  // Adiciona uma classe customizada (opcional)
+                            }
+                        }).then(function () {
+                            // Fecha o modal
+                            $('#InserirServico').modal('hide');
+                            // Recarrega a página
+                            location.reload(); // Recarrega a página atual
+                        });
+                    } else {
+                        Swal.fire({
+                            position: "top-end",
+                            icon: 'error',
+                            title: 'Erro',
+                            text: resultado.message,
+                            confirmButtonText: 'OK',
+                            width: '400px',  // Defina a largura desejada aqui
+                            padding: '20px', // Ajuste o preenchimento interno do alerta
+                            customClass: {
+                                popup: 'custom-popup'  // Adiciona uma classe customizada (opcional)
+                            }
+                        });
+                    }
+                 },
+                 error: function () {
+                     Swal.fire({
+                            position: "top-end",
+                            icon: 'error',
+                            title: 'Erro',
+                            text: resultado.message,
+                            confirmButtonText: 'OK',
+                            width: '400px',  // Defina a largura desejada aqui
+                            padding: '20px', // Ajuste o preenchimento interno do alerta
+                            customClass: {
+                                popup: 'custom-popup'  // Adiciona uma classe customizada (opcional)
+                            }
+                        });
+                 }
+             });
+         }
 
         function AtualizarServico() {
-            var idServico = $('#EdtId').val();
-            var nomeServico = $('#EdtNome').val();
-            var valorServico = $('#EdtValor').val();
+            // Obter valores dos campos
+            var id = $('#EdtId').val();
+            var tipoServico = $('#EdtTipoServico option:selected').text();  // Valor do tipo de serviço selecionado
+            var valor = $('#EdtValor').val();  // Valor inserido
 
-            // Validação simples para garantir que os campos não estão vazios
-            if (nomeServico.trim() === "") {
-                alert("Por favor, preencha o campo Nome.");
-                return;
+            // Validação dos campos
+            if (!id || id === "") {
+                alert("O ID do serviço é obrigatório.");
+                return;  // Para a execução da função se o ID não estiver preenchido
             }
-            if (valorServico.trim() === "") {
-                alert("Por favor, preencha o campo Valor.");
-                return;
+
+            if (!tipoServico || tipoServico === "Escolha o serviço") {
+                alert("Por favor, selecione um tipo de serviço.");
+                return;  // Para a execução da função se o tipo de serviço não for selecionado
             }
+
+            if (!valor || valor.trim() === "") {
+                alert("Por favor, insira um valor para o serviço.");
+                return;  // Para a execução da função se o valor estiver vazio
+            }
+
             // Show the overlay and loader
-            $("#overlay").show();  // Exibir o overlay escuro
-            $("#loader").show();   // Exibir o loader
+             $("#overlay").show();  // Exibir o overlay escuro
+             $("#loader").show();   // Exibir o loader
 
-            // Criar o objeto com os dados para envio
-            var dados = {
-                id: idServico,
-                tipoServico: nomeServico, // Usar o nome do serviço ou valor adequado
-                valor: valorServico
-            };
-
-            // Requisição AJAX para enviar os dados de atualização
+            // Fazer a requisição AJAX para atualizar o serviço
             $.ajax({
-                url: '/Servico/AtualizarServico', // URL do controlador que vai processar a atualização
-                type: "POST",
-                dataType: "json",
-                data: dados,
+                url: '/Servico/AtualizarServico',  // Substitua pelo nome real do seu controller
+                type: 'POST',
+                data: {
+                    id: id,
+                    TipoServico: tipoServico,
+                    Valor: valor
+                },
                 success: function (resultado) {
+                    // Hide the overlay and loader after the resultado
+                    $("#overlay").hide();
+                    $("#loader").hide();
+
                     if (resultado.success) {
-                        alert(resultado.message);  // Exibe a mensagem de sucesso
-                        $('#EditarServico').modal('hide'); // Fecha o modal
-                        location.reload(); // Recarrega a página para mostrar a alteração
+                        Swal.fire({
+                            position: "top-end",
+                            icon: 'success',
+                            title: 'Sucesso',
+                            text: 'Servico alterado com sucesso!',
+                            confirmButtonText: 'OK',
+                            width: '400px',  // Defina a largura desejada aqui
+                            padding: '20px', // Ajuste o preenchimento interno do alerta
+                            customClass: {
+                                popup: 'custom-popup'  // Adiciona uma classe customizada (opcional)
+                            }
+                        }).then(function () {
+                            // Fecha o modal
+                            $('#AtualizarServico').modal('hide');
+                            // Recarrega a página
+                            location.reload(); // Recarrega a página atual
+                        });
                     } else {
-                        alert(resultado.message);  // Exibe a mensagem de erro
+                        Swal.fire({
+                            position: "top-end",
+                            icon: 'error',
+                            title: 'Erro',
+                            text: resultado.message,
+                            confirmButtonText: 'OK',
+                            width: '400px',  // Defina a largura desejada aqui
+                            padding: '20px', // Ajuste o preenchimento interno do alerta
+                            customClass: {
+                                popup: 'custom-popup'  // Adiciona uma classe customizada (opcional)
+                            }
+                        });
                     }
                 },
-                error: function () {
-                    alert('Erro na requisição AJAX.');
+                error: function (xhr, status, error) {
+                    Swal.fire({
+                            position: "top-end",
+                            icon: 'error',
+                            title: 'Erro',
+                            text: resultado.message,
+                            confirmButtonText: 'OK',
+                            width: '400px',  // Defina a largura desejada aqui
+                            padding: '20px', // Ajuste o preenchimento interno do alerta
+                            customClass: {
+                                popup: 'custom-popup'  // Adiciona uma classe customizada (opcional)
+                            }
+                        });
                 }
             });
         }
-
-
 
         function ExcluirServico() {
             var idServico = $('#ExcId').val();  // Pega o ID do serviço
@@ -435,7 +612,7 @@
                             }
                         }).then(function () {
                             // Fecha o modal
-                            $('#EditarServico').modal('hide');
+                            $('#AtualizarServico').modal('hide');
                             // Recarrega a página
                             location.reload(); // Recarrega a página atual
                         });

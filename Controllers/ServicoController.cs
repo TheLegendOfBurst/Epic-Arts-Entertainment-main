@@ -38,38 +38,23 @@ namespace Epic_Arts_Entertainment.Controllers
             var Servicos = _servicoRepositorio.ListarServicos();
             return View(Servicos);
         }
-
         public IActionResult InserirServico(string tipoServico, decimal valor)
         {
             try
             {
-                // Mapeamento dos tipos de serviço (podemos fazer isso diretamente ou usar um serviço)
-                var tipoServicoMap = new Dictionary<string, string>
-        {
-            { "0", "Desenvolvimento de Jogos" },
-            { "1", "Criação de Roteiro e Narrativas" },
-            { "2", "Design De Personagens e Ambientes" },
-            { "3", "Marketing e Lançamento de Jogos" },
-            { "4", "Teste e Garantia de Qualidade (QA)" },
-            { "5", "Suporte e Manutenção de Jogos e Consoles" }
-        };
-
-                // Obter o nome do tipo de serviço baseado no valor selecionado
-                string nomeTipoServico = tipoServicoMap[tipoServico];
-
                 // Chama o método do repositório que realiza a inserção no banco de dados
-                var resultado = _servicoRepositorio.InserirServico(nomeTipoServico, valor);
+                var resultado = _servicoRepositorio.InserirServico(tipoServico, valor);
 
                 // Verifica o resultado da inserção
                 if (resultado)
                 {
-                    // Se o resultado for verdadeiro, significa que o serviço foi inserido com sucesso
-                    return Json(new { success = true, message = "Serviço inserido com sucesso!" });
+                    // Se o resultado for verdadeiro, significa que o servico foi inserido com sucesso
+                    return Json(new { success = true, message = "Servico inserido com sucesso!" });
                 }
                 else
                 {
-                    // Se o resultado for falso, significa que houve um erro ao tentar inserir o serviço
-                    return Json(new { success = false, message = "Erro ao inserir o serviço. Tente novamente." });
+                    // Se o resultado for falso, significa que houve um erro ao tentar inserir o servico
+                    return Json(new { success = false, message = "Erro ao inserir o servico. Tente novamente." });
                 }
             }
             catch (Exception ex)
@@ -78,12 +63,11 @@ namespace Epic_Arts_Entertainment.Controllers
                 return Json(new { success = false, message = "Erro ao processar a solicitação. Detalhes: " + ex.Message });
             }
         }
-
         public IActionResult AtualizarServico(int id, string tipoServico, decimal valor)
         {
             try
             {
-                // Chama o repositório para atualizar o serviço
+                // Chama o repositório para atualizar o servico
                 var resultado = _servicoRepositorio.AtualizarServico(id, tipoServico, valor);
 
                 if (resultado)
@@ -100,29 +84,29 @@ namespace Epic_Arts_Entertainment.Controllers
                 return Json(new { success = false, message = "Erro ao processar a solicitação. Detalhes: " + ex.Message });
             }
         }
-
         public IActionResult ExcluirServico(int id)
         {
             try
             {
-                // Chama o repositório para excluir o serviço
+                // Chama o repositório para excluir o usuário
                 var resultado = _servicoRepositorio.ExcluirServico(id);
 
                 if (resultado)
                 {
-                    return Json(new { success = true, message = "Serviço excluído com sucesso!" });
+                    return Json(new { success = true, message = "Usuário excluído com sucesso!" });
                 }
                 else
                 {
-                    return Json(new { success = false, message = "Não foi possível excluir o serviço. Verifique se ele está vinculado a outros registros no sistema." });
+                    // Se o resultado for falso, você pode fornecer uma mensagem mais específica.
+                    return Json(new { success = false, message = "Não foi possível excluir o usuário. Verifique se ele está vinculado a outros registros no sistema." });
                 }
             }
             catch (Exception ex)
             {
+                // Captura qualquer erro e inclui a mensagem detalhada da exceção
                 return Json(new { success = false, message = "Erro ao processar a solicitação. Detalhes: " + ex.Message });
             }
         }
-
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

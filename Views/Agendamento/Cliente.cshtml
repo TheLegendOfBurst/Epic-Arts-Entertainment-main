@@ -248,278 +248,352 @@
     </section>
 
 
-
     <script src="~/lib/swiper/swiper-bundle.min.js"></script>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
 
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Adiciona o SweetAlert2 -->
+
+
     <script>
-        var listaOriginalHorario;
-           
-$(document).ready(function () {
-    $('input[type="checkbox"]').click(function () {
-        var isChecked = $(this).prop("checked");
-        var groupId = $(this).attr("data-group");
+                var listaOriginalHorario;
 
-        if (isChecked) {
-            $('input[type="checkbox"][data-group="' + groupId + '"]').not($(this)).prop("checked", false);
-        }
-    });
-});
+                $(document).ready(function () {
+                    $('input[type="checkbox"]').click(function () {
+                        var isChecked = $(this).prop("checked");
+                        var groupId = $(this).attr("data-group");
 
-function definirExc(id, Nome, Email, Telefone, Data, Horario, Tecnica, Val) {
+                        if (isChecked) {
+                            $('input[type="checkbox"][data-group="' + groupId + '"]').not($(this)).prop("checked", false);
+                        }
+                    });
+                });
 
-    $('#ExcId').val(id);
-    $('#ExcNome').val(Nome);
-    $('#ExcEmail').val(Email);
-    $('#ExcTel').val(Telefone)
-    $('#ExcData').val(Data)
-    $('#ExcHorario').val(Horario)
-    $('#ExcTecnica').val(Tecnica)
-    $('#ExcVal').val(Val)
+                function definirExc(id, Nome, Email, Telefone, Data, Horario, Tecnica, Val) {
 
-}
+                    $('#ExcId').val(id);
+                    $('#ExcNome').val(Nome);
+                    $('#ExcEmail').val(Email);
+                    $('#ExcTel').val(Telefone)
+                    $('#ExcData').val(Data)
+                    $('#ExcHorario').val(Horario)
+                    $('#ExcTecnica').val(Tecnica)
+                    $('#ExcVal').val(Val)
 
-function definirEdt(id, Nome, Email, Telefone, Data, Horario, Tecnica, Val, Conf) {
-
-    $('#EdtId').val(id);
-    $('#EdtNome').val(Nome);
-    $('#EdtEmail').val(Email);
-    $('#EdtTel').val(Telefone);
-    $('#EdtData').val(Data);
-    $('#EdtHorario').val(Horario);
-    $('#EdtVal').val(Val);
-
-    $('#EdtTipoServico option').each(function () {
-        if ($(this).text() === Tecnica) {
-            $(this).prop('selected', true);
-        }
-    });
-}
-
-$(document).ready(function () {
-    $('#EditarAgendamento').on('show.bs.modal', function () {
-        $('#chkR').prop('checked', false);
-        $('#divCampos').hide();
-    });
-});
-
-$(document).ready(function () {
-
-    listaOriginalHorario = @Html.Raw(JsonSerializer.Serialize(ViewBag.lstHorarios));
-    document.getElementById('divCampos').style.display = 'none';
-
-    // Adiciona o ouvinte de evento ao checkbox
-    document.getElementById('chkR').addEventListener('change', function () {
-        var display = this.checked ? 'block' : 'none';
-        document.getElementById('divCampos').style.display = display;
-    });
-});
-
-$(document).ready(function () {
-    // Função para atualizar o contador de registros visíveis
-    function atualizarContador() {
-        var visibleRows = $('#TbAgendamentoBody tbody tr:visible').length; // Conta as linhas visíveis
-        $('#registroCount').text(visibleRows); // Atualiza o contador
-    }
-
-    // Quando o usuário digitar no campo de filtro
-    $('#filtro').on('keyup', function () {
-        var value = $(this).val().toLowerCase(); // Pega o valor do campo de filtro e converte para minúsculas
-
-        // Filtra as linhas do corpo da tabela
-        $('#TbAgendamentoBody tbody tr').each(function () {
-            // Verifica se qualquer célula na linha contém o valor digitado no filtro
-            var rowText = $(this).text().toLowerCase();
-            // Exibe ou oculta a linha, dependendo de conter o valor
-            $(this).toggle(rowText.indexOf(value) > -1);
-        });
-
-        // Atualiza o contador após filtrar as linhas
-        atualizarContador();
-    });
-
-    // Inicializa o contador de registros ao carregar a página
-    atualizarContador();
-});
-
-function atualizarDropDownHorario(lista) {
-
-    $("#DropHorario").empty();
-    $.each(lista, function (index, item) {
-        $("#DropHorario").append($("<option></option>")
-            .attr("value", item.Value)
-            .text(item.Text));
-    });
-}
-          
-function consultarAgendamentoEdt() {
-
-    var data = $("#data_a").val();
-
-    // Resetar o DropDownList para a lista original
-    if (listaOriginalHorario) {
-        atualizarDropDownHorario(listaOriginalHorario);
-    }
-
-    $.ajax({
-        type: "GET",
-        url: "/Agendamento/ConsultarAgendamento",
-        data: { data: data },
-        success: function (response) {
-            response.forEach(function (item) {
-                switch (item.horario) {
-                    case "08:00:00":
-                        $("#DropHorario option[value='8']").remove();
-                        break;
-                    case "10:00:00":
-                        $("#DropHorario option[value='10']").remove();
-                        break;
-                    case "13:00:00":
-                        $("#DropHorario option[value='13']").remove();
-                        break;
-                    case "15:00:00":
-                        $("#DropHorario option[value='15']").remove();
-                        break;
-                    case "17:00:00":
-                        $("#DropHorario option[value='17']").remove();
-                        break;
-                    case "19:00:00":
-                        $("#DropHorario option[value='19']").remove();
-                        break;
-                    default:
-                        break;
                 }
+
+                function definirEdt(id, Nome, Email, Telefone, Data, Horario, Tecnica, Val, Conf) {
+
+                    $('#EdtId').val(id);
+                    $('#EdtNome').val(Nome);
+                    $('#EdtEmail').val(Email);
+                    $('#EdtTel').val(Telefone);
+                    $('#EdtData').val(Data);
+                    $('#EdtHorario').val(Horario);
+                    $('#EdtVal').val(Val);
+
+                    $('#EdtTipoServico option').each(function () {
+                        if ($(this).text() === Tecnica) {
+                            $(this).prop('selected', true);
+                        }
+                    });
+                }
+
+                $(document).ready(function () {
+                    $('#EditarAgendamento').on('show.bs.modal', function () {
+                        $('#chkR').prop('checked', false);
+                        $('#divCampos').hide();
+                    });
+                });
+
+                $(document).ready(function () {
+
+                    listaOriginalHorario = @Html.Raw(JsonSerializer.Serialize(ViewBag.lstHorarios));
+                    document.getElementById('divCampos').style.display = 'none';
+
+                    // Adiciona o ouvinte de evento ao checkbox
+                    document.getElementById('chkR').addEventListener('change', function () {
+                        var display = this.checked ? 'block' : 'none';
+                        document.getElementById('divCampos').style.display = display;
+                    });
+                });
+
+                $(document).ready(function () {
+                    // Função para atualizar o contador de registros visíveis
+                    function atualizarContador() {
+                        var visibleRows = $('#TbAgendamentoBody tbody tr:visible').length; // Conta as linhas visíveis
+                        $('#registroCount').text(visibleRows); // Atualiza o contador
+                    }
+
+                    // Quando o usuário digitar no campo de filtro
+                    $('#filtro').on('keyup', function () {
+                        var value = $(this).val().toLowerCase(); // Pega o valor do campo de filtro e converte para minúsculas
+
+                        // Filtra as linhas do corpo da tabela
+                        $('#TbAgendamentoBody tbody tr').each(function () {
+                            // Verifica se qualquer célula na linha contém o valor digitado no filtro
+                            var rowText = $(this).text().toLowerCase();
+                            // Exibe ou oculta a linha, dependendo de conter o valor
+                            $(this).toggle(rowText.indexOf(value) > -1);
+                        });
+
+                        // Atualiza o contador após filtrar as linhas
+                        atualizarContador();
+                    });
+
+                    // Inicializa o contador de registros ao carregar a página
+                    atualizarContador();
+                });
+
+                function atualizarDropDownHorario(lista) {
+
+                    $("#DropHorario").empty();
+                    $.each(lista, function (index, item) {
+                        $("#DropHorario").append($("<option></option>")
+                            .attr("value", item.Value)
+                  .text(item.Text));
+                    });
+                }
+
+                function consultarAgendamentoEdt() {
+
+                    var data = $("#data_a").val();
+
+                    // Resetar o DropDownList para a lista original
+                    if (listaOriginalHorario) {
+                        atualizarDropDownHorario(listaOriginalHorario);
+                    }
+
+                    $.ajax({
+                        type: "GET",
+                        url: "/Agendamento/ConsultarAgendamento",
+                        data: { data: data },
+                        success: function (response) {
+                            response.forEach(function (item) {
+                                switch (item.horario) {
+                                    case "08:00:00":
+                                        $("#DropHorario option[value='8']").remove();
+                                        break;
+                                    case "10:00:00":
+                                        $("#DropHorario option[value='10']").remove();
+                                        break;
+                                    case "13:00:00":
+                                        $("#DropHorario option[value='13']").remove();
+                                        break;
+                                    case "15:00:00":
+                                        $("#DropHorario option[value='15']").remove();
+                                        break;
+                                    case "17:00:00":
+                                        $("#DropHorario option[value='17']").remove();
+                                        break;
+                                    case "19:00:00":
+                                        $("#DropHorario option[value='19']").remove();
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            });
+                        },
+                        error: function (error) {
+                            // Manipule os erros aqui
+                            console.error("Erro na requisição AJAX:", error);
+                }
+                    });
+                }
+
+                function obterDataHoraFormatada() {
+                    // Obtém a data e hora atuais
+                    var dataHoraAtual = new Date();
+
+                    // Formata a data e hora para o formato desejado (por exemplo, "yyyy-MM-dd HH:mm:ss.fff")
+                    var dataHoraFormatada = dataHoraAtual.getFullYear() + "-" +
+                        ("0" + (dataHoraAtual.getMonth() + 1)).slice(-2) + "-" +
+                        ("0" + dataHoraAtual.getDate()).slice(-2) + " " +
+                        ("0" + dataHoraAtual.getHours()).slice(-2) + ":" +
+                        ("0" + dataHoraAtual.getMinutes()).slice(-2) + ":" +
+                        ("0" + dataHoraAtual.getSeconds()).slice(-2) + "." +
+                        ("00" + dataHoraAtual.getMilliseconds()).slice(-3);
+
+                    // Retorna a data e hora formatada
+                    return dataHoraFormatada;
+                }
+
+                function AlterarAgendamento() {
+
+                    var id = $("#EdtId").val();
+                    var servico = $('#EdtTipoServico option:selected').val();
+                    var data;
+                    var horario;
+                    if (!servico != 0) {
+                        alert("Por favor, preencha o campo Tecnica.");
+                        return;
+                    }
+                    if ($('#chkR').prop('checked')) {
+                        data = $("#data_a").val(),
+                            horario = $('#DropHorario option:selected').text()
+
+                        if (!data) {
+                            alert("Por favor, preencha o campo data.");
+                            return;
+                        }
+                        if (!horario) {
+                            alert("Por favor, preencha o campo horário.");
+                            return;
+                        }
+
+
+                    }
+                    else {
+
+                        data = null,
+                            horario = ""
+
+                    }
+
+                    // Show the overlay and loader
+                    $("#overlay").show();  // Exibir o overlay escuro
+                    $("#loader").show();   // Exibir o loader
+
+                    var dados = {
+                        id: id,
+                        data: data,
+                        servico: servico,
+                        horario: horario
+                    };
+
+                    console.log(dados);
+                    $.ajax({
+                        url: '/Agendamento/AlterarAgendamento',
+                        type: "POST",
+                        dataType: "json",
+                        data: dados,
+                        success: function (resultado) {
+                            // Hide the overlay and loader after the response
+                            $("#overlay").hide();
+                            $("#loader").hide();
+                            if (resultado.success) {
+                                Swal.fire({
+                                    position: "top-end",
+                                    icon: 'success',
+                                    title: 'Sucesso',
+                                    text: 'Agendamento alterado com sucesso!',
+                                    confirmButtonText: 'OK',
+                                    width: '400px',  // Defina a largura desejada aqui
+                                    padding: '20px', // Ajuste o preenchimento interno do alerta
+                                    customClass: {
+                                        popup: 'custom-popup'  // Adiciona uma classe customizada (opcional)
+                            }
+                        }).then(function () {
+                            // Fecha o modal
+                                    $('#EditarAgendamento').modal('hide');
+                                    // Recarrega a página
+                                    location.reload(); // Recarrega a página atual
+                                });
+                            } else {
+                                Swal.fire({
+                                    position: "top-end",
+                                    icon: 'error',
+                            title: 'Erro',
+                            text: resultado.message,
+                            confirmButtonText: 'OK',
+                                    width: '400px',  // Defina a largura desejada aqui
+                                    padding: '20px', // Ajuste o preenchimento interno do alerta
+                                    customClass: {
+                                        popup: 'custom-popup'  // Adiciona uma classe customizada (opcional)
+                                    }
+                                });
+                            }
+                        },
+                        error: function (xhr, textStatus, errorThrown) {
+                            Swal.fire({
+                                    position: "top-end",
+                                    icon: 'error',
+                                    title: 'Erro',
+                                    text: resultado.message,
+                                    confirmButtonText: 'OK',
+                                    width: '400px',  // Defina a largura desejada aqui
+                                    padding: '20px', // Ajuste o preenchimento interno do alerta
+                                    customClass: {
+                                    popup: 'custom-popup'  // Adiciona uma classe customizada (opcional)
+                                    }
+                            });
+                        }
             });
-        },
-        error: function (error) {
-            // Manipule os erros aqui
-            console.error("Erro na requisição AJAX:", error);
-        }
-    });
-}
-        
-function obterDataHoraFormatada() {
-    // Obtém a data e hora atuais
-    var dataHoraAtual = new Date();
-
-    // Formata a data e hora para o formato desejado (por exemplo, "yyyy-MM-dd HH:mm:ss.fff")
-    var dataHoraFormatada = dataHoraAtual.getFullYear() + "-" +
-        ("0" + (dataHoraAtual.getMonth() + 1)).slice(-2) + "-" +
-        ("0" + dataHoraAtual.getDate()).slice(-2) + " " +
-        ("0" + dataHoraAtual.getHours()).slice(-2) + ":" +
-        ("0" + dataHoraAtual.getMinutes()).slice(-2) + ":" +
-        ("0" + dataHoraAtual.getSeconds()).slice(-2) + "." +
-        ("00" + dataHoraAtual.getMilliseconds()).slice(-3);
-
-    // Retorna a data e hora formatada
-    return dataHoraFormatada;
-}            
-
-function AlterarAgendamento() {
-
-    var id = $("#EdtId").val();
-    var servico = $('#EdtTipoServico option:selected').val();
-    var data;
-    var horario;
-    if (!servico != 0) {
-        alert("Por favor, preencha o campo Tecnica.");
-        return;
-    }
-    if ($('#chkR').prop('checked')) {
-        data = $("#data_a").val(),
-            horario = $('#DropHorario option:selected').text()
-
-        if (!data) {
-            alert("Por favor, preencha o campo data.");
-            return;
-        }
-        if (!horario) {
-            alert("Por favor, preencha o campo horário.");
-            return;
         }
 
+                function ExcluirAgendamento() {
 
 
+                    var userId = $('#ExcId').val();
 
-    }
-    else {
+                    // Show the overlay and loader
+                    $("#overlay").show();  // Exibir o overlay escuro
+                    $("#loader").show();   // Exibir o loader
 
-        data = null,
-            horario = ""
+                    $.ajax({
+                        type: "POST",
+                        url: "/Agendamento/ExcluirAgendamento",
+                        dataType: "json",
+                        data: { id: userId },
+                        success: function (resultado) {
 
-    }
-    var dados = {
-        id: id,
-        data: data,
-        servico: servico,
-        horario: horario
-    };
+                            // Hide the overlay and loader after the response
+                            $("#overlay").hide();
+                            $("#loader").hide();
 
-    console.log(dados);
-    $.ajax({
-        url: '/Agendamento/AlterarAgendamento',
-        type: "POST",
-        dataType: "json",
-        data: dados,
-        success: function (response) {
-            if (response.success) {
-                alert("Agendamento(s) Alterados(s) com sucesso!");
-                $('#EditarAgendamento').modal('hide'); // Substitua 'seuModal' pelo ID do seu modal
-                // Atualizar a página
-                location.reload();
-            } else {
-                alert("Erro ao alterar agendamento(s).");
-            }
-        },
-        error: function (xhr, textStatus, errorThrown) {
-            alert("Erro ao cadastrar agendamento(s): " + errorThrown);
-        }
-    });
-}
-
-function ExcluirAgendamento() {
-
-
-    var userId = $('#ExcId').val();
-
-            // Show the overlay and loader
-            $("#overlay").show();  // Exibir o overlay escuro
-            $("#loader").show();   // Exibir o loader
-
-    $.ajax({
-        type: "POST",
-        url: "/Agendamento/ExcluirAgendamento",
-        dataType: "json",
-        data: { id: userId },
-        success: function (response) {
-
-                    // Hide the overlay and loader after the response
-                    $("#overlay").hide();
-                    $("#loader").hide();
-
-            if (response.success) {
-
-                alert("Agendamento excluido com sucesso!");
-                $('#ExcluirAgendamento').modal('hide');
-                location.reload();
-
-            } else {
-
-                alert("Falha ao excluir usuário.");
-            }
-        },
-        error: function () {
-
-            alert("Erro na requisição AJAX.");
-        }
-    });
-}
+                            if (resultado.success) {
+                                Swal.fire({
+                                    position: "top-end",
+                                    icon: 'success',
+                                    title: 'Sucesso',
+                                    text: 'Agendamento excluido com sucesso!',
+                                    confirmButtonText: 'OK',
+                                    width: '400px',  // Defina a largura desejada aqui
+                                    padding: '20px', // Ajuste o preenchimento interno do alerta
+                                    customClass: {
+                                        popup: 'custom-popup'  // Adiciona uma classe customizada (opcional)
+                                    }
+                                }).then(function () {
+                                    // Fecha o modal
+                                    $('#ExcluirAgendamento').modal('hide');
+                                    // Recarrega a página
+                                    location.reload(); // Recarrega a página atual
+                                });
+                            } else {
+                                Swal.fire({
+                                    position: "top-end",
+                                    icon: 'error',
+                                    title: 'Erro',
+                                    text: resultado.message,
+                                    confirmButtonText: 'OK',
+                                    width: '400px',  // Defina a largura desejada aqui
+                                    padding: '20px', // Ajuste o preenchimento interno do alerta
+                                    customClass: {
+                                        popup: 'custom-popup'  // Adiciona uma classe customizada (opcional)
+                                    }
+                                });
+                            }
+                        },
+                        error: function () {
+                            Swal.fire({
+                                    position: "top-end",
+                                    icon: 'error',
+                                    title: 'Erro',
+                                    text: resultado.message,
+                                    confirmButtonText: 'OK',
+                                    width: '400px',  // Defina a largura desejada aqui
+                                    padding: '20px', // Ajuste o preenchimento interno do alerta
+                                    customClass: {
+                                        popup: 'custom-popup'  // Adiciona uma classe customizada (opcional)
+                                    }
+                                });
+                        }
+                    });
+                }
     </script>
-
     <script>
-        // Definindo a data mínima como a data atual usando JavaScript
         document.getElementById('data_a').setAttribute('min', new Date().toISOString().split('T')[0]);
     </script>
 </body>
