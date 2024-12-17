@@ -212,6 +212,7 @@ namespace Epic_Arts_Entertainment.Repositorios
             }
         }
 
+
         public List<UsuarioVM> ListarNomesAgendamentos()
         {
             // Lista para armazenar os usuários com apenas Id e Nome

@@ -260,7 +260,8 @@
         });
 
         $(document).ready(function () {
-            // Função para atualizar o contador de registros visíveis
+
+         // Função para atualizar o contador de registros visíveis
             function atualizarContador() {
                 var visibleRows = $('#TbServicosBody tbody tr:visible').length; // Conta as linhas visíveis
                 $('#registroCount').text(visibleRows); // Atualiza o contador
@@ -400,6 +401,10 @@
         function ExcluirServico() {
             var idServico = $('#ExcId').val();  // Pega o ID do serviço
 
+            // Show the overlay and loader
+            $("#overlay").show();  // Exibir o overlay escuro
+            $("#loader").show();   // Exibir o loader
+
             // Dados a enviar para o servidor (ID do serviço)
             var dados = {
                 id: idServico // Usando "id" conforme esperado pelo backend
@@ -412,19 +417,56 @@
                 dataType: "json",
                 data: dados,
                 success: function (resultado) {
-                    // Hide the overlay and loader after the response
+                    // Hide the overlay and loader after the resultado
                     $("#overlay").hide();
                     $("#loader").hide();
 
                     if (resultado.success) {
-                        alert(resultado.message);  // Exibe a mensagem de sucesso
-                        location.reload(); // Recarrega a página para atualizar a lista de serviços
+                        Swal.fire({
+                            position: "top-end",
+                            icon: 'success',
+                            title: 'Sucesso',
+                            text: 'Serviço excluido com sucesso!',
+                            confirmButtonText: 'OK',
+                            width: '400px',  // Defina a largura desejada aqui
+                            padding: '20px', // Ajuste o preenchimento interno do alerta
+                            customClass: {
+                                popup: 'custom-popup'  // Adiciona uma classe customizada (opcional)
+                            }
+                        }).then(function () {
+                            // Fecha o modal
+                            $('#EditarServico').modal('hide');
+                            // Recarrega a página
+                            location.reload(); // Recarrega a página atual
+                        });
                     } else {
-                        alert("Erro ao excluir o serviço. Verifique as dependências.");
+                        Swal.fire({
+                            position: "top-end",
+                            icon: 'error',
+                            title: 'Erro',
+                            text: resultado.message,
+                            confirmButtonText: 'OK',
+                            width: '400px',  // Defina a largura desejada aqui
+                            padding: '20px', // Ajuste o preenchimento interno do alerta
+                            customClass: {
+                                popup: 'custom-popup'  // Adiciona uma classe customizada (opcional)
+                            }
+                        });
                     }
                 },
-                error: function () {
-                    alert('Erro na requisição AJAX.');
+                error: function (xhr, status, error) {
+                    Swal.fire({
+                        position: "top-end",
+                        icon: 'error',
+                        title: 'Erro',
+                        text: resultado.message,
+                        confirmButtonText: 'OK',
+                        width: '400px',  // Defina a largura desejada aqui
+                        padding: '20px', // Ajuste o preenchimento interno do alerta
+                        customClass: {
+                            popup: 'custom-popup'  // Adiciona uma classe customizada (opcional)
+                        }
+                    });
                 }
             });
         }

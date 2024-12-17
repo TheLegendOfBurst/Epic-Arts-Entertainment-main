@@ -244,10 +244,9 @@
         // Função para inserir agendamento
         function InserirAgendamento() {
             // Data from hidden field or any other necessary values
-            var dataC = obterDataHoraFormatada();
+            var dataC = obterDataHoraFormatada();  // Assuming this function formats the current date/time.
             var data = $("#data_agdt").val();
-            var usuario = $("#DropUsuario").val();
-            var tipoServico = $('#TipoServico option:selected').val();
+            var tipoServico = $('#TipoServico option:selected').val(); // Getting value for "TipoServico"
             var atendimentos = [];
 
             // Check if the time slots are selected and push them into the atendimentos array
@@ -283,7 +282,6 @@
                 dtHoraAgendamento: dataC,
                 dataAgendamento: data,
                 horario: atendimentos,
-                IdUsuario: usuario,
                 IdServico: tipoServico,
             };
 
@@ -296,11 +294,11 @@
                 dataType: "json",
                 data: dados,
                 success: function (response) {
-                    if (response.success) {
-                        // Hide the overlay and loader after the response
+                    // Hide the overlay and loader after the response
                     $("#overlay").hide();
                     $("#loader").hide();
 
+                    if (response.success) {
                         alert("Agendamento cadastrado com sucesso!");
                         location.reload();  // Reload the page
                     } else {

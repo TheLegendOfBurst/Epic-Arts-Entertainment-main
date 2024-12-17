@@ -132,6 +132,10 @@
             return;
         }
 
+        // Show the overlay and loader
+         $("#overlay").show();  // Exibir o overlay escuro
+         $("#loader").show();   // Exibir o loader
+
         // Crie um objeto de usuário para enviar
         var dados = {
             Nome: nome,
@@ -148,6 +152,11 @@
             dataType: "json",
             data: dados,
             success: function (resultado) {
+
+                 // Hide the overlay and loader after the response
+                    $("#overlay").hide();
+                    $("#loader").hide();
+
                 if (resultado.success) {
                     Swal.fire({
                         icon: 'success',

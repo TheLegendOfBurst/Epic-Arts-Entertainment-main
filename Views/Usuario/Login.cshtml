@@ -101,66 +101,79 @@
 
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Adiciona o SweetAlert2 -->
 
-         $(document).ready(function () {
-     // Função para alternar a visibilidade da senha
-     $('#show-hide-password').click(function () {
-         var senhaInput = $('#loginPassword');
-         var tipoInput = senhaInput.attr('type');
+<script>
+    $(document).ready(function () {
+        // Função para alternar a visibilidade da senha
+        $('#show-hide-password').click(function () {
+            var senhaInput = $('#loginPassword');
+            var tipoInput = senhaInput.attr('type');
 
-         // Alternar entre o tipo de input password e text
-         if (tipoInput === 'password') {
-             senhaInput.attr('type', 'text');
-             $('#show-hide-password i').removeClass('fa-eye-slash').addClass('fa-eye');
-         } else {
-             senhaInput.attr('type', 'password');
-             $('#show-hide-password i').removeClass('fa-eye').addClass('fa-eye-slash');
-         }
-     });
+            // Alternar entre o tipo de input password e text
+            if (tipoInput === 'password') {
+                senhaInput.attr('type', 'text');
+                $('#show-hide-password i').removeClass('fa-eye-slash').addClass('fa-eye');
+            } else {
+                senhaInput.attr('type', 'password');
+                $('#show-hide-password i').removeClass('fa-eye').addClass('fa-eye-slash');
+            }
+        });
 
-     // Detecta quando o 'Enter' é pressionado no campo de email ou senha
-     $('#loginEmail, #loginPassword').on('keypress', function (e) {
-         if (e.which === 13) {  // Verifica se a tecla pressionada é 'Enter' (código 13)
-             e.preventDefault();  // Previne a ação padrão (para evitar que o formulário seja enviado)
-             ConsultaLogin();  // Chama a função de login
-         }
-     });
- });
+        // Detecta quando o 'Enter' é pressionado no campo de email ou senha
+        $('#loginEmail, #loginPassword').on('keypress', function (e) {
+            if (e.which === 13) {  // Verifica se a tecla pressionada é 'Enter' (código 13)
+                e.preventDefault();  // Previne a ação padrão (para evitar que o formulário seja enviado)
+                ConsultaLogin();  // Chama a função de login
+            }
+        });
+    });
 
-        function ConsultaLogin() {
-            var email = $("#loginEmail").val();
-            var senha = $("#loginPassword").val();
+    function ConsultaLogin() {
+        var email = $("#loginEmail").val();
+        var senha = $("#loginPassword").val();
 
-            // Show the overlay and loader
-            $("#overlay").show();  // Exibir o overlay escuro
-            $("#loader").show();   // Exibir o loader
+         // Show the overlay and loader
+         $("#overlay").show();  // Exibir o overlay escuro
+         $("#loader").show();   // Exibir o loader
 
-            $.ajax({
-                type: "POST",
-                url: "/Usuario/VerificarLogin",
-                data: { Email: email, Senha: senha },
-                dataType: "json",
-                success: function (result) {
+        $.ajax({
+            type: "POST",
+            url: "/Usuario/VerificarLogin",
+            data: { Email: email, Senha: senha },
+            dataType: "json",
+            success: function (result) {
+                // Hide the overlay and loader after the response
+                $("#overlay").hide();
+                $("#loader").hide();
 
-                    // Hide the overlay and loader after the response
-                    $("#overlay").hide();
-                    $("#loader").hide();
-
-                    if (result.success) {
-                        window.location.href = '/Home/Index';
-
-                    } else {
-                        // Exiba uma mensagem de erro
-                        alert("Erro: " + result.message);
-                    }
-                },
-                error: function (error) {
-                    console.error(error);
-                    // Lógica para lidar com erros de chamada Ajax
+                if (result.success) {
+                    Swal.fire({
+                        position: "top-end",
+                        icon: 'success',
+                        title: 'Sucesso',
+                        text: 'Login feito com sucesso!',
+                        confirmButtonText: 'OK'
+                    }).then(function () {
+                        window.location.href = '/Home/Index'; // Redireciona após o clique no botão OK
+                    });
+                } else {
+                    Swal.fire({
+                        position: "top-end",
+                        icon: 'error',
+                        title: 'Erro',
+                        text: result.message,
+                        confirmButtonText: 'OK'
+                    });
                 }
-            });
-        }
+            },
+            error: function (error) {
+                console.error(error);
+                // Lógica para lidar com erros de chamada Ajax
+            }
+        });
+    }
+
     </script>
 </body>
 
