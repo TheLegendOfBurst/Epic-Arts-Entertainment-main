@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|c:\\users\\aluno tarde\\documents\\davig\\site\\epic-arts-entertainment-main\\views\\agendamento\\admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|solutionrelative:views\\agendamento\\admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|c:\\users\\aluno tarde\\documents\\davig\\site\\epic-arts-entertainment-main\\views\\relatorio\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|solutionrelative:views\\relatorio\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,24 +14,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 335,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Admin.cshtml",
-              "DocumentMoniker": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\Views\\Agendamento\\Admin.cshtml",
-              "RelativeDocumentMoniker": "Views\\Agendamento\\Admin.cshtml",
-              "ToolTip": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\Views\\Agendamento\\Admin.cshtml",
-              "RelativeToolTip": "Views\\Agendamento\\Admin.cshtml",
-              "ViewState": "AgIAAH8CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-04T18:39:37.209Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -40,6 +27,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\Views\\Relatorio\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Relatorio\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\Views\\Relatorio\\Index.cshtml",
+              "RelativeToolTip": "Views\\Relatorio\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-04T19:25:27.495Z",
+              "EditorCaption": ""
             }
           ]
         }
