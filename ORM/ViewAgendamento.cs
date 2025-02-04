@@ -5,9 +5,7 @@ namespace Epic_Arts_Entertainment.ORM;
 
 public partial class ViewAgendamento
 {
-    public string TipoServico { get; set; } = null!;
-
-    public decimal Valor { get; set; }
+    public int IdAgendamento { get; set; }
 
     public DateTime DtHoraAgendamento { get; set; }
 
@@ -15,7 +13,9 @@ public partial class ViewAgendamento
 
     public TimeOnly Horario { get; set; }
 
-    public int IdAgendamento { get; set; }
+    public string TipoServico { get; set; } = null!;
+
+    public decimal Valor { get; set; }
 
     public string Nome { get; set; } = null!;
 

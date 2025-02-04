@@ -1,16 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Aluno Noite\\Downloads\\DaviG\\Site\\Epic-Arts-Entertainment-main\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|c:\\users\\aluno noite\\downloads\\davig\\site\\epic-arts-entertainment-main\\wwwroot\\css\\loader.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|solutionrelative:wwwroot\\css\\loader.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|c:\\users\\aluno noite\\downloads\\davig\\site\\epic-arts-entertainment-main\\views\\servico\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D24888C9-F185-4569-94CA-BB81B2FA779D}|Epic Arts Entertainment.csproj|solutionrelative:views\\servico\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,37 +9,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 335,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Downloads\\DaviG\\Site\\Epic-Arts-Entertainment-main\\Views\\Servico\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Servico\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Downloads\\DaviG\\Site\\Epic-Arts-Entertainment-main\\Views\\Servico\\Index.cshtml",
-              "RelativeToolTip": "Views\\Servico\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-17T20:36:49.475Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "loader.css",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Downloads\\DaviG\\Site\\Epic-Arts-Entertainment-main\\wwwroot\\css\\loader.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\loader.css",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Downloads\\DaviG\\Site\\Epic-Arts-Entertainment-main\\wwwroot\\css\\loader.css",
-              "RelativeToolTip": "wwwroot\\css\\loader.css",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAADYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-17T20:30:10.825Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             }
           ]
         }
