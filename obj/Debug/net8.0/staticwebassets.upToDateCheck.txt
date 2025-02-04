@@ -33,6 +33,8 @@ wwwroot\images\Logo\gamepad-solid.svg
 wwwroot\images\Logo\Home.png
 wwwroot\images\Logo\Home1.png
 wwwroot\images\Logo\Logo.png
+wwwroot\images\Logo\LogoName.gif
+wwwroot\images\Logo\teste12.mp4
 wwwroot\images\Portfolio\Design 600x400.png
 wwwroot\images\Portfolio\Design.png
 wwwroot\images\Portfolio\Jmeter 600x400.png

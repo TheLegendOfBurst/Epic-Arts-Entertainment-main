@@ -4,11 +4,13 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <section class="home" id="home">
+    <section>
         <div class="box-container">
+            <!-- Imagem GIF (Fundo) -->
             <div class="image">
-                <img src="/images/Logo/EA GIF.gif" alt="Home-Image">
+                <img src="~/images/Logo/LogoName.gif" alt="Home-Image">
             </div>
+
             <div class="content">
                 <div class="filter-container">
                     <h3>Filtrar Relatório</h3>
@@ -58,12 +60,8 @@
                     <button id="pesquisarBtn" class="btn">Pesquisar</button>
                 </div>
             </div>
-
-
         </div>
     </section>
-
-
 
     <!-- Tabela jTable -->
     <section class="tabela-relatorio">
@@ -75,29 +73,56 @@
     <script src="~/vendors/typed/typed.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jtable@2.5.0/dist/jtable.min.js"></script>
 
-
-
     <!-- Estilo CSS -->
     <style>
-        .filters {
-            padding: 30px 0;
-            background-color: #f4f4f4;
-            text-align: center;
+        /* Contêiner da imagem (GIF) */
+        .image {
+            position: absolute; /* Faz a imagem ficar atrás */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1; /* Garante que a imagem fique atrás do conteúdo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Ajusta a imagem para cobrir toda a área do contêiner */
+            }
+
+        .box-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .content {
+            width: 50%;
+            margin-top: 100px;
         }
 
         .filter-container {
-            max-width: 800px;
+            max-width: 1000px; /* Aumentei o tamanho máximo */
             margin: 0 auto;
-            background-color: #fff;
+            background-color: rgba(219, 34, 172, 0.85); /* Cor com transparência para ver o GIF */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1; /* Garante que o filtro fique acima da imagem */
         }
 
             .filter-container h3 {
-                font-size: 24px;
-                color: #333;
-                margin-bottom: 20px;
+                font-size: 28px;
+                color: #ffffff; /* Cor branca para melhor contraste com o fundo */
+                margin-bottom: 25px;
+                text-align: center; /* Centraliza o título */
             }
 
         .filter-group {
@@ -106,18 +131,18 @@
 
             .filter-group label {
                 display: block;
-                font-size: 14px;
-                color: #555;
+                font-size: 16px;
+                color: #ffffff; /* Cor branca para o texto */
                 margin-bottom: 5px;
             }
 
         .filter-input,
         .filter-select {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             font-size: 16px;
             border-radius: 5px;
-            border: 1px solid #ddd;
+            border: 1px solid #fff;
             box-sizing: border-box;
             transition: all 0.3s ease;
         }
@@ -130,25 +155,25 @@
 
         .btn {
             padding: 12px 25px;
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
+            background-color: #db22ac;
+            color: #ffffff;
+            border: 2px solid #ffffff;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
 
             .btn:hover {
-                background-color: #45a049;
+                background-color: #ffffff;
+                color: #db22ac;
             }
 
         #tabelaContainer {
             margin-top: 30px;
-            background-color: #fff;
+            background-color: #db22ac;
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
 </body>
-b

@@ -165,8 +165,16 @@
       "PackagePath": "staticwebassets\\images\\Logo\\Logo.png"
     },
     {
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\LogoName.gif",
+      "PackagePath": "staticwebassets\\images\\Logo\\LogoName.gif"
+    },
+    {
       "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\gamepad-solid.svg",
       "PackagePath": "staticwebassets\\images\\Logo\\gamepad-solid.svg"
+    },
+    {
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\teste12.mp4",
+      "PackagePath": "staticwebassets\\images\\Logo\\teste12.mp4"
     },
     {
       "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\Design 600x400.png",

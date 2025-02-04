@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "l0h+z9+1xptCqplLTHoZf/CpAZ3NKmW3l6rAF9mbdRo=",
+  "Hash": "DU1eopq6vhJA/ptiR5nPNPzgxE8vZ4CJz05qc4VHXCA=",
   "Source": "Epic Arts Entertainment",
   "BasePath": "_content/Epic Arts Entertainment",
   "Mode": "Default",
@@ -792,6 +792,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Logo\\Logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\LogoName.gif",
+      "SourceId": "Epic Arts Entertainment",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\",
+      "BasePath": "_content/Epic Arts Entertainment",
+      "RelativePath": "images/Logo/LogoName#[.{fingerprint}]?.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "f3o9z9mez4",
+      "Integrity": "xXayzGsYG2/NRhit07qJygNtLgl79S+GXJIbT6r5hzo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Logo\\LogoName.gif"
+    },
+    {
+      "Identity": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\teste12.mp4",
+      "SourceId": "Epic Arts Entertainment",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\",
+      "BasePath": "_content/Epic Arts Entertainment",
+      "RelativePath": "images/Logo/teste12#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "b7nfbkegav",
+      "Integrity": "N75mhSuzcIN3qIickBgy2fQWRakJ5HscL2XHOOMArTc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Logo\\teste12.mp4"
     },
     {
       "Identity": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\Design 600x400.png",
@@ -6514,6 +6556,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-xjKlZCCtSnYZPyQgCPjt0IHIBiWQkGoSXnm65TcTH3g="
+        }
+      ]
+    },
+    {
+      "Route": "images/Logo/LogoName.f3o9z9mez4.gif",
+      "AssetFile": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\LogoName.gif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "46904"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/gif"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xXayzGsYG2/NRhit07qJygNtLgl79S+GXJIbT6r5hzo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 20:29:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f3o9z9mez4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Logo/LogoName.gif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xXayzGsYG2/NRhit07qJygNtLgl79S+GXJIbT6r5hzo="
+        }
+      ]
+    },
+    {
+      "Route": "images/Logo/LogoName.gif",
+      "AssetFile": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\LogoName.gif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "46904"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/gif"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xXayzGsYG2/NRhit07qJygNtLgl79S+GXJIbT6r5hzo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 20:29:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xXayzGsYG2/NRhit07qJygNtLgl79S+GXJIbT6r5hzo="
+        }
+      ]
+    },
+    {
+      "Route": "images/Logo/teste12.b7nfbkegav.mp4",
+      "AssetFile": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\teste12.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52576"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"N75mhSuzcIN3qIickBgy2fQWRakJ5HscL2XHOOMArTc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 20:24:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b7nfbkegav"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Logo/teste12.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-N75mhSuzcIN3qIickBgy2fQWRakJ5HscL2XHOOMArTc="
+        }
+      ]
+    },
+    {
+      "Route": "images/Logo/teste12.mp4",
+      "AssetFile": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\teste12.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52576"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"N75mhSuzcIN3qIickBgy2fQWRakJ5HscL2XHOOMArTc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 20:24:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-N75mhSuzcIN3qIickBgy2fQWRakJ5HscL2XHOOMArTc="
         }
       ]
     },
