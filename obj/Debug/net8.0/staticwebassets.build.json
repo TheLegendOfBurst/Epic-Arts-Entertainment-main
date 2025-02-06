@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DU1eopq6vhJA/ptiR5nPNPzgxE8vZ4CJz05qc4VHXCA=",
+  "Hash": "DiRJN4i0/pxBGrymKgxCC0ghwylje/oVESNqqV8LvRo=",
   "Source": "Epic Arts Entertainment",
   "BasePath": "_content/Epic Arts Entertainment",
   "Mode": "Default",
@@ -808,8 +808,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "f3o9z9mez4",
-      "Integrity": "xXayzGsYG2/NRhit07qJygNtLgl79S+GXJIbT6r5hzo=",
+      "Fingerprint": "4nhzmwfmk9",
+      "Integrity": "EAq1k7WGshkmlxK5OGzEcUmIYiNFk6U44Pb5GyEkpzI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Logo\\LogoName.gif"
@@ -829,8 +829,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "b7nfbkegav",
-      "Integrity": "N75mhSuzcIN3qIickBgy2fQWRakJ5HscL2XHOOMArTc=",
+      "Fingerprint": "muhkdgiwmj",
+      "Integrity": "otsA6R8OfLjghZCOtXN2/sIDXOqXOckcn66pV4BvE6o=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Logo\\teste12.mp4"
@@ -6560,7 +6560,7 @@
       ]
     },
     {
-      "Route": "images/Logo/LogoName.f3o9z9mez4.gif",
+      "Route": "images/Logo/LogoName.4nhzmwfmk9.gif",
       "AssetFile": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\LogoName.gif",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6570,7 +6570,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "46904"
+          "Value": "22887"
         },
         {
           "Name": "Content-Type",
@@ -6578,11 +6578,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xXayzGsYG2/NRhit07qJygNtLgl79S+GXJIbT6r5hzo=\""
+          "Value": "\"EAq1k7WGshkmlxK5OGzEcUmIYiNFk6U44Pb5GyEkpzI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 04 Feb 2025 20:29:26 GMT"
+          "Value": "Tue, 04 Feb 2025 20:44:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6592,7 +6592,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "f3o9z9mez4"
+          "Value": "4nhzmwfmk9"
         },
         {
           "Name": "label",
@@ -6600,7 +6600,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-xXayzGsYG2/NRhit07qJygNtLgl79S+GXJIbT6r5hzo="
+          "Value": "sha256-EAq1k7WGshkmlxK5OGzEcUmIYiNFk6U44Pb5GyEkpzI="
         }
       ]
     },
@@ -6615,7 +6615,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "46904"
+          "Value": "22887"
         },
         {
           "Name": "Content-Type",
@@ -6623,11 +6623,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xXayzGsYG2/NRhit07qJygNtLgl79S+GXJIbT6r5hzo=\""
+          "Value": "\"EAq1k7WGshkmlxK5OGzEcUmIYiNFk6U44Pb5GyEkpzI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 04 Feb 2025 20:29:26 GMT"
+          "Value": "Tue, 04 Feb 2025 20:44:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6637,52 +6637,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-xXayzGsYG2/NRhit07qJygNtLgl79S+GXJIbT6r5hzo="
-        }
-      ]
-    },
-    {
-      "Route": "images/Logo/teste12.b7nfbkegav.mp4",
-      "AssetFile": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\teste12.mp4",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "52576"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "video/mp4"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"N75mhSuzcIN3qIickBgy2fQWRakJ5HscL2XHOOMArTc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 04 Feb 2025 20:24:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "b7nfbkegav"
-        },
-        {
-          "Name": "label",
-          "Value": "images/Logo/teste12.mp4"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-N75mhSuzcIN3qIickBgy2fQWRakJ5HscL2XHOOMArTc="
+          "Value": "sha256-EAq1k7WGshkmlxK5OGzEcUmIYiNFk6U44Pb5GyEkpzI="
         }
       ]
     },
@@ -6697,7 +6652,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "52576"
+          "Value": "23748"
         },
         {
           "Name": "Content-Type",
@@ -6705,11 +6660,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"N75mhSuzcIN3qIickBgy2fQWRakJ5HscL2XHOOMArTc=\""
+          "Value": "\"otsA6R8OfLjghZCOtXN2/sIDXOqXOckcn66pV4BvE6o=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 04 Feb 2025 20:24:23 GMT"
+          "Value": "Tue, 04 Feb 2025 20:43:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6719,7 +6674,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-N75mhSuzcIN3qIickBgy2fQWRakJ5HscL2XHOOMArTc="
+          "Value": "sha256-otsA6R8OfLjghZCOtXN2/sIDXOqXOckcn66pV4BvE6o="
+        }
+      ]
+    },
+    {
+      "Route": "images/Logo/teste12.muhkdgiwmj.mp4",
+      "AssetFile": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\teste12.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23748"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"otsA6R8OfLjghZCOtXN2/sIDXOqXOckcn66pV4BvE6o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 20:43:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "muhkdgiwmj"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Logo/teste12.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-otsA6R8OfLjghZCOtXN2/sIDXOqXOckcn66pV4BvE6o="
         }
       ]
     },
