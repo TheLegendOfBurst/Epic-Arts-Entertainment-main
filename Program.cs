@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Epic_Arts_Entertainment.Repositorios;
 using Epic_Arts_Entertainment.ORM;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.Win32;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,8 @@ builder.Services.AddScoped<ServicoRepositorio>();  // Ou AddTransient ou AddSing
 builder.Services.AddScoped<AgendamentoRepositorio>();  // Ou AddTransient ou AddSingleton dependendo do caso
 // Registrar o repositório (RelatorioRepositorio)
 builder.Services.AddScoped<RelatorioRepositorio>();  // Ou AddTransient ou AddSingleton dependendo do caso
+// Registrar o repositório(DashboardRepositorio)
+builder.Services.AddScoped<DashboardRepositorio>();  // Ou AddTransient ou AddSingleton dependendo do caso
 
 // Registrar o IHttpContextAccessor para acessar o HttpContext dentro de repositórios
 builder.Services.AddHttpContextAccessor();
