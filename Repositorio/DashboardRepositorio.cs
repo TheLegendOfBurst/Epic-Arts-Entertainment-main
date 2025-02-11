@@ -48,24 +48,34 @@ namespace Epic_Arts_Entertainment.Repositorios
             return lucroTotal;
         }
 
-        public List<int> ContarAgendamentosPorMes(int ano)
+        public List<AgendamentosPorMes> ContarAgendamentosPorMes(int ano)
         {
             return _context.TbAgendamentos
                            .Where(a => a.DtHoraAgendamento.Year == ano)
                            .GroupBy(a => a.DtHoraAgendamento.Month)
                            .OrderBy(g => g.Key)
-                           .Select(g => g.Count())
+                           .Select(g => new AgendamentosPorMes
+                           {
+                               Mes = g.Key,  // Mês (1 para Janeiro, 2 para Fevereiro, etc.)
+                               TotalAgendamentos = g.Count()  // Contagem de agendamentos nesse mês
+                           })
                            .ToList();
         }
-        public List<int> ContarUsuariosPorMes(int ano)
+
+        public List<UsuariosPorMes> ContarUsuariosPorMes(int ano)
         {
             return _context.TbUsuarios
                            .Where(u => u.DataHoraCadastro.Year == ano)
                            .GroupBy(u => u.DataHoraCadastro.Month)
                            .OrderBy(g => g.Key)
-                           .Select(g => g.Count())
+                           .Select(g => new UsuariosPorMes
+                           {
+                               Mes = g.Key,  // Mês (1 para Janeiro, 2 para Fevereiro, etc.)
+                               TotalUsuarios = g.Count()  // Contagem de usuários cadastrados nesse mês
+                           })
                            .ToList();
         }
+
         public List<decimal> SomarLucroPorMes(int ano)
         {
             return _context.ViewAgendamentos
