@@ -48,42 +48,43 @@ namespace Epic_Arts_Entertainment.Repositorios
             return lucroTotal;
         }
 
-        public List<AgendamentosPorMes> ContarAgendamentosPorMes(int ano)
+        public IEnumerable<AgendamentosPorMes> ContarAgendamentosPorMes(int ano)
         {
             return _context.TbAgendamentos
-                           .Where(a => a.DtHoraAgendamento.Year == ano)
-                           .GroupBy(a => a.DtHoraAgendamento.Month)
-                           .OrderBy(g => g.Key)
-                           .Select(g => new AgendamentosPorMes
-                           {
-                               Mes = g.Key,  // Mês (1 para Janeiro, 2 para Fevereiro, etc.)
-                               TotalAgendamentos = g.Count()  // Contagem de agendamentos nesse mês
-                           })
-                           .ToList();
+                .Where(a => a.DtHoraAgendamento.Year == ano)
+                .GroupBy(a => a.DtHoraAgendamento.Month)
+                .OrderBy(g => g.Key)
+                .Select(g => new AgendamentosPorMes
+                {
+                    Mes = g.Key,
+                    TotalAgendamentos = g.Count()
+                })
+                .ToList();
         }
-
-        public List<UsuariosPorMes> ContarUsuariosPorMes(int ano)
+        public IEnumerable<UsuariosPorMes> ContarUsuariosPorMes(int ano)
         {
             return _context.TbUsuarios
-                           .Where(u => u.DataHoraCadastro.Year == ano)
-                           .GroupBy(u => u.DataHoraCadastro.Month)
-                           .OrderBy(g => g.Key)
-                           .Select(g => new UsuariosPorMes
-                           {
-                               Mes = g.Key,  // Mês (1 para Janeiro, 2 para Fevereiro, etc.)
-                               TotalUsuarios = g.Count()  // Contagem de usuários cadastrados nesse mês
-                           })
-                           .ToList();
+                .Where(u => u.DataHoraCadastro.Year == ano)
+                .GroupBy(u => u.DataHoraCadastro.Month)
+                .OrderBy(g => g.Key)
+                .Select(g => new UsuariosPorMes
+                {
+                    Mes = g.Key,
+                    TotalUsuarios = g.Count()
+                })
+                .ToList();
         }
-
-        public List<decimal> SomarLucroPorMes(int ano)
+        public IEnumerable<LucroPorMes> SomarLucroPorMes(int ano)
         {
             return _context.ViewAgendamentos
-                           .Where(a => a.DtHoraAgendamento.Year == ano)
-                           .GroupBy(a => a.DtHoraAgendamento.Month)
-                           .OrderBy(g => g.Key)
-                           .Select(g => g.Sum(a => (decimal?)a.Valor) ?? 0)
-                           .ToList();
+                .Where(a => a.DtHoraAgendamento.Year == ano)
+                .GroupBy(a => a.DtHoraAgendamento.Month)
+                .Select(g => new LucroPorMes
+                {
+                    Mes = g.Key,
+                    TotalLucro = g.Sum(a => (decimal?)a.Valor) ?? 0
+                })
+                .ToList();
         }
 
     }

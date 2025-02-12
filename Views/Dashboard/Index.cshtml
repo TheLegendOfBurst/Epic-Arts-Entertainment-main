@@ -101,6 +101,13 @@
         </select>
     </div>
 
+    <!-- Divs para os gráficos -->
+    <div style="display: flex; justify-content: space-between;">
+        <div id="graficoAgendamentos" style="height: 400px; width: 500px;"></div>
+        <div id="graficoUsuarios" style="height: 400px; width: 500px;"></div>
+        <div id="graficoLucros" style="height: 400px; width: 500px;"></div>
+    </div>
+
     <!-- Container do Gráfico -->
     <div id="chart-container"></div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -174,9 +181,88 @@
                 }
             });
         }
+
     </script>
 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var ano = 2025; // Ano a ser utilizado
 
+            // Função para carregar os dados e gerar o gráfico de agendamentos por mês
+            function carregarGraficoAgendamentos() {
+                $.getJSON('@Url.Action("ContarAgendamentosPorMes", "Dashboard")', { ano: ano }, function (dados) {
+                    Highcharts.chart('graficoAgendamentos', {
+                        chart: {
+                            type: 'column'
+                        },
+                        title: {
+                            text: 'Agendamentos por Mês'
+                        },
+                        xAxis: {
+                            categories: dados.categorias // Meses
+                        },
+                        yAxis: {
+                            title: {
+                                text: 'Total de Agendamentos'
+                            }
+                        },
+                        series: dados.series // Dados dos agendamentos
+                    });
+                });
+            }
+
+            // Função para carregar os dados e gerar o gráfico de usuários cadastrados por mês
+            function carregarGraficoUsuarios() {
+                $.getJSON('@Url.Action("ContarUsuariosPorMes", "Dashboard")', { ano: ano }, function (dados) {
+                    Highcharts.chart('graficoUsuarios', {
+                        chart: {
+                            type: 'column'
+                        },
+                        title: {
+                            text: 'Usuários Cadastrados por Mês'
+                        },
+                        xAxis: {
+                            categories: dados.categorias // Meses
+                        },
+                        yAxis: {
+                            title: {
+                                text: 'Total de Usuários'
+                            }
+                        },
+                        series: dados.series // Dados dos usuários
+                    });
+                });
+            }
+
+            // Função para carregar os dados e gerar o gráfico de lucros por mês
+            function carregarGraficoLucros() {
+                $.getJSON('@Url.Action("SomarLucroPorMes", "Dashboard")', { ano: ano }, function (dados) {
+                    Highcharts.chart('graficoLucros', {
+                        chart: {
+                            type: 'column'
+                        },
+                        title: {
+                            text: 'Lucro por Mês'
+                        },
+                        xAxis: {
+                            categories: dados.categorias // Meses
+                        },
+                        yAxis: {
+                            title: {
+                                text: 'Lucro (R$)'
+                            }
+                        },
+                        series: dados.series // Dados do lucro
+                    });
+                });
+            }
+
+            // Carregar os gráficos quando a página carregar
+            carregarGraficoAgendamentos();
+            carregarGraficoUsuarios();
+            carregarGraficoLucros();
+        });
+    </script>
 
 </body>
 </html>
