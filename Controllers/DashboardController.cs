@@ -71,7 +71,7 @@ namespace Epic_Arts_Entertainment.Controllers
                 categorias,
                 series = new[]
                 {
-        new { name = "Agendamentos", data = seriesData }
+        new { name = "Agendamentos", data = seriesData, color = "#db22ac" }
     }
             });
         }
@@ -91,10 +91,16 @@ namespace Epic_Arts_Entertainment.Controllers
                 categorias,
                 series = new[]
                 {
-        new { name = "Usuários Cadastrados", data = seriesData }
-    }
+            new
+            {
+                name = "Usuários Cadastrados",
+                data = seriesData,
+                color = "#db22ac"  // Cor personalizada para a série "Usuários Cadastrados"
+            }
+        }
             });
         }
+
 
         // Método para somar lucro por mês
         public JsonResult SomarLucroPorMes(int ano)
@@ -111,7 +117,7 @@ namespace Epic_Arts_Entertainment.Controllers
                 categorias,
                 series = new[]
                 {
-        new { name = "Lucro", data = seriesData }
+        new { name = "Lucro", data = seriesData, color = "#db22ac" }
     }
             });
         }
@@ -144,6 +150,30 @@ namespace Epic_Arts_Entertainment.Controllers
             {
                 categorias,
                 series
+            });
+        }
+        public JsonResult SomarServicosMaisUsadosPorAno(int ano)
+        {
+            // Chama o serviço para obter os dados
+            var dados = _dashboardRepositorio.ConsultarServicosMaisUsadosPorAno(ano);
+
+            // Cria as categorias com os nomes dos serviços
+            var categorias = dados.Select(d => d.TipoServico).ToList();  // Utilizando TipoServico para a categoria
+
+            // Cria os valores (quantidade de usos de cada serviço)
+            var valores = dados.Select(d => d.TotalUsos).ToList();
+
+            // Formatação para o gráfico, onde cada valor se torna um objeto com a chave 'y'
+            var seriesData = valores.Select(v => new { y = v }).ToList();
+
+            // Retorna os dados em formato JSON compatível com o gráfico
+            return Json(new
+            {
+                categorias,  // Os nomes dos serviços
+                series = new[]
+                {
+    new { name = "Serviços Mais Usados", data = seriesData }
+}
             });
         }
     }

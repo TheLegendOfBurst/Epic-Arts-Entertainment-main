@@ -102,5 +102,23 @@ namespace Epic_Arts_Entertainment.Repositorios
 
             return resultados;
         }
+
+        public IEnumerable<ServicoMaisUsadoPorAno> ConsultarServicosMaisUsadosPorAno(int ano)
+        {
+            var resultados = _context.TbAgendamentos
+                .Where(a => a.DataAgendamento.Year == ano)  // Filtra por ano
+                .GroupBy(a => new { a.DataAgendamento.Year, a.IdServico })  // Agrupa por ano e serviço
+                .Select(group => new ServicoMaisUsadoPorAno
+                {
+                    Ano = group.Key.Year,  // Ano
+                    ServicoId = group.Key.IdServico,  // ID do serviço
+                    TotalUsos = group.Count(),  // Contagem de agendamentos por serviço
+                    TipoServico = group.FirstOrDefault().IdServicoNavigation.TipoServico  // Acessando a propriedade TipoServico
+                })
+                .OrderByDescending(result => result.TotalUsos)  // Ordena pela quantidade de usos
+                .ToList();
+
+            return resultados;
+        }
     }
 }

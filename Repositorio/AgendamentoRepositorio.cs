@@ -211,8 +211,6 @@ namespace Epic_Arts_Entertainment.Repositorios
                 return new List<AgendamentoVM>(); // Retorna uma lista vazia em caso de erro
             }
         }
-
-
         public List<UsuarioVM> ListarNomesAgendamentos()
         {
             // Lista para armazenar os usuários com apenas Id e Nome
@@ -230,5 +228,8 @@ namespace Epic_Arts_Entertainment.Repositorios
             // Retorna a lista já com os campos filtrados
             return listTb;
         }
+
+        
+
     }
 }

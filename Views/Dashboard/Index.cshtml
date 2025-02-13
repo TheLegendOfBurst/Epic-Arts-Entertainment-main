@@ -106,14 +106,17 @@
     </div>
 
     <!-- Container do Gráfico -->
-    <div id="grafico"></div>
+    <div style="display: flex; justify-content: space-between;">
+        <div id="container"></div>
+        <div id="grafico"></div>
+    </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
 
     <script>
-             $(document).ready(function() {
+                    $(document).ready(function() {
             // Faz a requisição para pegar os dados da evolução mensal
             $.getJSON('/Dashboard/ConsultarEvolucaoMensalPorAno', function (data) {
                 console.log(data);  // Verifique os dados recebidos no console
@@ -123,26 +126,57 @@
                     // Cria o gráfico Highcharts
                     Highcharts.chart('grafico', {
                         chart: {
-                            type: 'line'  // Tipo de gráfico: linha
+                            type: 'line',  // Tipo de gráfico: linha
+                            backgroundColor: '#000000'  // Fundo preto
                         },
                         title: {
-                            text: 'Evolução Mensal dos Atendimentos por Ano'  // Título do gráfico
+                            text: 'Evolução Mensal dos Atendimentos por Ano',  // Título do gráfico
+                            style: {
+                                color: '#FFFFFF'  // Cor do título em branco
+                            }
                         },
                         xAxis: {
                             categories: data.categorias,  // Meses (01, 02, ..., 12)
                             title: {
-                                text: 'Meses'
+                                text: 'Meses',
+                                style: {
+                                    color: '#FFFFFF'  // Cor do título do eixo X em branco
+                                }
+                            },
+                            labels: {
+                                style: {
+                                    color: '#FFFFFF'  // Cor das labels do eixo X em branco
+                                }
                             }
                         },
                         yAxis: {
                             title: {
-                                text: 'Total de Atendimentos'
+                                text: 'Total de Atendimentos',
+                                style: {
+                                    color: '#FFFFFF'  // Cor do título do eixo Y em branco
+                                }
+                            },
+                            labels: {
+                                style: {
+                                    color: '#FFFFFF'  // Cor das labels do eixo Y em branco
+                                }
                             }
                         },
                         series: data.series,  // Dados das séries por ano
                         tooltip: {
                             shared: true,  // Mostra todos os pontos de dados ao passar o mouse
-                            valueSuffix: ' atendimentos'  // Sufixo para os valores
+                            valueSuffix: ' atendimentos',  // Sufixo para os valores
+                            backgroundColor: '#333333',  // Cor de fundo do tooltip
+                            style: {
+                                color: '#FFFFFF'  // Cor do texto no tooltip
+                            }
+                        },
+                        plotOptions: {
+                            line: {
+                                dataLabels: {
+                                    color: '#FFFFFF'  // Cor das labels de dados em branco
+                                }
+                            }
                         }
                     });
                 } else {
@@ -153,6 +187,7 @@
                 console.error("Erro ao carregar os dados do gráfico:", error);
             });
         });
+
 
         $(document).ready(function () {
             var anoAtual = new Date().getFullYear();
@@ -174,6 +209,7 @@
             carregarGraficoAgendamentos(anoAtual);
             carregarGraficoUsuarios(anoAtual);
             carregarGraficoLucros(anoAtual);
+            carregarGraficoPizza(anoAtual);
         });
 
 
@@ -187,6 +223,8 @@
             carregarGraficoAgendamentos(anoSelecionado);
             carregarGraficoUsuarios(anoSelecionado);
             carregarGraficoLucros(anoSelecionado);
+            carregarGraficoPizza(anoSelecionado);
+
         }
 
         // Função para contar agendamentos por ano
@@ -238,57 +276,57 @@
         }
 
         // Função para carregar os dados e gerar o gráfico de agendamentos por mês
-        function carregarGraficoAgendamentos(ano) {
-            $.getJSON('@Url.Action("ContarAgendamentosPorMes", "Dashboard")', { ano: ano }, function (dados) {
-                Highcharts.chart('graficoAgendamentos', {
-                    chart: {
-                        type: 'column',
-                        backgroundColor: '#000000'  // Fundo preto
-                    },
-                    title: {
-                        text: 'Agendamentos por Mês',
-                        style: {
-                            color: '#FFFFFF'  // Cor do título em branco
-                        }
-                    },
-                    xAxis: {
-                        categories: dados.categorias, // Meses
-                        labels: {
-                            style: {
-                                color: '#FFFFFF'  // Cor das labels do eixo X em branco
-                            }
-                        }
-                    },
-                    yAxis: {
-                        title: {
-                            text: 'Total de Agendamentos',
-                            style: {
-                                color: '#FFFFFF'  // Cor do título do eixo Y em branco
-                            }
-                        },
-                        labels: {
-                            style: {
-                                color: '#FFFFFF'  // Cor das labels do eixo Y em branco
-                            }
-                        }
-                    },
-                    series: dados.series, // Dados dos agendamentos
-                    plotOptions: {
-                        column: {
-                            dataLabels: {
-                                color: '#FFFFFF'  // Cor das labels de dados em branco
-                            }
-                        }
-                    },
-                    tooltip: {
-                        backgroundColor: '#333333',  // Cor de fundo do tooltip
-                        style: {
-                            color: '#FFFFFF'  // Cor do texto no tooltip
-                        }
+function carregarGraficoAgendamentos(ano) {
+    $.getJSON('@Url.Action("ContarAgendamentosPorMes", "Dashboard")', { ano: ano }, function (dados) {
+        Highcharts.chart('graficoAgendamentos', {
+            chart: {
+                type: 'column',
+                backgroundColor: '#000000'  // Fundo preto
+            },
+            title: {
+                text: 'Agendamentos por Mês',
+                style: {
+                    color: '#FFFFFF'  // Cor do título em branco
+                }
+            },
+            xAxis: {
+                categories: dados.categorias, // Meses
+                labels: {
+                    style: {
+                        color: '#FFFFFF'  // Cor das labels do eixo X em branco
                     }
-                });
-            });
-        }
+                }
+            },
+            yAxis: {
+                title: {
+                    text: 'Total de Agendamentos',
+                    style: {
+                        color: '#FFFFFF'  // Cor do título do eixo Y em branco
+                    }
+                },
+                labels: {
+                    style: {
+                        color: '#FFFFFF'  // Cor das labels do eixo Y em branco
+                    }
+                }
+            },
+            series: dados.series, // Dados dos agendamentos
+            plotOptions: {
+                column: {
+                    dataLabels: {
+                        color: '#FFFFFF'  // Cor das labels de dados em branco
+                    }
+                }
+            },
+            tooltip: {
+                backgroundColor: '#333333',  // Cor de fundo do tooltip
+                style: {
+                    color: '#FFFFFF'  // Cor do texto no tooltip
+                }
+            }
+        });
+    });
+}
 
 
                 // Função para carregar os dados e gerar o gráfico de usuários cadastrados por mês
@@ -396,6 +434,69 @@
                 });
             });
         }
+
+          function carregarGraficoPizza(ano) {
+    $.getJSON('@Url.Action("SomarServicosMaisUsadosPorAno", "Dashboard")', { ano: ano }, function(dados) {
+        // Verifica se os dados estão presentes
+        if (dados && dados.categorias && dados.series) {
+            // Prepara os dados para o gráfico
+            var categorias = dados.categorias;  // Lista de serviços (nomes ou tipos dos serviços)
+            var valores = dados.series[0].data.map(item => item.y);  // Quantidade de usos dos serviços
+
+            // Cria o gráfico de pizza usando Highcharts
+            Highcharts.chart('container', {
+                chart: {
+                    type: 'pie',  // Tipo de gráfico: pizza
+                    backgroundColor: '#000000'  // Fundo preto
+                },
+                title: {
+                    text: `Serviços Mais Usados em ${ano}`,  // Título do gráfico
+                    style: {
+                        color: '#FFFFFF'  // Cor do título em branco
+                    }
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',  // Exibe a porcentagem de cada fatia
+                    backgroundColor: '#333333',  // Cor de fundo do tooltip
+                    style: {
+                        color: '#FFFFFF'  // Cor do texto no tooltip
+                    }
+                },
+                series: [{
+                    name: 'Serviços Mais Usados',
+                    data: categorias.map((categoria, index) => ({
+                        name: categoria,  // Nome do serviço
+                        y: valores[index]  // Quantidade de vezes que o serviço foi usado
+                    })),
+                    colors: [  // Definindo as cores das fatias do gráfico
+                        '#1E90FF', // Azul
+                        '#32CD32', // Verde
+                        '#FF6347', // Tomate
+                        '#FFD700', // Amarelo
+                        '#8A2BE2', // Azul violeta
+                        '#FF4500'  // Laranja escuro
+                    ]
+                }],
+                plotOptions: {
+                    pie: {
+                        dataLabels: {
+                            enabled: true,  // Habilita rótulos de dados
+                            format: '{point.name}: {point.percentage:.1f}%',  // Exibe a porcentagem ao lado de cada fatia
+                            style: {
+                                color: '#FFFFFF'  // Cor das labels em branco
+                            }
+                        }
+                    }
+                }
+            });
+        } else {
+            console.error("Dados inválidos recebidos:", dados);
+        }
+    })
+    .fail(function(xhr, status, error) {
+        console.error("Erro ao carregar os dados do gráfico:", error);
+    });
+}
 
 
         // Carregar os gráficos quando a página carregar
