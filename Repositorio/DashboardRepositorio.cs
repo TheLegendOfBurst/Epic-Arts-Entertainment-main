@@ -86,6 +86,21 @@ namespace Epic_Arts_Entertainment.Repositorios
                 })
                 .ToList();
         }
+        public IEnumerable<AgendamentosPorAnoMes> ConsultarEvolucaoMensalAtendimentos()
+        {
+            var resultados = _context.TbAgendamentos
+                .GroupBy(a => new { a.DataAgendamento.Year, a.DataAgendamento.Month })  // Agrupa por ano e mês
+                .Select(group => new AgendamentosPorAnoMes
+                {
+                    Ano = group.Key.Year,
+                    Mes = group.Key.Month,
+                    TotalAtendimentos = group.Count()
+                })
+                .OrderBy(result => result.Ano)
+                .ThenBy(result => result.Mes)  // Ordena primeiro por ano e depois por mês
+                .ToList();
 
+            return resultados;
+        }
     }
 }

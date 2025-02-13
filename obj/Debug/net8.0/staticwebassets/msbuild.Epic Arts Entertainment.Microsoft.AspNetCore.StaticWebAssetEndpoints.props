@@ -124,13 +124,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\usuario_index.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ZaddFz5V6/iL0LrzA4j9chgVo6LwX4vc4cC\u002BJ587jVY="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5677"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022ZaddFz5V6/iL0LrzA4j9chgVo6LwX4vc4cC\u002BJ587jVY=\u0022"},{"Name":"Last-Modified","Value":"Tue, 04 Feb 2025 16:45:34 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5677"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022ZaddFz5V6/iL0LrzA4j9chgVo6LwX4vc4cC\u002BJ587jVY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 13 Feb 2025 17:59:27 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Epic Arts Entertainment/css/usuario_index.ff3157fg5r.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\usuario_index.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ff3157fg5r"},{"Name":"integrity","Value":"sha256-ZaddFz5V6/iL0LrzA4j9chgVo6LwX4vc4cC\u002BJ587jVY="},{"Name":"label","Value":"_content/Epic Arts Entertainment/css/usuario_index.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5677"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022ZaddFz5V6/iL0LrzA4j9chgVo6LwX4vc4cC\u002BJ587jVY=\u0022"},{"Name":"Last-Modified","Value":"Tue, 04 Feb 2025 16:45:34 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5677"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022ZaddFz5V6/iL0LrzA4j9chgVo6LwX4vc4cC\u002BJ587jVY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 13 Feb 2025 17:59:27 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Epic Arts Entertainment/Epic Arts Entertainment.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Epic Arts Entertainment.gwy9inhp0e.bundle.scp.css'))</AssetFile>

@@ -115,5 +115,36 @@ namespace Epic_Arts_Entertainment.Controllers
     }
             });
         }
+        public JsonResult ConsultarEvolucaoMensalPorAno()
+        {
+            var dados = _dashboardRepositorio.ConsultarEvolucaoMensalAtendimentos();
+
+            // Agrupa os dados por ano
+            var dadosAgrupadosPorAno = dados
+                .GroupBy(d => d.Ano)
+                .Select(g => new
+                {
+                    Ano = g.Key,
+                    DadosMensais = g.OrderBy(d => d.Mes).Select(d => d.TotalAtendimentos).ToList()
+                })
+                .ToList();
+
+            // Definindo as categorias (meses)
+            var categorias = Enumerable.Range(1, 12).Select(m => m.ToString("D2")).ToList(); // Meses de 01 a 12
+
+            // Preparar as séries para o gráfico (um para cada ano)
+            var series = dadosAgrupadosPorAno.Select(anoData => new
+            {
+                name = anoData.Ano.ToString(),
+                data = anoData.DadosMensais
+            }).ToList();
+
+            // Retorna os dados no formato correto para o Highcharts
+            return Json(new
+            {
+                categorias,
+                series
+            });
+        }
     }
 }
