@@ -29,7 +29,7 @@
                 <!-- Corpo do modal -->
                 <div class="modal-body">
                     <form>
-                        <p style="color:red">Campos com * vermelho são obrigatórios</p>
+                        <p style="color:#db22ac">Campos com * vermelho são obrigatórios</p>
                         
                         <!-- Campo oculto para hora -->
                         <div class="mb-3 d-flex align-items-center">
@@ -39,7 +39,7 @@
                         <!-- Campo de data -->
                         <div class="mb-3 d-flex align-items-center">
                             <input id="data_agdt" type="date" class="form-control" style="width: 300px;" placeholder="Escolha a data do agendamento" oninput="consultarAgendamento()" min="{{ today }}" required>
-                            <label for="data_agdt" style="color:red; margin-left: 5px;">*</label>
+                            <label for="data_agdt" style="color:#db22ac; margin-left: 5px;">*</label>
                         </div>
 
                         <!-- Campo de tipo de serviço -->
@@ -51,52 +51,52 @@
                                         new { @class = "form-control", @style = "background-color: #EAE7DC; color: #333;", required = "required" })
                             </div>
                             <div class="col-md-6">
-                                <label style="color:red">*</label>
+                                <label style="color:#db22ac">*</label>
                             </div>
                         </div>
 
                         <!-- Escolha do horário de atendimento -->
                         <fieldset>
-                            <legend style="display: inline-flex; align-items: center;">
+                            <legend style="display: inline-flex; align-items: center; color:#db22ac;">
                                 Escolha o horário de atendimento:
-                                <label style="color:red; margin-left: 5px; vertical-align: middle;">*</label>
+                                <label style="color:#db22ac; margin-left: 5px; vertical-align: middle;">*</label>
                             </legend>
 
                             <!-- Horários de atendimento -->
                             <div class="mb-3 d-flex align-items-center">
                                 <input type="checkbox" id="chk08" class="form-check-input" value="08:00" style="margin-right: 10px;" data-group="horario">
                                 <label class="form-check-label" for="chk08">Atendimento das 8:00</label>
-                                <span id="Span08" style="color:red;"></span>
+                                <span id="Span08" style="color:#db22ac;"></span>
                             </div>
 
                             <div class="mb-3 d-flex align-items-center">
                                 <input type="checkbox" id="chk10" class="form-check-input" value="10:00" style="margin-right: 10px;" data-group="horario">
                                 <label class="form-check-label" for="chk10">Atendimento das 10:00</label>
-                                <span id="Span10" style="color:red;"></span>
+                                <span id="Span10" style="color:#db22ac;"></span>
                             </div>
 
                             <div class="mb-3 d-flex align-items-center">
                                 <input type="checkbox" id="chk13" class="form-check-input" value="13:00" style="margin-right: 10px;" data-group="horario">
                                 <label class="form-check-label" for="chk13">Atendimento das 13:00</label>
-                                <span id="Span13" style="color:red;"></span>
+                                <span id="Span13" style="color:#db22ac;"></span>
                             </div>
 
                             <div class="mb-3 d-flex align-items-center">
                                 <input type="checkbox" id="chk15" class="form-check-input" value="15:00" style="margin-right: 10px;" data-group="horario">
                                 <label class="form-check-label" for="chk15">Atendimento das 15:00</label>
-                                <span id="Span15" style="color:red;"></span>
+                                <span id="Span15" style="color:#db22ac;"></span>
                             </div>
 
                             <div class="mb-3 d-flex align-items-center">
                                 <input type="checkbox" id="chk17" class="form-check-input" value="17:00" style="margin-right: 10px;" data-group="horario">
                                 <label class="form-check-label" for="chk17">Atendimento das 17:00</label>
-                                <span id="Span17" style="color:red;"></span>
+                                <span id="Span17" style="color:#db22ac;"></span>
                             </div>
 
                             <div class="mb-3 d-flex align-items-center">
                                 <input type="checkbox" id="chk19" class="form-check-input" value="19:00" style="margin-right: 10px;" data-group="horario">
                                 <label class="form-check-label" for="chk19">Atendimento das 19:00</label>
-                                <span id="Span19" style="color:red;"></span>
+                                <span id="Span19" style="color:#db22ac;"></span>
                             </div>
                         </fieldset>
 
