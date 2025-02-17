@@ -4,49 +4,49 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\gerenciamento_cliente.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-vuPgjHFUzykcM\u002BHGkCmO6VQ35n9ZlsfvRjMYut1yjYo="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2519"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022vuPgjHFUzykcM\u002BHGkCmO6VQ35n9ZlsfvRjMYut1yjYo=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 18:41:30 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2519"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022vuPgjHFUzykcM\u002BHGkCmO6VQ35n9ZlsfvRjMYut1yjYo=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 19:41:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Epic Arts Entertainment/css/gerenciamento_cliente.u88ktoir8x.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\gerenciamento_cliente.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"u88ktoir8x"},{"Name":"integrity","Value":"sha256-vuPgjHFUzykcM\u002BHGkCmO6VQ35n9ZlsfvRjMYut1yjYo="},{"Name":"label","Value":"_content/Epic Arts Entertainment/css/gerenciamento_cliente.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2519"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022vuPgjHFUzykcM\u002BHGkCmO6VQ35n9ZlsfvRjMYut1yjYo=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 18:41:30 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2519"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022vuPgjHFUzykcM\u002BHGkCmO6VQ35n9ZlsfvRjMYut1yjYo=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 19:41:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Epic Arts Entertainment/css/gerenciamento_index.6vvvgk02bd.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\gerenciamento_index.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"6vvvgk02bd"},{"Name":"integrity","Value":"sha256-7uwuk15mwIe2ZiS96eSr5sW1K2lnmL5QL1E\u002BRLdcIEI="},{"Name":"label","Value":"_content/Epic Arts Entertainment/css/gerenciamento_index.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2620"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00227uwuk15mwIe2ZiS96eSr5sW1K2lnmL5QL1E\u002BRLdcIEI=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 18:41:30 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2620"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00227uwuk15mwIe2ZiS96eSr5sW1K2lnmL5QL1E\u002BRLdcIEI=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 19:41:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Epic Arts Entertainment/css/gerenciamento_index.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\gerenciamento_index.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-7uwuk15mwIe2ZiS96eSr5sW1K2lnmL5QL1E\u002BRLdcIEI="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2620"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00227uwuk15mwIe2ZiS96eSr5sW1K2lnmL5QL1E\u002BRLdcIEI=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 18:41:30 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2620"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00227uwuk15mwIe2ZiS96eSr5sW1K2lnmL5QL1E\u002BRLdcIEI=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 19:41:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Epic Arts Entertainment/css/loader.5rigk49fl1.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\loader.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"5rigk49fl1"},{"Name":"integrity","Value":"sha256-8TY9\u002BMxZ7wldlKBMcTq6diMZ9F\u002B1NUOCWCI8HSfma/s="},{"Name":"label","Value":"_content/Epic Arts Entertainment/css/loader.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1813"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00228TY9\u002BMxZ7wldlKBMcTq6diMZ9F\u002B1NUOCWCI8HSfma/s=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 18:41:30 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1813"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00228TY9\u002BMxZ7wldlKBMcTq6diMZ9F\u002B1NUOCWCI8HSfma/s=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 19:41:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Epic Arts Entertainment/css/loader.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\loader.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-8TY9\u002BMxZ7wldlKBMcTq6diMZ9F\u002B1NUOCWCI8HSfma/s="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1813"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00228TY9\u002BMxZ7wldlKBMcTq6diMZ9F\u002B1NUOCWCI8HSfma/s=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 18:41:30 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1813"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00228TY9\u002BMxZ7wldlKBMcTq6diMZ9F\u002B1NUOCWCI8HSfma/s=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 19:41:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Epic Arts Entertainment/css/login.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\login.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-LSSMNWkMv7p0lFpZ0pF7hlVocjVHS1AVDdvFRdY7SEw="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2868"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022LSSMNWkMv7p0lFpZ0pF7hlVocjVHS1AVDdvFRdY7SEw=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 18:41:30 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2868"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022LSSMNWkMv7p0lFpZ0pF7hlVocjVHS1AVDdvFRdY7SEw=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 19:41:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Epic Arts Entertainment/css/login.h7am3h49ap.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\login.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"h7am3h49ap"},{"Name":"integrity","Value":"sha256-LSSMNWkMv7p0lFpZ0pF7hlVocjVHS1AVDdvFRdY7SEw="},{"Name":"label","Value":"_content/Epic Arts Entertainment/css/login.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2868"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022LSSMNWkMv7p0lFpZ0pF7hlVocjVHS1AVDdvFRdY7SEw=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 18:41:30 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2868"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022LSSMNWkMv7p0lFpZ0pF7hlVocjVHS1AVDdvFRdY7SEw=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 19:41:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Epic Arts Entertainment/css/main.41zvzmw4a3.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\main.css'))</AssetFile>
@@ -88,13 +88,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\submenu.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hOuelSmRT/sOers4gElt7I5smuPshg4QN3aT\u002Bh4o7no="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1498"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022hOuelSmRT/sOers4gElt7I5smuPshg4QN3aT\u002Bh4o7no=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 18:41:30 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1498"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022hOuelSmRT/sOers4gElt7I5smuPshg4QN3aT\u002Bh4o7no=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 19:41:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Epic Arts Entertainment/css/submenu.g58dpi4sef.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\submenu.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"g58dpi4sef"},{"Name":"integrity","Value":"sha256-hOuelSmRT/sOers4gElt7I5smuPshg4QN3aT\u002Bh4o7no="},{"Name":"label","Value":"_content/Epic Arts Entertainment/css/submenu.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1498"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022hOuelSmRT/sOers4gElt7I5smuPshg4QN3aT\u002Bh4o7no=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 18:41:30 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1498"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022hOuelSmRT/sOers4gElt7I5smuPshg4QN3aT\u002Bh4o7no=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 19:41:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Epic Arts Entertainment/css/submenu2.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\submenu2.css'))</AssetFile>
@@ -124,13 +124,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\usuario_index.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ZaddFz5V6/iL0LrzA4j9chgVo6LwX4vc4cC\u002BJ587jVY="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5677"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022ZaddFz5V6/iL0LrzA4j9chgVo6LwX4vc4cC\u002BJ587jVY=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 18:41:30 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5677"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022ZaddFz5V6/iL0LrzA4j9chgVo6LwX4vc4cC\u002BJ587jVY=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 19:41:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Epic Arts Entertainment/css/usuario_index.ff3157fg5r.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\usuario_index.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ff3157fg5r"},{"Name":"integrity","Value":"sha256-ZaddFz5V6/iL0LrzA4j9chgVo6LwX4vc4cC\u002BJ587jVY="},{"Name":"label","Value":"_content/Epic Arts Entertainment/css/usuario_index.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5677"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022ZaddFz5V6/iL0LrzA4j9chgVo6LwX4vc4cC\u002BJ587jVY=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 18:41:30 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5677"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022ZaddFz5V6/iL0LrzA4j9chgVo6LwX4vc4cC\u002BJ587jVY=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 19:41:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Epic Arts Entertainment/Epic Arts Entertainment.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Epic Arts Entertainment.gwy9inhp0e.bundle.scp.css'))</AssetFile>
@@ -436,25 +436,25 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Logo\LogoName.gif'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4nhzmwfmk9"},{"Name":"integrity","Value":"sha256-EAq1k7WGshkmlxK5OGzEcUmIYiNFk6U44Pb5GyEkpzI="},{"Name":"label","Value":"_content/Epic Arts Entertainment/images/Logo/LogoName.gif"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"22887"},{"Name":"Content-Type","Value":"image/gif"},{"Name":"ETag","Value":"\u0022EAq1k7WGshkmlxK5OGzEcUmIYiNFk6U44Pb5GyEkpzI=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 18:41:30 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"22887"},{"Name":"Content-Type","Value":"image/gif"},{"Name":"ETag","Value":"\u0022EAq1k7WGshkmlxK5OGzEcUmIYiNFk6U44Pb5GyEkpzI=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 19:41:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Epic Arts Entertainment/images/Logo/LogoName.gif">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Logo\LogoName.gif'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-EAq1k7WGshkmlxK5OGzEcUmIYiNFk6U44Pb5GyEkpzI="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"22887"},{"Name":"Content-Type","Value":"image/gif"},{"Name":"ETag","Value":"\u0022EAq1k7WGshkmlxK5OGzEcUmIYiNFk6U44Pb5GyEkpzI=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 18:41:30 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"22887"},{"Name":"Content-Type","Value":"image/gif"},{"Name":"ETag","Value":"\u0022EAq1k7WGshkmlxK5OGzEcUmIYiNFk6U44Pb5GyEkpzI=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 19:41:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Epic Arts Entertainment/images/Logo/teste12.mp4">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Logo\teste12.mp4'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-otsA6R8OfLjghZCOtXN2/sIDXOqXOckcn66pV4BvE6o="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"23748"},{"Name":"Content-Type","Value":"video/mp4"},{"Name":"ETag","Value":"\u0022otsA6R8OfLjghZCOtXN2/sIDXOqXOckcn66pV4BvE6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 18:41:30 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"23748"},{"Name":"Content-Type","Value":"video/mp4"},{"Name":"ETag","Value":"\u0022otsA6R8OfLjghZCOtXN2/sIDXOqXOckcn66pV4BvE6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 19:41:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Epic Arts Entertainment/images/Logo/teste12.muhkdgiwmj.mp4">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Logo\teste12.mp4'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"muhkdgiwmj"},{"Name":"integrity","Value":"sha256-otsA6R8OfLjghZCOtXN2/sIDXOqXOckcn66pV4BvE6o="},{"Name":"label","Value":"_content/Epic Arts Entertainment/images/Logo/teste12.mp4"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"23748"},{"Name":"Content-Type","Value":"video/mp4"},{"Name":"ETag","Value":"\u0022otsA6R8OfLjghZCOtXN2/sIDXOqXOckcn66pV4BvE6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 18:41:30 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"23748"},{"Name":"Content-Type","Value":"video/mp4"},{"Name":"ETag","Value":"\u0022otsA6R8OfLjghZCOtXN2/sIDXOqXOckcn66pV4BvE6o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 17 Feb 2025 19:41:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Epic Arts Entertainment/images/Portfolio/Design 600x400.4dzkzxyy9o.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Portfolio\Design 600x400.png'))</AssetFile>
