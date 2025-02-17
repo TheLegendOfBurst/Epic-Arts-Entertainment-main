@@ -43,7 +43,7 @@ div[style*="background-color: #000000; color: white;"] h1 {
     background-color: #080808;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px #fc0fc0;
+    box-shadow: 0 0 10px #db22ac;
 }
 
 /* Modal header */
@@ -58,7 +58,7 @@ div[style*="background-color: #000000; color: white;"] h1 {
 
 .modal-header h1 {
     margin: 0;
-    color: #fc0fc0;
+    color: #db22ac;
 }
 
 /* Modal body */
@@ -74,7 +74,7 @@ input[type="date"], .form-select {
     border: 1px solid #555;
     border-radius: 4px;
     background-color: #222;
-    color: #fc0fc0;
+    color: #db22ac;
 }
 
 input[type="checkbox"] {
@@ -83,7 +83,7 @@ input[type="checkbox"] {
 
 /* Checkbox labels */
 .form-check-label {
-    color: #fc0fc0;
+    color: #db22ac;
 }
 
 /* Error messages */
@@ -113,7 +113,7 @@ p[style="color:red"] {
 # Butao voltar
 --------------------------------------------------------------*/
 button{
-    background-color: #fc0fc0 !important;
+    background-color: #db22ac !important;
     border: none !important;
     color: #000000 !important;
     transition: .5s;
@@ -121,5 +121,5 @@ button{
 
 button:hover{
     background-color: #000000 !important;
-    color: #fc0fc0 !important;
-    border: 1px solid #fc0fc0 !important;
+    color: #db22ac !important;
+    border: 1px solid #db22ac !important;

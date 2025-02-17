@@ -1,124 +1,164 @@
 ﻿using Epic_Arts_Entertainment.Models;
 using Epic_Arts_Entertainment.ORM;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Linq;
 
-
-namespace Epic_Arts_Entertainment.Repositories
+namespace Epic_Arts_Entertainment.Repositorios
 {
     public class UsuarioRepositorio
     {
-        private readonly BdEpicArtsEntertainmentContext _context;
 
+        private BdEpicArtsEntertainmentContext _context;
         public UsuarioRepositorio(BdEpicArtsEntertainmentContext context)
         {
             _context = context;
         }
-
-        public void Add(UsuarioVM usuario)
+        public bool InserirUsuario(string nome, string email, string telefone, string senha, int tipoUsuario)
         {
-            var tbUsuario = new TbUsuario()
+            try
             {
-                Nome = usuario.Nome,
-                Email = usuario.Email,
-                Telefone = usuario.Telefone,
-                Senha = usuario.Senha,
-                TipoUsuario = usuario.TipoUsuario
-            };
+                TbUsuario usuario = new TbUsuario();
+                usuario.Nome = nome;
+                usuario.Email = email;
+                usuario.Telefone = telefone;
+                usuario.Senha = senha;
+                usuario.TipoUsuario = tipoUsuario;
 
-            _context.TbUsuarios.Add(tbUsuario);
-            _context.SaveChanges();
-        }
-
-        public void Delete(int id)
-        {
-            var tbUsuario = _context.TbUsuarios.FirstOrDefault(f => f.IdUsuario == id);
-
-            if (tbUsuario != null)
-            {
-                _context.TbUsuarios.Remove(tbUsuario);
+                _context.TbUsuarios.Add(usuario);  // Supondo que _context.TbUsuarios seja o DbSet para a entidade de usuários
                 _context.SaveChanges();
+
+                return true;  // Retorna true para indicar sucesso
             }
-            else
+            catch (Exception ex)
             {
-                throw new Exception("Usuário não encontrado.");
+                // Trate o erro ou faça um log do ex.Message se necessário
+                return false;  // Retorna false para indicar falha
             }
         }
 
-        public List<UsuarioVM> GetAll()
+        public List<UsuarioVM> ListarUsuarios()
         {
-            List<UsuarioVM> listaUsuarios = new List<UsuarioVM>();
-            var listaTb = _context.TbUsuarios.ToList();
+            List<UsuarioVM> listFun = new List<UsuarioVM>();
 
-            foreach (var item in listaTb)
+            var listTb = _context.TbUsuarios.ToList();
+
+            foreach (var item in listTb)
             {
-                var usuario = new UsuarioVM
+                var usuarios = new UsuarioVM
                 {
                     IdUsuario = item.IdUsuario,
                     Nome = item.Nome,
                     Email = item.Email,
                     Telefone = item.Telefone,
                     Senha = item.Senha,
-                    TipoUsuario = item.TipoUsuario
+                    TipoUsuario = item.TipoUsuario,
                 };
 
-                listaUsuarios.Add(usuario);
+                listFun.Add(usuarios);
             }
 
-            return listaUsuarios;
+            return listFun;
         }
 
-        public UsuarioVM GetById(int id)
+        public bool AtualizarUsuario(int id, string nome, string email, string telefone, string senha, int tipoUsuario)
         {
-            var item = _context.TbUsuarios.FirstOrDefault(f => f.IdUsuario == id);
-
-            if (item == null)
+            try
             {
-                return null;
+                // Busca o usuário pelo ID
+                var usuario = _context.TbUsuarios.FirstOrDefault(u => u.IdUsuario == id);
+                if (usuario != null)
+                {
+                    // Atualiza os dados do usuário
+                    usuario.Nome = nome;
+                    usuario.Email = email;
+                    usuario.Telefone = telefone;
+                    usuario.Senha = senha;  // Não se esqueça de criptografar a senha antes de atualizar
+                    usuario.TipoUsuario = tipoUsuario;
+
+                    // Salva as mudanças no banco de dados
+                    _context.SaveChanges();
+
+                    return true;  // Retorna verdadeiro se a atualização for bem-sucedida
+                }
+                else
+                {
+                    return false;  // Retorna falso se o usuário não foi encontrado
+                }
             }
-
-            var usuario = new UsuarioVM
+            catch (Exception ex)
             {
-                IdUsuario = item.IdUsuario,
-                Nome = item.Nome,
-                Email = item.Email,
-                Telefone = item.Telefone,
-                Senha = item.Senha,
-                TipoUsuario = item.TipoUsuario
-            };
-
-            return usuario;
+                Console.WriteLine($"Erro ao atualizar o usuário com ID {id}: {ex.Message}");
+                return false;
+            }
         }
 
-        public void Update(UsuarioVM usuario)
+        public bool ExcluirUsuario(int id)
         {
-            var tbUsuario = _context.TbUsuarios.FirstOrDefault(f => f.IdUsuario == usuario.IdUsuario);
-
-            if (tbUsuario != null)
+            try
             {
-                tbUsuario.Nome = usuario.Nome;
-                tbUsuario.Email = usuario.Email;
-                tbUsuario.Telefone = usuario.Telefone;
-                tbUsuario.Senha = usuario.Senha;
-                tbUsuario.TipoUsuario = usuario.TipoUsuario;
+                // Busca o usuário pelo ID
+                var usuario = _context.TbUsuarios.FirstOrDefault(u => u.IdUsuario == id);
 
-                _context.TbUsuarios.Update(tbUsuario);
-                _context.SaveChanges();
+                // Se o usuário não for encontrado, lança uma exceção personalizada
+                if (usuario == null)
+                {
+                    throw new KeyNotFoundException("Usuário não encontrado.");
+                }
+
+
+                // Remove o usuário do banco de dados
+                _context.TbUsuarios.Remove(usuario);
+                _context.SaveChanges();  // Isso pode lançar uma exceção se houver dependências
+
+                // Se tudo correr bem, retorna true indicando sucesso
+                return true;
+
             }
-            else
+            catch (Exception ex)
             {
-                throw new Exception("Usuário não encontrado.");
+                // Aqui tratamos qualquer erro inesperado e logamos para depuração
+                Console.WriteLine($"Erro ao excluir o usuário com ID {id}: {ex.Message}");
+
+                // Relança a exceção para ser capturada pelo controlador
+                throw new Exception($"Erro ao excluir o usuário: {ex.Message}");
             }
         }
 
-        public TbUsuario GetByCredentials(string email, string senha)
+        public UsuarioVM VerificarLogin(string email, string senha)
         {
-            return _context.TbUsuarios.FirstOrDefault(u => u.Email == email && u.Senha == senha);
+            // Verifica se o e-mail e a senha estão presentes no banco de dados
+            var usuario = _context.TbUsuarios
+                .FirstOrDefault(u => u.Email == email && u.Senha == senha);
+
+            // Se encontrar o usuário, cria um objeto UsuarioVM para retornar
+            if (usuario != null)
+            {
+                var usuarioVM = new UsuarioVM
+                {
+                    IdUsuario = usuario.IdUsuario,
+                    Nome = usuario.Nome,
+                    Email = usuario.Email,
+                    Telefone = usuario.Telefone,
+                    Senha = usuario.Senha, // Senha pode ser omitida por questões de segurança
+                    TipoUsuario = usuario.TipoUsuario
+                };
+                // Definindo variáveis de ambiente
+                Environment.SetEnvironmentVariable("USUARIO_ID", usuario.IdUsuario.ToString());
+                Environment.SetEnvironmentVariable("USUARIO_NOME", usuario.Nome);
+                Environment.SetEnvironmentVariable("USUARIO_EMAIL", usuario.Email);
+                Environment.SetEnvironmentVariable("USUARIO_TELEFONE", usuario.Senha);
+                Environment.SetEnvironmentVariable("USUARIO_TIPO", usuario.TipoUsuario.ToString());
+                return usuarioVM;
+            }
+            // Acessando as variáveis de ambiente
+            /*string id = Environment.GetEnvironmentVariable("USUARIO_ID");
+            string nome = Environment.GetEnvironmentVariable("USUARIO_NOME");
+            string email = Environment.GetEnvironmentVariable("USUARIO_EMAIL");
+            string telefone = Environment.GetEnvironmentVariable("USUARIO_TELEFONE");
+            string tipoUsuario = Environment.GetEnvironmentVariable("USUARIO_TIPO");
+            // Se não encontrar o usuário, retorna null ou uma exceção
+            */
+            return null; // Ou você pode lançar uma exceção, dependendo de sua estratégia
         }
+
     }
 }

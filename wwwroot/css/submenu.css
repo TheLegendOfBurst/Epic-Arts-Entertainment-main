@@ -1,9 +1,9 @@
 :root {
-    --purple: #fc0fc0;
+    --purple: #db22ac;
     --black: #000000;
     --white: #878788;
     --grey: #DFDFDE;
-    --red: #fc0fc0;
+    --red: #db22ac;
 }
 
 
@@ -44,13 +44,13 @@
     border-radius: 30% !important;
 }
 
-.dropdown-content a:hover {
-    background-color: var(--red) !important; /* Muda a cor do fundo para vermelho ao passar o mouse */
-    color: var(--black) !important; /* Muda a cor da letra para preto ao passar o mouse */
-    border: var(--red) solid 2px;    
-    border-radius: 3%;
-    text-decoration: none !important;
-}
+    .dropdown-content a:hover {
+        background-color: #db22ac !important; /* Muda a cor do fundo para vermelho ao passar o mouse */
+        color: #000000 !important; /* Muda a cor da letra para preto ao passar o mouse */
+        border: var(--red) solid 2px;
+        border-radius: 3%;
+        text-decoration: none !important;
+    }
 
 .dropdown-content a:hover .fa {
     color: var(--black) !important; /* Muda a cor do ícone para preto ao passar o mouse */

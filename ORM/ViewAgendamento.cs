@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 namespace Epic_Arts_Entertainment.ORM;
 
-public partial class ViewAtendimento
+public partial class ViewAgendamento
 {
-    public int IdAtendimento { get; set; }
+    public int IdAgendamento { get; set; }
 
     public DateTime DtHoraAgendamento { get; set; }
 
-    public DateOnly DataAtendimento { get; set; }
+    public DateOnly DataAgendamento { get; set; }
 
     public TimeOnly Horario { get; set; }
 
