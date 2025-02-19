@@ -1,648 +1,672 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\Epic Arts Entertainment.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Epic Arts Entertainment.bundle.scp.css"
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\Epic Arts Entertainment.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Epic Arts Entertainment.gwy9inhp0e.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\Vendors\\jquery\\jquery-3.6.0.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\Vendors\\jquery\\jquery-3.6.0.js",
       "PackagePath": "staticwebassets\\Vendors\\jquery\\jquery-3.6.0.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\Vendors\\magnific-popup\\jquery.magnific-popup.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\Vendors\\magnific-popup\\jquery.magnific-popup.js",
       "PackagePath": "staticwebassets\\Vendors\\magnific-popup\\jquery.magnific-popup.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\Vendors\\magnific-popup\\magnific-popup.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\Vendors\\magnific-popup\\magnific-popup.css",
       "PackagePath": "staticwebassets\\Vendors\\magnific-popup\\magnific-popup.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\Vendors\\swiper\\swiper.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\Vendors\\swiper\\swiper.css",
       "PackagePath": "staticwebassets\\Vendors\\swiper\\swiper.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\Vendors\\swiper\\swiper.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\Vendors\\swiper\\swiper.js",
       "PackagePath": "staticwebassets\\Vendors\\swiper\\swiper.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\Vendors\\typed\\typed.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\Vendors\\typed\\typed.js",
       "PackagePath": "staticwebassets\\Vendors\\typed\\typed.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\css\\gerenciamento_cliente.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\css\\gerenciamento_cliente.css",
       "PackagePath": "staticwebassets\\css\\gerenciamento_cliente.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\css\\gerenciamento_index.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\css\\gerenciamento_index.css",
       "PackagePath": "staticwebassets\\css\\gerenciamento_index.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\css\\login.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\css\\loader.css",
+      "PackagePath": "staticwebassets\\css\\loader.css"
+    },
+    {
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\css\\login.css",
       "PackagePath": "staticwebassets\\css\\login.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\css\\main.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\css\\main.css",
       "PackagePath": "staticwebassets\\css\\main.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\css\\responsive.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\css\\responsive.css",
       "PackagePath": "staticwebassets\\css\\responsive.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\css\\submenu.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\css\\submenu.css",
       "PackagePath": "staticwebassets\\css\\submenu.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\css\\usuario_index.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\css\\submenu2.css",
+      "PackagePath": "staticwebassets\\css\\submenu2.css"
+    },
+    {
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\css\\test.css",
+      "PackagePath": "staticwebassets\\css\\test.css"
+    },
+    {
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\css\\usuario_index.css",
       "PackagePath": "staticwebassets\\css\\usuario_index.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\About\\About-Image.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\About\\About-Image.png",
       "PackagePath": "staticwebassets\\images\\About\\About-Image.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Blogs\\Design.jpeg",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Blogs\\Design.jpeg",
       "PackagePath": "staticwebassets\\images\\Blogs\\Design.jpeg"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Blogs\\Jogos de videogame.webp",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Blogs\\Jogos de videogame.webp",
       "PackagePath": "staticwebassets\\images\\Blogs\\Jogos de videogame.webp"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Blogs\\Marketing.jpg",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Blogs\\Marketing.jpg",
       "PackagePath": "staticwebassets\\images\\Blogs\\Marketing.jpg"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Blogs\\Roteiro.jpg",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Blogs\\Roteiro.jpg",
       "PackagePath": "staticwebassets\\images\\Blogs\\Roteiro.jpg"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Blogs\\Suporte.jpg",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Blogs\\Suporte.jpg",
       "PackagePath": "staticwebassets\\images\\Blogs\\Suporte.jpg"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Blogs\\Teste.jpeg",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Blogs\\Teste.jpeg",
       "PackagePath": "staticwebassets\\images\\Blogs\\Teste.jpeg"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Blogs\\blog-1.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Blogs\\blog-1.png",
       "PackagePath": "staticwebassets\\images\\Blogs\\blog-1.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Blogs\\blog-2.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Blogs\\blog-2.png",
       "PackagePath": "staticwebassets\\images\\Blogs\\blog-2.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Blogs\\blog-3.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Blogs\\blog-3.png",
       "PackagePath": "staticwebassets\\images\\Blogs\\blog-3.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Blogs\\blog-4.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Blogs\\blog-4.png",
       "PackagePath": "staticwebassets\\images\\Blogs\\blog-4.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Blogs\\blog-5.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Blogs\\blog-5.png",
       "PackagePath": "staticwebassets\\images\\Blogs\\blog-5.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Home\\Home-Image.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Home\\Home-Image.png",
       "PackagePath": "staticwebassets\\images\\Home\\Home-Image.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Logo\\Dragon.jpeg",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\Dragon.jpeg",
       "PackagePath": "staticwebassets\\images\\Logo\\Dragon.jpeg"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Logo\\EA GIF.gif",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\EA GIF.gif",
       "PackagePath": "staticwebassets\\images\\Logo\\EA GIF.gif"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Logo\\EA.mp4",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\EA.mp4",
       "PackagePath": "staticwebassets\\images\\Logo\\EA.mp4"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Logo\\EA.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\EA.png",
       "PackagePath": "staticwebassets\\images\\Logo\\EA.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Logo\\Epic Arts Entertainment.jpeg",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\Epic Arts Entertainment.jpeg",
       "PackagePath": "staticwebassets\\images\\Logo\\Epic Arts Entertainment.jpeg"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Logo\\Epic Arts Entertainment.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\Epic Arts Entertainment.png",
       "PackagePath": "staticwebassets\\images\\Logo\\Epic Arts Entertainment.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Logo\\Home.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\Home.png",
       "PackagePath": "staticwebassets\\images\\Logo\\Home.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Logo\\Home1.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\Home1.png",
       "PackagePath": "staticwebassets\\images\\Logo\\Home1.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Logo\\Logo.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\Logo.png",
       "PackagePath": "staticwebassets\\images\\Logo\\Logo.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Logo\\gamepad-solid.svg",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\LogoName.gif",
+      "PackagePath": "staticwebassets\\images\\Logo\\LogoName.gif"
+    },
+    {
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\gamepad-solid.svg",
       "PackagePath": "staticwebassets\\images\\Logo\\gamepad-solid.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Portfolio\\Design 600x400.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Logo\\teste12.mp4",
+      "PackagePath": "staticwebassets\\images\\Logo\\teste12.mp4"
+    },
+    {
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\Design 600x400.png",
       "PackagePath": "staticwebassets\\images\\Portfolio\\Design 600x400.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Portfolio\\Design.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\Design.png",
       "PackagePath": "staticwebassets\\images\\Portfolio\\Design.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Portfolio\\Jmeter 600x400.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\Jmeter 600x400.png",
       "PackagePath": "staticwebassets\\images\\Portfolio\\Jmeter 600x400.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Portfolio\\Jmeter.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\Jmeter.png",
       "PackagePath": "staticwebassets\\images\\Portfolio\\Jmeter.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Portfolio\\Jogos.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\Jogos.png",
       "PackagePath": "staticwebassets\\images\\Portfolio\\Jogos.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Portfolio\\Jogos.webp",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\Jogos.webp",
       "PackagePath": "staticwebassets\\images\\Portfolio\\Jogos.webp"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Portfolio\\Manutenção jogos 600x400.jpeg",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\Manutenção jogos 600x400.jpeg",
       "PackagePath": "staticwebassets\\images\\Portfolio\\Manutenção jogos 600x400.jpeg"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Portfolio\\Manutenção jogos.jpeg",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\Manutenção jogos.jpeg",
       "PackagePath": "staticwebassets\\images\\Portfolio\\Manutenção jogos.jpeg"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Portfolio\\Manutenção.jpeg",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\Manutenção.jpeg",
       "PackagePath": "staticwebassets\\images\\Portfolio\\Manutenção.jpeg"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Portfolio\\marketing 600x400.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\marketing 600x400.png",
       "PackagePath": "staticwebassets\\images\\Portfolio\\marketing 600x400.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Portfolio\\marketing.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\marketing.png",
       "PackagePath": "staticwebassets\\images\\Portfolio\\marketing.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Portfolio\\portfolio-1.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\portfolio-1.png",
       "PackagePath": "staticwebassets\\images\\Portfolio\\portfolio-1.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Portfolio\\portfolio-2.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\portfolio-2.png",
       "PackagePath": "staticwebassets\\images\\Portfolio\\portfolio-2.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Portfolio\\portfolio-3.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\portfolio-3.png",
       "PackagePath": "staticwebassets\\images\\Portfolio\\portfolio-3.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Portfolio\\portfolio-4.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\portfolio-4.png",
       "PackagePath": "staticwebassets\\images\\Portfolio\\portfolio-4.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Portfolio\\portfolio-5.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\portfolio-5.png",
       "PackagePath": "staticwebassets\\images\\Portfolio\\portfolio-5.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Portfolio\\portfolio-6.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\portfolio-6.png",
       "PackagePath": "staticwebassets\\images\\Portfolio\\portfolio-6.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Portfolio\\roteiro.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\roteiro.png",
       "PackagePath": "staticwebassets\\images\\Portfolio\\roteiro.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Portfolio\\roteiro.webp",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Portfolio\\roteiro.webp",
       "PackagePath": "staticwebassets\\images\\Portfolio\\roteiro.webp"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Service\\Bloco de notas 20.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Service\\Bloco de notas 20.png",
       "PackagePath": "staticwebassets\\images\\Service\\Bloco de notas 20.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Service\\Bloco de notas.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Service\\Bloco de notas.png",
       "PackagePath": "staticwebassets\\images\\Service\\Bloco de notas.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Service\\Blocos 50.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Service\\Blocos 50.png",
       "PackagePath": "staticwebassets\\images\\Service\\Blocos 50.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Service\\Blocos.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Service\\Blocos.png",
       "PackagePath": "staticwebassets\\images\\Service\\Blocos.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Testimonials\\Artista-3D.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Testimonials\\Artista-3D.png",
       "PackagePath": "staticwebassets\\images\\Testimonials\\Artista-3D.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Testimonials\\Consultor_1.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Testimonials\\Consultor_1.png",
       "PackagePath": "staticwebassets\\images\\Testimonials\\Consultor_1.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Testimonials\\Critico_1.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Testimonials\\Critico_1.png",
       "PackagePath": "staticwebassets\\images\\Testimonials\\Critico_1.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Testimonials\\Desenvolvedor.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Testimonials\\Desenvolvedor.png",
       "PackagePath": "staticwebassets\\images\\Testimonials\\Desenvolvedor.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Testimonials\\Escritora.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Testimonials\\Escritora.png",
       "PackagePath": "staticwebassets\\images\\Testimonials\\Escritora.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Testimonials\\Gerente.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Testimonials\\Gerente.png",
       "PackagePath": "staticwebassets\\images\\Testimonials\\Gerente.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Testimonials\\pic-1.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Testimonials\\pic-1.png",
       "PackagePath": "staticwebassets\\images\\Testimonials\\pic-1.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Testimonials\\pic-2.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Testimonials\\pic-2.png",
       "PackagePath": "staticwebassets\\images\\Testimonials\\pic-2.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Testimonials\\pic-3.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Testimonials\\pic-3.png",
       "PackagePath": "staticwebassets\\images\\Testimonials\\pic-3.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Testimonials\\pic-4.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Testimonials\\pic-4.png",
       "PackagePath": "staticwebassets\\images\\Testimonials\\pic-4.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\images\\Testimonials\\pic-5.png",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\images\\Testimonials\\pic-5.png",
       "PackagePath": "staticwebassets\\images\\Testimonials\\pic-5.png"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\js\\blog-slider.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\js\\blog-slider.js",
       "PackagePath": "staticwebassets\\js\\blog-slider.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\js\\counter-up.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\js\\counter-up.js",
       "PackagePath": "staticwebassets\\js\\counter-up.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\js\\portfolio.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\js\\portfolio.js",
       "PackagePath": "staticwebassets\\js\\portfolio.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\js\\script.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\js\\script.js",
       "PackagePath": "staticwebassets\\js\\script.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\js\\scroll-spy.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\js\\scroll-spy.js",
       "PackagePath": "staticwebassets\\js\\scroll-spy.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\js\\testi-slider.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\js\\testi-slider.js",
       "PackagePath": "staticwebassets\\js\\testi-slider.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap-icons\\bootstrap-icons.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap-icons\\bootstrap-icons.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\bootstrap-icons.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap-icons\\bootstrap-icons.json",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap-icons\\bootstrap-icons.json",
       "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\bootstrap-icons.json"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap-icons\\bootstrap-icons.min.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap-icons\\bootstrap-icons.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\bootstrap-icons.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap-icons\\bootstrap-icons.scss",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap-icons\\bootstrap-icons.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\bootstrap-icons.scss"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap-icons\\fonts\\bootstrap-icons.woff",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap-icons\\fonts\\bootstrap-icons.woff",
       "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\fonts\\bootstrap-icons.woff"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap-icons\\fonts\\bootstrap-icons.woff2",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap-icons\\fonts\\bootstrap-icons.woff2",
       "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\fonts\\bootstrap-icons.woff2"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\boxicons\\css\\animations.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\boxicons\\css\\animations.css",
       "PackagePath": "staticwebassets\\lib\\boxicons\\css\\animations.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\boxicons\\css\\boxicons.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\boxicons\\css\\boxicons.css",
       "PackagePath": "staticwebassets\\lib\\boxicons\\css\\boxicons.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\boxicons\\css\\boxicons.min.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\boxicons\\css\\boxicons.min.css",
       "PackagePath": "staticwebassets\\lib\\boxicons\\css\\boxicons.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\boxicons\\css\\transformations.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\boxicons\\css\\transformations.css",
       "PackagePath": "staticwebassets\\lib\\boxicons\\css\\transformations.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\boxicons\\fonts\\boxicons.eot",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\boxicons\\fonts\\boxicons.eot",
       "PackagePath": "staticwebassets\\lib\\boxicons\\fonts\\boxicons.eot"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\boxicons\\fonts\\boxicons.svg",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\boxicons\\fonts\\boxicons.svg",
       "PackagePath": "staticwebassets\\lib\\boxicons\\fonts\\boxicons.svg"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\boxicons\\fonts\\boxicons.ttf",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\boxicons\\fonts\\boxicons.ttf",
       "PackagePath": "staticwebassets\\lib\\boxicons\\fonts\\boxicons.ttf"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\boxicons\\fonts\\boxicons.woff",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\boxicons\\fonts\\boxicons.woff",
       "PackagePath": "staticwebassets\\lib\\boxicons\\fonts\\boxicons.woff"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\boxicons\\fonts\\boxicons.woff2",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\boxicons\\fonts\\boxicons.woff2",
       "PackagePath": "staticwebassets\\lib\\boxicons\\fonts\\boxicons.woff2"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\glightbox\\css\\glightbox.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\glightbox\\css\\glightbox.css",
       "PackagePath": "staticwebassets\\lib\\glightbox\\css\\glightbox.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\glightbox\\css\\glightbox.min.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\glightbox\\css\\glightbox.min.css",
       "PackagePath": "staticwebassets\\lib\\glightbox\\css\\glightbox.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\glightbox\\css\\plyr.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\glightbox\\css\\plyr.css",
       "PackagePath": "staticwebassets\\lib\\glightbox\\css\\plyr.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\glightbox\\css\\plyr.min.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\glightbox\\css\\plyr.min.css",
       "PackagePath": "staticwebassets\\lib\\glightbox\\css\\plyr.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\glightbox\\js\\glightbox.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\glightbox\\js\\glightbox.js",
       "PackagePath": "staticwebassets\\lib\\glightbox\\js\\glightbox.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\glightbox\\js\\glightbox.min.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\glightbox\\js\\glightbox.min.js",
       "PackagePath": "staticwebassets\\lib\\glightbox\\js\\glightbox.min.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\swiper\\swiper-bundle.min.css",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\swiper\\swiper-bundle.min.css",
       "PackagePath": "staticwebassets\\lib\\swiper\\swiper-bundle.min.css"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\swiper\\swiper-bundle.min.js",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\swiper\\swiper-bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\swiper\\swiper-bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\Aluno Noite\\Documents\\Backup\\Epic-Arts-Entertainment\\wwwroot\\lib\\swiper\\swiper-bundle.min.js.map",
+      "Id": "C:\\Users\\Aluno Tarde\\Documents\\DaviG\\site\\Epic-Arts-Entertainment-main\\wwwroot\\lib\\swiper\\swiper-bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\swiper\\swiper-bundle.min.js.map"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.Epic Arts Entertainment.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.Epic Arts Entertainment.Microsoft.AspNetCore.StaticWebAssets.props",
